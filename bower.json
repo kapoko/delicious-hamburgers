@@ -1,0 +1,25 @@
+{
+  "name": "delicious-hamburgers",
+  "authors": [
+    "Kasper Koman <kasper.koman@gmail.com>"
+  ],
+  "description": "Beautiful SASS powered hamburger menu toggle buttons",
+  "main": "sass/main.scss",
+  "keywords": [
+    "sass",
+    "css",
+    "hamburger",
+    "menu",
+    "toggle",
+    "button"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
