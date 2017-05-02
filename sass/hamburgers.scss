@@ -1,0 +1,57 @@
+// Variables
+$hamburger-size:        	60px !default;
+$hamburger-thickness:   	4px !default; 
+$hamburger-color: 			#000 !default;
+
+// Calculations
+$hamburger-bar-size:    	$hamburger-size - ($hamburger-size * 0.2);
+$hamburger-bar-offset: 		$hamburger-size / 5;
+$hamburger-easing:      	cubic-bezier(0.645, 0.045, 0.355, 1);
+$ROOT-TWO: 					1.41421356237309504880;
+
+// The button
+.hamburger-toggle {
+	width:  $hamburger-size;
+	height: $hamburger-size;
+	background: rgba(255, 0, 0, .1);
+	border: none;
+	padding: 0;
+	display: inline-block;
+	cursor: pointer;
+	
+	&.active {
+		background-color: rgba(0, 255, 0, .1);
+	}
+	
+	> .inner {
+		position: relative;
+		margin-left: $hamburger-size * 0.1;
+		margin-right: $hamburger-size * 0.1;
+		top: -$hamburger-thickness / 2;
+		width: $hamburger-bar-size;
+	}
+
+	span.bar {
+		width: 100%;
+		height: $hamburger-thickness;
+		display: block;
+		position: absolute;
+		background-color: $hamburger-color;
+
+		&:nth-child(1) {
+			top: -$hamburger-bar-offset;
+		}
+
+		&:nth-child(3) {
+			top: $hamburger-bar-offset;
+		}
+	}
+	
+	&:focus {
+		outline: 0;
+	}
+}
+
+@import 'animations/default';
+@import 'animations/criss-cross';
+
