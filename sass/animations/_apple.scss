@@ -1,15 +1,15 @@
-.apple {
+.hamburger-toggle.apple {
 	> .inner {
 		transition: transform .5s $hamburger-easing,
 					top .5s $hamburger-easing;
 	}
 
 	span.bar {
-		transition: top .5s $hamburger-easing,
-					transform .25s $hamburger-easing;
 
 		&:nth-child(1) {
 			top: -$hamburger-bar-offset * .8;
+			transition: top .5s $hamburger-easing,
+						transform .25s $hamburger-easing;
 		}
 
 		&:nth-child(2) {
@@ -18,6 +18,8 @@
 
 		&:nth-child(3) {
 			top: $hamburger-bar-offset * .8;
+			transition: top .5s $hamburger-easing,
+						transform .35s $hamburger-easing;
 		}
 	}
 
@@ -32,7 +34,7 @@
 
 		span.bar {
 			transition: top .5s $hamburger-easing,
-						transform .25s $hamburger-easing .25s;
+						transform .35s $hamburger-easing .15s;
 
 			&:nth-child(1) {
 				top: 0;

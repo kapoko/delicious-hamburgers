@@ -1,0 +1,28 @@
+.hamburger-toggle.collapse {
+	span.bar {
+		transition: transform .5s $hamburger-easing,
+					top .25s $hamburger-easing .25s,
+					opacity .25s $hamburger-easing .25s;
+	}
+
+	&.active {
+		span.bar {
+			top: 0;
+			transition: transform .5s $hamburger-easing,
+						top .25s $hamburger-easing,
+						opacity .25s $hamburger-easing;
+
+			&:nth-child(1) {
+				transform: rotate(135deg);
+			}
+
+			&:nth-child(2) {
+				opacity: 0;
+			}
+
+			&:nth-child(3) {
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
