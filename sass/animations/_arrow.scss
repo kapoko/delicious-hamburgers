@@ -1,0 +1,85 @@
+.hamburger-toggle.arrow, .hamburger-toggle.arrow-right {
+	> .inner {
+		transition: transform .5s $hamburger-easing,
+					top .5s $hamburger-easing;	
+	}
+
+	span.bar {
+		transition: transform .3s $hamburger-easing,
+					width .3s $hamburger-easing,
+					top .3s $hamburger-easing,
+					right .3s $hamburger-easing;
+		transition-delay: .1s;
+
+		&:nth-child(1) {
+			transform-origin: 100% 0;
+			right: 0;
+		}
+
+		&:nth-child(3) {
+			transform-origin: 100% 100%;
+			right: 0;
+		}
+	}
+
+	&.active {
+		span.bar {
+			transition-delay: 0s;
+
+			&:nth-child(1) {
+				transform: rotate(45deg);
+				top: $hamburger-thickness / 2;
+				width: 40%;
+			}
+
+			&:nth-child(2) {
+				width: $hamburger-bar-size - $hamburger-thickness;
+			}
+
+			&:nth-child(3) {
+				transform: rotate(-45deg);
+				top: -$hamburger-thickness / 2;
+				width: 40%;
+			}
+		}
+
+		> .inner {
+			transform: rotate(180deg);
+			// top: $hamburger-thickness / 2;
+		}
+	}
+}
+
+.hamburger-toggle.arrow-right {
+	span.bar {
+		&:nth-child(1) {
+			transform-origin: 0 0;
+			left: 0;
+		}
+
+		&:nth-child(2) {
+			right: 0;
+		}
+
+		&:nth-child(3) {
+			transform-origin: 0 100%;
+			left: 0;
+		}
+	}
+
+	&.active {
+		span.bar {
+			&:nth-child(1) {
+				transform: rotate(-45deg);
+			}
+
+			&:nth-child(3) {
+				transform: rotate(45deg);
+			}
+		}
+
+		> .inner {
+			transform: rotate(-180deg);
+		}
+	}
+}
