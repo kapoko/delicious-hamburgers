@@ -26,10 +26,8 @@
     &.active {
 
         > .inner {
-            transition: transform .35s $hamburger-easing,
-                        top .25s $hamburger-easing;
-            transform: rotate(90deg);
-            top: 0;
+            transition: transform .35s $hamburger-easing;
+            transform: rotate(90deg) translate3d($hamburger-thickness / 2, -$hamburger-thickness / 2, 0);
         }
 
         span.bar {

@@ -1,0 +1,36 @@
+.hamburger-toggle.dive {
+    span.bar {
+        transition: transform .4s $hamburger-easing,
+                    top .4s $hamburger-easing,
+                    right .4s $hamburger-easing;
+
+        &:nth-child(1) {
+            top: -$hamburger-bar-offset * .8;
+        }
+
+        &:nth-child(2) {
+            display: none;
+        }
+
+        &:nth-child(3) {
+            transform-origin: 100% 50%;
+            top: $hamburger-bar-offset * .8;
+            right: 0;
+        }
+    }
+
+    &.active {
+        span.bar {
+            &:nth-child(1) {
+                transform: rotate(135deg);
+                top: 0;
+            }
+
+            &:nth-child(3) {
+                transform: rotate(45deg);
+                right: ($hamburger-bar-size - ($hamburger-bar-size / $ROOT-TWO)) / 2;
+                top: ($hamburger-bar-size / $ROOT-TWO) / 2;
+            }
+        }
+    }
+}

@@ -6,6 +6,11 @@
   padding: 0;
   display: inline-block;
   cursor: pointer;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  margin: 0;
+  overflow: visible;
 }
 
 .hamburger-toggle.active {
@@ -16,8 +21,9 @@
   position: relative;
   margin-left: 5px;
   margin-right: 5px;
-  top: -1px;
   width: 40px;
+  top: 50%;
+  margin-top: -1px;
 }
 
 .hamburger-toggle span.bar {
@@ -168,13 +174,11 @@
 }
 
 .hamburger-toggle.apple.active > .inner {
-  transition: top 0.25s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.25s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
-  top: 0;
+  transition: -webkit-transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transform: rotate(90deg) translate3d(1px, -1px, 0);
+          transform: rotate(90deg) translate3d(1px, -1px, 0);
 }
 
 .hamburger-toggle.apple.active span.bar {
@@ -391,4 +395,73 @@
   -webkit-transform: translate3d(0, -8px, 0);
           transform: translate3d(0, -8px, 0);
   opacity: 0;
+}
+
+.hamburger-toggle.dive span.bar {
+  transition: top 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), right 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), right 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), right 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.hamburger-toggle.dive span.bar:nth-child(1) {
+  top: -8px;
+}
+
+.hamburger-toggle.dive span.bar:nth-child(2) {
+  display: none;
+}
+
+.hamburger-toggle.dive span.bar:nth-child(3) {
+  -webkit-transform-origin: 100% 50%;
+      -ms-transform-origin: 100% 50%;
+          transform-origin: 100% 50%;
+  top: 8px;
+  right: 0;
+}
+
+.hamburger-toggle.dive.active span.bar:nth-child(1) {
+  -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+          transform: rotate(135deg);
+  top: 0;
+}
+
+.hamburger-toggle.dive.active span.bar:nth-child(3) {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  right: 5.85786px;
+  top: 14.14214px;
+}
+
+.hamburger-toggle.stack span.bar {
+  transition: top 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.4s, -webkit-transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.4s;
+  transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.4s, -webkit-transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.hamburger-toggle.stack.active span.bar {
+  transition: top 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.4s;
+  transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.4s, top 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.4s, top 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.4s;
+}
+
+.hamburger-toggle.stack.active span.bar:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 0;
+}
+
+.hamburger-toggle.stack.active span.bar:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.hamburger-toggle.stack.active span.bar:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 0;
 }
