@@ -1,0 +1,34 @@
+.hamburger-toggle.minimal {
+    span.bar {
+        transition: transform .5s $hamburger-easing,
+                    opacity .35s $hamburger-easing .15s;
+
+        &:nth-child(1) {
+            top: -$hamburger-bar-offset * .8;
+        }
+
+        &:nth-child(2) {
+            display: none;
+        }
+
+        &:nth-child(3) {
+            top: $hamburger-bar-offset * .8;
+        }
+    }
+
+    &.active {
+        span.bar {
+            transition: transform .5s $hamburger-easing,
+                        opacity .35s $hamburger-easing;
+
+            &:nth-child(1) {
+                transform: translate3d(0, $hamburger-bar-offset * .8, 0);
+            }
+
+            &:nth-child(3) {
+                transform: translate3d(0, -$hamburger-bar-offset * .8, 0);
+                opacity: 0;
+            }
+        }
+    }
+}
