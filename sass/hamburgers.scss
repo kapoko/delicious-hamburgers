@@ -27,6 +27,11 @@ $ROOT-TWO:                  1.41421356237309504880;
     padding: 0;
     display: inline-block;
     cursor: pointer;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    margin: 0;
+    overflow: visible;
     
     &.active {
         background-color: rgba(0, 255, 0, .1);
@@ -36,8 +41,9 @@ $ROOT-TWO:                  1.41421356237309504880;
         position: relative;
         margin-left: $hamburger-size * 0.1;
         margin-right: $hamburger-size * 0.1;
-        top: -$hamburger-thickness / 2;
         width: $hamburger-bar-size;
+        top: 50%;
+        margin-top: -$hamburger-thickness / 2;
     }
 
     span.bar {
@@ -64,3 +70,5 @@ $ROOT-TWO:                  1.41421356237309504880;
 @import 'animations/spin';
 @import 'animations/collapse';
 @import 'animations/minimal';
+@import 'animations/dive';
+@import 'animations/stack';
