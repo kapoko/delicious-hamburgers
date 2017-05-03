@@ -1,7 +1,6 @@
 .hamburger-toggle.spin {
     > .inner {
-        transition: transform .5s $hamburger-easing,
-                    top .5s $hamburger-easing;  
+        transition: transform .5s $hamburger-easing;
     }
 
     span.bar {
@@ -31,8 +30,7 @@
         }
 
         > .inner {
-            transform: rotate(180deg);
-            top: $hamburger-thickness / 2;
+            transform: rotate(180deg) translate3d(0, -$hamburger-thickness, 0);
         }
     }
 }

@@ -198,9 +198,9 @@
 }
 
 .hamburger-toggle.arrow > .inner, .hamburger-toggle.arrow-right > .inner {
-  transition: top 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: -webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .hamburger-toggle.arrow span.bar, .hamburger-toggle.arrow-right span.bar {
@@ -249,10 +249,8 @@
 }
 
 .hamburger-toggle.arrow.active > .inner, .hamburger-toggle.arrow-right.active > .inner {
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
-  top: 1px;
+  -webkit-transform: rotate(180deg) translate3d(0, -2px, 0);
+          transform: rotate(180deg) translate3d(0, -2px, 0);
 }
 
 .hamburger-toggle.arrow-right span.bar:nth-child(1) {
@@ -292,9 +290,9 @@
 }
 
 .hamburger-toggle.spin > .inner {
-  transition: top 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: -webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .hamburger-toggle.spin span.bar {
@@ -327,23 +325,21 @@
 }
 
 .hamburger-toggle.spin.active > .inner {
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
-  top: 1px;
+  -webkit-transform: rotate(180deg) translate3d(0, -2px, 0);
+          transform: rotate(180deg) translate3d(0, -2px, 0);
 }
 
 .hamburger-toggle.collapse span.bar {
-  transition: top 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s, opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s, -webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s, opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s;
-  transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s, opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s, -webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: top 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s, opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s, -webkit-transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s, opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s;
+  transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s, opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s, -webkit-transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .hamburger-toggle.collapse.active span.bar {
   top: 0;
-  transition: top 0.25s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.25s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.25s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: top 0.25s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+  transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s, top 0.25s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s, top 0.25s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
 }
 
 .hamburger-toggle.collapse.active span.bar:nth-child(1) {
