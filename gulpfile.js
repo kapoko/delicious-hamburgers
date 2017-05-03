@@ -5,6 +5,7 @@ var gulp = require('gulp'),
     gutil = require('gulp-util'),
     gulpSequence = require('gulp-sequence'),
     clean = require('gulp-clean'),
+    browserSync = require('browser-sync').create(),
     autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('clean', function() {
