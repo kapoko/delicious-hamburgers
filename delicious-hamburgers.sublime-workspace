@@ -1,0 +1,778 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"hamburg",
+				"hamburger-easing"
+			],
+			[
+				"transf",
+				"transform: "
+			],
+			[
+				"trans",
+				"transform: "
+			],
+			[
+				"hamb",
+				"hamburger-easing"
+			],
+			[
+				"ani",
+				"animation: "
+			],
+			[
+				"hambur",
+				"hamburger-bar-size"
+			],
+			[
+				"transform",
+				"transform-origin: "
+			],
+			[
+				"hamburger",
+				"hamburger-size"
+			],
+			[
+				"auto",
+				"auto-kampnaam"
+			],
+			[
+				"elem",
+				"elementsArray"
+			],
+			[
+				"cons",
+				"console"
+			],
+			[
+				"inlien",
+				"inline-block"
+			],
+			[
+				"Main",
+				"MainMenu"
+			],
+			[
+				"font",
+				"font-size: "
+			],
+			[
+				"fotn",
+				"font-weight: "
+			],
+			[
+				"stt",
+				"startAnimations"
+			],
+			[
+				"contian",
+				"container-nested"
+			],
+			[
+				"evetn",
+				"eventix"
+			],
+			[
+				"background",
+				"background-glitch"
+			],
+			[
+				"anim",
+				"animation: "
+			],
+			[
+				"back",
+				"background: "
+			],
+			[
+				"intro",
+				"intro-animations"
+			],
+			[
+				"margin",
+				"margin-right: "
+			],
+			[
+				"backgr",
+				"background-size: "
+			],
+			[
+				"animation",
+				"animation-delay: "
+			],
+			[
+				"backgroud",
+				"background-color: "
+			],
+			[
+				"marign",
+				"margin-top: "
+			],
+			[
+				"update",
+				"updateMenuLine"
+			],
+			[
+				"wpcf",
+				"wpcf7-submit"
+			],
+			[
+				"te",
+				"text-align: "
+			],
+			[
+				"menu",
+				"menuHeight"
+			],
+			[
+				"border",
+				"border-bottom: "
+			],
+			[
+				"media-breakp",
+				"media-breakpoint-up"
+			],
+			[
+				"mari",
+				"margin: "
+			],
+			[
+				"tex",
+				"text-transform: "
+			],
+			[
+				"scrol",
+				"scrollPosition"
+			],
+			[
+				"sec",
+				"sectionPositions"
+			],
+			[
+				"logo",
+				"logo-ratio"
+			],
+			[
+				"new",
+				"newHeight"
+			],
+			[
+				"section",
+				"sectionSize"
+			],
+			[
+				"sect",
+				"sectionPositions"
+			],
+			[
+				"cl",
+				"calculateSectionPositions"
+			],
+			[
+				"scro",
+				"scrollPosition"
+			],
+			[
+				"list-",
+				"list-style-type: "
+			],
+			[
+				"pris",
+				"prisondaily_2"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "example.html",
+			"settings":
+			{
+				"buffer_size": 1658,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sass/hamburgers.scss",
+			"settings":
+			{
+				"buffer_size": 1143,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "gulpfile.js",
+			"settings":
+			{
+				"buffer_size": 1013,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "dist/hamburgers.css",
+			"settings":
+			{
+				"buffer_size": 3064,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sass/animations/_default.scss",
+			"settings":
+			{
+				"buffer_size": 224,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sass/animations/_criss-cross.scss",
+			"settings":
+			{
+				"buffer_size": 1812,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 87.0,
+		"last_filter": "Package Control: instal",
+		"selected_items":
+		[
+			[
+				"Package Control: instal",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/kasper/web/bower/delicious-hamburgers",
+		"/Users/kasper/web/bower/delicious-hamburgers/sass",
+		"/Users/kasper/web/bower/delicious-hamburgers/sass/animations"
+	],
+	"file_history":
+	[
+		"/Users/kasper/web/upthegame.nl/site/composer.json",
+		"/Users/kasper/web/bower/delicious-hamburgers/dist/hamburgers.css",
+		"/Users/kasper/web/bower/delicious-hamburgers/example.html",
+		"/Users/kasper/web/bower/delicious-hamburgers/gulpfile.js",
+		"/Users/kasper/web/bower/delicious-hamburgers/dist/hamburgers.min.css",
+		"/Users/kasper/web/prisonescape.nl/site/web/app/themes/pe/gulpfile.js",
+		"/Users/kasper/web/bower/delicious-hamburgers/sass/main.scss",
+		"/Users/kasper/web/bower/delicious-hamburgers/.gitignore",
+		"/Users/kasper/web/prisonescape.nl/site/web/app/themes/pe/bower_components/delicious-hamburgers/.bower.json",
+		"/Users/kasper/web/prisonescape.nl/site/web/app/themes/pe/bower_components/delicious-hamburgers/sass/main.scss",
+		"/Users/kasper/Downloads/www_gunsforhire_nl/www_gunsforhire_nl.cer",
+		"/Users/kasper/Downloads/www_gunsforhire_nl/AddTrustExternalCARoot.crt",
+		"/Users/kasper/Downloads/www_gunsforhire_nl/COMODORSAAddTrustCA.crt",
+		"/Users/kasper/Downloads/www_gunsforhire_nl/COMODORSADomainValidationSecureServerCA.crt",
+		"/private/var/folders/md/z33p27wd3vj__crwg9gjyb8w0000gn/T/fz3temp-2/.htaccess",
+		"/Users/kasper/web/tralies/index.html",
+		"/private/var/folders/md/z33p27wd3vj__crwg9gjyb8w0000gn/T/fz3temp-2/index.html",
+		"/Users/kasper/web/gunsforhire.nl/site/web/app/themes/guns/template-about.php",
+		"/Users/kasper/web/prisonescape.nl/site/web/app/themes/pe/assets/styles/common/_variables.scss",
+		"/Users/kasper/web/prisonescape.nl/site/web/app/themes/pe/assets/scripts/helpers.js",
+		"/Users/kasper/web/prisonescape.nl/site/web/app/themes/pe/lib/menu.php",
+		"/Users/kasper/web/prisonescape.nl/site/web/app/themes/pe/lib/setup.php",
+		"/Users/kasper/web/prisonescape.nl/site/web/app/themes/pe/assets/scripts/modernizr-config.json",
+		"/Users/kasper/web/prisonescape.nl/site/web/app/themes/pe/templates/masthead.php",
+		"/Users/kasper/web/prisonescape.nl/site/web/app/themes/pe/templates/header.php",
+		"/Users/kasper/web/prisonescape.nl/site/web/app/themes/pe/assets/styles/layouts/_masthead.scss",
+		"/Users/kasper/web/prisonescape.nl/site/web/app/themes/pe/assets/styles/common/_utilities.scss",
+		"/Users/kasper/web/prisonescape.nl/site/web/app/themes/pe/assets/styles/common/_global.scss",
+		"/Users/kasper/web/prisonescape.nl/site/web/app/themes/pe/style.css",
+		"/Users/kasper/web/prisonescape.nl/site/web/app/themes/pe/assets/styles/layouts/_header.scss",
+		"/Users/kasper/web/prisonescape.nl/site/web/app/themes/pe/base.php",
+		"/Users/kasper/web/prisonescape.nl/site/web/app/themes/pe/assets/styles/components/_slide.scss",
+		"/Users/kasper/web/prisonescape.nl/site/web/app/themes/pe/assets/scripts/slide.js",
+		"/Users/kasper/web/prisonescape.nl/site/web/app/themes/pe/assets/scripts/main.js",
+		"/Users/kasper/web/prisonescape.nl/site/web/app/themes/pe/assets/manifest.json",
+		"/Users/kasper/web/prisonescape.nl/site/web/app/themes/pe/front-page.php",
+		"/Users/kasper/web/prisonescape.nl/.gitignore",
+		"/Users/kasper/web/prisonescape.nl/site/web/app/themes/pe/assets/styles/main.scss",
+		"/Users/kasper/web/prisonescape.nl/site/web/app/themes/pe/assets/styles/components/_buttons.scss",
+		"/Users/kasper/web/prisonescape.nl/site/web/app/themes/pe/templates/menu-item.php",
+		"/Users/kasper/web/prisonescape.nl/site/web/app/themes/pe/functions.php",
+		"/Users/kasper/web/prisonescape.nl/site/web/app/themes/pe/templates/head.php",
+		"/private/var/folders/md/z33p27wd3vj__crwg9gjyb8w0000gn/T/fz3temp-2/single-kampen.php",
+		"/private/var/folders/md/z33p27wd3vj__crwg9gjyb8w0000gn/T/fz3temp-2/kampoverzicht.php",
+		"/private/var/folders/md/z33p27wd3vj__crwg9gjyb8w0000gn/T/fz3temp-2/functions.php",
+		"/private/var/folders/md/z33p27wd3vj__crwg9gjyb8w0000gn/T/fz3temp-2/script.js",
+		"/private/var/folders/md/z33p27wd3vj__crwg9gjyb8w0000gn/T/fz3temp-2/header.php",
+		"/private/var/folders/md/z33p27wd3vj__crwg9gjyb8w0000gn/T/fz3temp-2/footer.php",
+		"/Users/kasper/web/prisonescape.nl/site/web/app/themes/pe/templates/partials/head.blade.php",
+		"/Users/kasper/web/gunsforhire.nl/site/composer.json",
+		"/Users/kasper/Sync/Documents/prisonescape todo.txt",
+		"/Users/kasper/web/prisonescape.nl/site/web/app/themes/pe/assets/scripts/util/.eslintrc",
+		"/Users/kasper/web/prisonescape.nl/site/web/app/themes/pe/assets/scripts/util/.eslintrc.js",
+		"/Users/kasper/web/prisonescape.nl/site/web/app/themes/pe/assets/scripts/util/slideLines.js",
+		"/Users/kasper/web/prisonescape.nl/site/web/app/themes/pe/src/menu.php",
+		"/Users/kasper/web/prisonescape.nl/site/web/app/themes/pe/src/filters.php",
+		"/Users/kasper/web/prisonescape.nl/site/web/app/themes/pe/templates/partials/menu-item.blade.php",
+		"/Users/kasper/web/prisonescape.nl/site/web/app/themes/pe/templates/partials/header.blade.php",
+		"/Users/kasper/web/prisonescape.nl/site/web/app/themes/pe/templates/layouts/base.blade.php",
+		"/Users/kasper/web/gunsforhire.nl/site/web/app/themes/guns/gulpfile.js",
+		"/Users/kasper/web/prisonescape.nl/site/web/app/themes/pe/templates/front-page.blade.php",
+		"/private/var/folders/md/z33p27wd3vj__crwg9gjyb8w0000gn/T/fz3temp-2/.htaccess 2",
+		"/Users/kasper/Downloads/rockyou 2.txt",
+		"/Users/kasper/.bash_profile",
+		"/Users/kasper/.ssh/known_hosts",
+		"/Users/kasper/web/prisonescape.nl/site/web/app/themes/pe/src/helpers.php",
+		"/Users/kasper/web/prisonescape.nl/site/web/app/themes/pe/src/setup.php",
+		"/Users/kasper/web/prisonescape.nl/site/web/app/themes/pe/templates/partials/masthead.blade.php",
+		"/Users/kasper/Downloads/prisonescape backup/wp-content/themes/stockholm/framework/admin/assets/css/scss/bootstrap/_navbar.scss",
+		"/Users/kasper/web/gunsforhire.nl/site/web/app/themes/guns/lib/setup.php",
+		"/Users/kasper/web/prisonescape.nl/site/web/app/themes/pe/assets/styles/components/_full-width.scss",
+		"/Users/kasper/Sync/web/ouder/jump/wp-content/plugins/jetpack/scss/_utilities/mixins/_full-width-bars.scss",
+		"/Users/kasper/Downloads/prisonescape backup/wp-content/themes/stockholm/voorupdate/framework/admin/assets/css/scss/bootstrap/_navbar.scss",
+		"/Users/kasper/web/prisonescape.nl/site/web/app/themes/pe/assets/config.json",
+		"/Users/kasper/web/prisonescape.nl/site/web/app/themes/pe/assets/build/webpack.config.watch.js",
+		"/Users/kasper/web/prisonescape.nl/site/web/app/themes/pe/assets/build/config.js",
+		"/Users/kasper/Downloads/rlg backup/wp-content/themes/rlg/gulpfile.js",
+		"/Users/kasper/web/reallifegaming.nl/site/web/app/themes/rlg/functions.php",
+		"/Users/kasper/web/reallifegaming.nl/site/web/app/themes/rlg/template-about.php",
+		"/Users/kasper/web/reallifegaming.nl/site/web/app/themes/rlg/page-home.php",
+		"/Users/kasper/web/prisonescape.nl/trellis/group_vars/development/vault.yml",
+		"/Users/kasper/web/prisonescape.nl/trellis/group_vars/development/wordpress_sites.yml",
+		"/private/var/folders/md/z33p27wd3vj__crwg9gjyb8w0000gn/T/fz3temp-2/.env",
+		"/Users/kasper/Downloads/rlg backup/wp-config.php",
+		"/Users/kasper/Downloads/rlgwp (2).sql",
+		"/private/var/folders/md/z33p27wd3vj__crwg9gjyb8w0000gn/T/fz3temp-2/index.php",
+		"/Users/kasper/web/reallifegaming.nl/site/.env",
+		"/Users/kasper/Desktop/env-server",
+		"/private/var/folders/md/z33p27wd3vj__crwg9gjyb8w0000gn/T/fz3temp-2/application.php",
+		"/Users/kasper/web/reallifegaming.nl/site/web/app/themes/rlg/assets/css/single-beleving.css",
+		"/Users/kasper/web/reallifegaming.nl/site/web/app/themes/rlg/single-beleving.php",
+		"/Users/kasper/web/reallifegaming.nl/site/web/app/themes/rlg/header.php",
+		"/etc/exports",
+		"/Users/kasper/web/reallifegaming.nl/site/web/app/themes/rlg/.gitignore",
+		"/Users/kasper/web/reallifegaming.nl/site/web/app/themes/rlg/gulpfile.js",
+		"/Users/kasper/web/reallifegaming.nl/.gitignore",
+		"/Users/kasper/web/reallifegaming.nl/trellis/.gitignore",
+		"/Users/kasper/web/reallifegaming.nl/database/backups/example_development.sql",
+		"/Users/kasper/Downloads/rlgwp (1).sql",
+		"/Users/kasper/.ssh/kwo",
+		"/Users/kasper/web/reallifegaming/trellis/group_vars/development/wordpress_sites.yml",
+		"/Users/kasper/web/reallifegaming.nl/trellis/group_vars/development/mail.yml",
+		"/Users/kasper/web/reallifegaming.nl/trellis/group_vars/development/vault.yml",
+		"/Users/kasper/web/reallifegaming.nl/trellis/group_vars/development/wordpress_sites.yml",
+		"/Users/kasper/web/reallifegaming/database/backups/example_development.sql",
+		"/Users/kasper/web/joostnijhof.eu/site/composer.json",
+		"/Users/kasper/web/reallifegaming/trellis/group_vars/development/vault.yml",
+		"/Users/kasper/Sync/scripts/kasanova/utilities/go.sh",
+		"/Users/kasper/web/projectmayhem.nl/site/web/app/themes/mayhem/assets/scripts/menu.js",
+		"/Users/kasper/web/projectmayhem.nl/site/web/app/themes/mayhem/templates/section-contact.php",
+		"/Users/kasper/web/projectmayhem.nl/site/web/app/themes/mayhem/assets/styles/common/_global.scss",
+		"/Users/kasper/web/projectmayhem.nl/site/web/app/themes/mayhem/assets/styles/components/_buttons.scss",
+		"/Users/kasper/web/projectmayhem.nl/site/web/app/themes/mayhem/templates/section-newsletter.php",
+		"/Users/kasper/web/projectmayhem.nl/site/web/app/themes/mayhem/templates/section-tickets.php",
+		"/Users/kasper/web/projectmayhem.nl/site/web/app/themes/mayhem/assets/styles/common/_variables.scss",
+		"/Users/kasper/web/projectmayhem.nl/site/web/app/themes/mayhem/assets/styles/layouts/_home.scss",
+		"/Users/kasper/web/projectmayhem.nl/site/web/app/themes/mayhem/front-page.php",
+		"/Users/kasper/web/projectmayhem.nl/site/web/app/themes/mayhem/assets/scripts/main.js",
+		"/Users/kasper/web/projectmayhem.nl/site/web/app/themes/mayhem/lib/setup.php",
+		"/Users/kasper/web/projectmayhem.nl/site/web/app/themes/mayhem/templates/footer.php",
+		"/Users/kasper/web/projectmayhem.nl/site/web/app/themes/mayhem/template-simple.php",
+		"/Users/kasper/web/projectmayhem.nl/site/web/app/themes/mayhem/assets/styles/layouts/_pages.scss",
+		"/Users/kasper/web/projectmayhem.nl/site/web/app/themes/mayhem/assets/scripts/maps.js",
+		"/Users/kasper/.config/filezilla/sitemanager.xml",
+		"/Users/kasper/Sync/scripts/kasanova/README.md",
+		"/Users/kasper/.config/filezilla/recentservers.xml",
+		"/Users/kasper/web/projectmayhem.nl/site/web/app/themes/mayhem/templates/email-obfuscated.php",
+		"/Users/kasper/web/projectmayhem.nl/site/web/app/themes/mayhem/assets/scripts/loader.js"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/kasper/Sync/web/projectmayhem.nl/site/web/app/themes/mayhem/assets/styles",
+			"/Users/kasper/Sync/web/bellamy/web/app/themes/bellamy/assets/styles"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"clean",
+			"jshint",
+			"browsersync",
+			"footer",
+			"sidebar",
+			"full-width",
+			"full-widt",
+			"watch",
+			"reallifegaming.nl",
+			"h3",
+			"created-by",
+			"wpcf7",
+			"s:25",
+			"s:24",
+			"s:25",
+			"wpcf7",
+			"cf7",
+			"commentmeta",
+			"wp_",
+			"reallifegaming.nl",
+			"home",
+			"top",
+			"scroll",
+			"color",
+			"jshint",
+			"location",
+			"projectmayhem.dev",
+			"scroll",
+			"angle",
+			"arrow",
+			"//"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"reallifegaming.dev",
+			"projectmayhem.nl"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 5,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "example.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1658,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								15,
+								15
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "sass/hamburgers.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1143,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								323,
+								323
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "gulpfile.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1013,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								590,
+								590
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "dist/hamburgers.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3064,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2247,
+								2268
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1068.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "sass/animations/_default.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 224,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								219,
+								23
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "sass/animations/_criss-cross.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1812,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								524,
+								526
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "delicious-hamburgers.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"base",
+				"base.php"
+			],
+			[
+				"header",
+				"templates/partials/header.blade.php"
+			],
+			[
+				"header.php",
+				"templates/partials/header.blade.php"
+			],
+			[
+				"menu.",
+				"src/menu.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 275.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
