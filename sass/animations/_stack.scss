@@ -1,7 +1,7 @@
 .hamburger-toggle.stack {
     span.bar {
-        transition: transform .4s $hamburger-easing,
-                    top .4s $hamburger-easing .4s;
+        transition: transform .3s $hamburger-easing,
+                    top .4s $hamburger-easing .3s;
 
         &:nth-child(1) {
 
@@ -18,7 +18,7 @@
 
     &.active {
         span.bar {
-            transition: transform .4s $hamburger-easing .4s,
+            transition: transform .3s $hamburger-easing .4s,
                         top .4s $hamburger-easing;
 
             &:nth-child(1) {
