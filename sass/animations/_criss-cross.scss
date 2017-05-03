@@ -1,71 +1,71 @@
 .hamburger-toggle.criss-cross {
-	> .inner {
-		&::before, &::after {
-			@include hamburger-bar();
-			left: ($hamburger-bar-size - ($hamburger-bar-size / $ROOT-TWO)) / 2;
-			transform-origin: 0 50%;
-			transition: opacity .4s $hamburger-easing, width .4s $hamburger-easing;
-			width: 0;
-			opacity: 0;
-		}
+    > .inner {
+        &::before, &::after {
+            @include hamburger-bar();
+            left: ($hamburger-bar-size - ($hamburger-bar-size / $ROOT-TWO)) / 2;
+            transform-origin: 0 50%;
+            transition: opacity .4s $hamburger-easing, width .4s $hamburger-easing;
+            width: 0;
+            opacity: 0;
+        }
 
-		&::before {
-			transform: rotate(45deg);
-			top: -($hamburger-bar-size / $ROOT-TWO) / 2;
-		}
+        &::before {
+            transform: rotate(45deg);
+            top: -($hamburger-bar-size / $ROOT-TWO) / 2;
+        }
 
-		&::after {
-			transform: rotate(-45deg);
-			top: ($hamburger-bar-size / $ROOT-TWO) / 2;
-			transition-delay: .1s;
-		}
-	}
+        &::after {
+            transform: rotate(-45deg);
+            top: ($hamburger-bar-size / $ROOT-TWO) / 2;
+            transition-delay: .1s;
+        }
+    }
 
-	span.bar {
-		transition: transform .4s $hamburger-easing, 
-					opacity .4s $hamburger-easing,
-					width .4s $hamburger-easing;
+    span.bar {
+        transition: transform .4s $hamburger-easing, 
+                    opacity .4s $hamburger-easing,
+                    width .4s $hamburger-easing;
 
-		@for $i from 1 through 3 {
-			&:nth-child(#{$i}) {
-				transition-delay: .3 + ($i * .03s);
-			}
-		}
-	}
+        @for $i from 1 through 3 {
+            &:nth-child(#{$i}) {
+                transition-delay: .3 + ($i * .03s);
+            }
+        }
+    }
 
-	&.active {
-		> .inner {
-			&::before, &::after {
-				opacity: 1;
-				width: 100%;
-			}
+    &.active {
+        > .inner {
+            &::before, &::after {
+                opacity: 1;
+                width: 100%;
+            }
 
-			&::before {
-				transition-delay: .4s;
-			}
+            &::before {
+                transition-delay: .4s;
+            }
 
-			&::after { 
-				transition-delay: .5s;
-			}
-		}
+            &::after { 
+                transition-delay: .5s;
+            }
+        }
 
-		span.bar {
-			transform: translate3D(-10px, 0, 0);
-			opacity: 0;
-			width: 50%;
+        span.bar {
+            transform: translate3D(-10px, 0, 0);
+            opacity: 0;
+            width: 50%;
 
-			&:nth-child(1) {
-				transition-delay: 0s;
-			}
+            &:nth-child(1) {
+                transition-delay: 0s;
+            }
 
-			&:nth-child(2) {
-				transition-delay: .2s;
-			}
+            &:nth-child(2) {
+                transition-delay: .2s;
+            }
 
-			&:nth-child(3) {
-				transition-delay: .1s;
-			}
-		}
-	}
+            &:nth-child(3) {
+                transition-delay: .1s;
+            }
+        }
+    }
 }
 

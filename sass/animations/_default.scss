@@ -1,19 +1,19 @@
 .hamburger-toggle.default {
-	&.active {
-		span.bar {
-			top: 0;
+    &.active {
+        span.bar {
+            top: 0;
 
-			&:nth-child(1) {
-				transform: rotate(45deg);
-			}
+            &:nth-child(1) {
+                transform: rotate(45deg);
+            }
 
-			&:nth-child(2) {
-				opacity: 0;
-			}
-			
-			&:nth-child(3) {
-				transform: rotate(-45deg);
-			}
-		}
-	}
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            
+            &:nth-child(3) {
+                transform: rotate(-45deg);
+            }
+        }
+    }
 }
