@@ -1,6 +1,6 @@
 .hamburger-toggle.collapse {
     span.bar {
-        transition: transform .5s $hamburger-easing,
+        transition: transform .4s $hamburger-easing,
                     top .25s $hamburger-easing .25s,
                     opacity .25s $hamburger-easing .25s;
     }
@@ -8,7 +8,7 @@
     &.active {
         span.bar {
             top: 0;
-            transition: transform .5s $hamburger-easing,
+            transition: transform .4s $hamburger-easing .1s,
                         top .25s $hamburger-easing,
                         opacity .25s $hamburger-easing;
 
