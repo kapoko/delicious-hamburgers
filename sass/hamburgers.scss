@@ -1,6 +1,6 @@
 // Variables
 $hamburger-size:        	60px !default;
-$hamburger-thickness:   	2px !default; 
+$hamburger-thickness:   	3px !default; 
 $hamburger-color: 			#000 !default;
 
 $hamburger-bar-size:    	$hamburger-size - ($hamburger-size * 0.2);
@@ -27,8 +27,6 @@ $ROOT-TWO: 					1.41421356237309504880;
 	padding: 0;
 	display: inline-block;
 	cursor: pointer;
-	opacity: .8;
-	transition: opacity .2s linear;
 	
 	&.active {
 		background-color: rgba(0, 255, 0, .1);
@@ -54,11 +52,11 @@ $ROOT-TWO: 					1.41421356237309504880;
 		}
 	}
 	
-	&:focus  {
+	&:focus {
 		outline: 0;
-		opacity: 1;
 	}
 }
 
 @import 'animations/default';
 @import 'animations/criss-cross';
+@import 'animations/apple';
