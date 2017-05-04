@@ -86,7 +86,7 @@ $hamburger-color:       #fff;
 @import "~delicious-hamburgers/sass/hamburgers";
 ```
 
-### List
+### List of default variables
 
 Here's a full list of the customizable options available with their default values:
 
