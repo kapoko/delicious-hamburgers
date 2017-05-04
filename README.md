@@ -1,7 +1,7 @@
 # Delicious Hamburgers 🍔
 
 [![Build Status](https://travis-ci.org/kapoko/delicious-hamburgers.svg?branch=master)](https://travis-ci.org/kapoko/delicious-hamburgers)
-[![npm version](https://badge.fury.io/js/delicious-hamburgers.svg)](https://badge.fury.io/js/delicious-hamburgers)
+[![npm version](https://img.shields.io/npm/v/delicious-hamburgers.svg)](https://www.npmjs.com/package/delicious-hamburgers)
 
 Beautiful hamburger menu buttons with pure CSS animations, customizable with SASS.
 
