@@ -1,72 +1,73 @@
-.hamburger--criss-cross {
-    > .inner {
-        &::before, &::after {
-            @include hamburger-bar();
-            left: ($hamburger-bar-size - ($hamburger-bar-size / $ROOT-TWO)) / 2;
-            transform-origin: 0 50%;
-            transition: opacity .4s / $hamburger-animation-speed $hamburger-easing, 
-                        width .4s / $hamburger-animation-speed $hamburger-easing;
-            width: 0;
-            opacity: 0;
-        }
-
-        &::before {
-            transform: rotate(45deg);
-            top: -($hamburger-bar-size / $ROOT-TWO) / 2;
-        }
-
-        &::after {
-            transform: rotate(-45deg);
-            top: ($hamburger-bar-size / $ROOT-TWO) / 2;
-            transition-delay: .1s / $hamburger-animation-speed;
-        }
-    }
-
-    span.bar {
-        transition: transform .4s / $hamburger-animation-speed $hamburger-easing, 
-                    opacity .4s / $hamburger-animation-speed $hamburger-easing,
-                    width .4s / $hamburger-animation-speed $hamburger-easing;
-
-        @for $i from 1 through 3 {
-            &:nth-child(#{$i}) {
-                transition-delay: (.3 + ($i * .03s)) / $hamburger-animation-speed;
-            }
-        }
-    }
-
-    &.active {
+@if index($hamburger-animations, criss-cross) {
+    .hamburger--criss-cross {
         > .inner {
             &::before, &::after {
-                opacity: 1;
-                width: 100%;
+                @include hamburger-bar();
+                left: ($hamburger-bar-size - ($hamburger-bar-size / $ROOT-TWO)) / 2;
+                transform-origin: 0 50%;
+                transition: opacity .4s / $hamburger-animation-speed $hamburger-easing, 
+                            width .4s / $hamburger-animation-speed $hamburger-easing;
+                width: 0;
+                opacity: 0;
             }
 
             &::before {
-                transition-delay: .4s / $hamburger-animation-speed;
+                transform: rotate(45deg);
+                top: -($hamburger-bar-size / $ROOT-TWO) / 2;
             }
 
-            &::after { 
-                transition-delay: .5s / $hamburger-animation-speed;
+            &::after {
+                transform: rotate(-45deg);
+                top: ($hamburger-bar-size / $ROOT-TWO) / 2;
+                transition-delay: .1s / $hamburger-animation-speed;
             }
         }
 
         span.bar {
-            transform: translate3D(-10px, 0, 0);
-            opacity: 0;
-            width: 50%;
+            transition: transform .4s / $hamburger-animation-speed $hamburger-easing, 
+                        opacity .4s / $hamburger-animation-speed $hamburger-easing,
+                        width .4s / $hamburger-animation-speed $hamburger-easing;
 
-            &:nth-child(1) {
-                transition-delay: 0s / $hamburger-animation-speed;
+            @for $i from 1 through 3 {
+                &:nth-child(#{$i}) {
+                    transition-delay: (.3 + ($i * .03s)) / $hamburger-animation-speed;
+                }
+            }
+        }
+
+        &.active {
+            > .inner {
+                &::before, &::after {
+                    opacity: 1;
+                    width: 100%;
+                }
+
+                &::before {
+                    transition-delay: .4s / $hamburger-animation-speed;
+                }
+
+                &::after { 
+                    transition-delay: .5s / $hamburger-animation-speed;
+                }
             }
 
-            &:nth-child(2) {
-                transition-delay: .2s / $hamburger-animation-speed;
-            }
+            span.bar {
+                transform: translate3D(-10px, 0, 0);
+                opacity: 0;
+                width: 50%;
 
-            &:nth-child(3) {
-                transition-delay: .1s / $hamburger-animation-speed;
+                &:nth-child(1) {
+                    transition-delay: 0s / $hamburger-animation-speed;
+                }
+
+                &:nth-child(2) {
+                    transition-delay: .2s / $hamburger-animation-speed;
+                }
+
+                &:nth-child(3) {
+                    transition-delay: .1s / $hamburger-animation-speed;
+                }
             }
         }
     }
 }
-

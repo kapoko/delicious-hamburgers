@@ -1,83 +1,87 @@
-.hamburger--arrow, .hamburger--arrow-right {
-    > .inner {
-        transition: transform .5s / $hamburger-animation-speed $hamburger-easing;
-    }
-
-    span.bar {
-        transition: transform .3s / $hamburger-animation-speed $hamburger-easing,
-                    width .3s / $hamburger-animation-speed $hamburger-easing,
-                    top .3s / $hamburger-animation-speed $hamburger-easing,
-                    right .3s / $hamburger-animation-speed $hamburger-easing;
-        transition-delay: .1s / $hamburger-animation-speed;
-
-        &:nth-child(1) {
-            transform-origin: 100% 0;
-            right: 0;
+@if index($hamburger-animations, arrow) or index($hamburger-animations, arrow-r)  {
+    .hamburger--arrow, .hamburger--arrow-right {
+        > .inner {
+            transition: transform .5s / $hamburger-animation-speed $hamburger-easing;
         }
 
-        &:nth-child(3) {
-            transform-origin: 100% 100%;
-            right: 0;
-        }
-    }
-
-    &.active {
         span.bar {
-            transition-delay: 0s;
+            transition: transform .3s / $hamburger-animation-speed $hamburger-easing,
+                        width .3s / $hamburger-animation-speed $hamburger-easing,
+                        top .3s / $hamburger-animation-speed $hamburger-easing,
+                        right .3s / $hamburger-animation-speed $hamburger-easing;
+            transition-delay: .1s / $hamburger-animation-speed;
 
             &:nth-child(1) {
-                transform: rotate(45deg);
-                top: $hamburger-thickness / 2;
-                width: 40%;
-            }
-
-            &:nth-child(2) {
-                width: $hamburger-bar-size - $hamburger-thickness;
+                transform-origin: 100% 0;
+                right: 0;
             }
 
             &:nth-child(3) {
-                transform: rotate(-45deg);
-                top: -$hamburger-thickness / 2;
-                width: 40%;
+                transform-origin: 100% 100%;
+                right: 0;
             }
         }
 
-        > .inner {
-            transform: rotate(180deg) translate3d(0, -$hamburger-thickness, 0);
+        &.active {
+            span.bar {
+                transition-delay: 0s;
+
+                &:nth-child(1) {
+                    transform: rotate(45deg);
+                    top: $hamburger-thickness / 2;
+                    width: 40%;
+                }
+
+                &:nth-child(2) {
+                    width: $hamburger-bar-size - $hamburger-thickness;
+                }
+
+                &:nth-child(3) {
+                    transform: rotate(-45deg);
+                    top: -$hamburger-thickness / 2;
+                    width: 40%;
+                }
+            }
+
+            > .inner {
+                transform: rotate(180deg) translate3d(0, -$hamburger-thickness, 0);
+            }
         }
     }
 }
 
-.hamburger--arrow-right {
-    span.bar {
-        &:nth-child(1) {
-            transform-origin: 0 0;
-            left: 0;
-        }
-
-        &:nth-child(2) {
-            right: 0;
-        }
-
-        &:nth-child(3) {
-            transform-origin: 0 100%;
-            left: 0;
-        }
-    }
-
-    &.active {
+@if index($hamburger-animations, arrow-r) {
+    .hamburger--arrow-right {
         span.bar {
             &:nth-child(1) {
-                transform: rotate(-45deg);
+                transform-origin: 0 0;
+                left: 0;
+            }
+
+            &:nth-child(2) {
+                right: 0;
             }
 
             &:nth-child(3) {
-                transform: rotate(45deg);
+                transform-origin: 0 100%;
+                left: 0;
             }
         }
 
-        > .inner {
-            transform: rotate(-180deg) translate3d(0, -$hamburger-thickness, 0);
+        &.active {
+            span.bar {
+                &:nth-child(1) {
+                    transform: rotate(-45deg);
+                }
+
+                &:nth-child(3) {
+                    transform: rotate(45deg);
+                }
+            }
+
+            > .inner {
+                transform: rotate(-180deg) translate3d(0, -$hamburger-thickness, 0);
+            }
         }
     }
 }

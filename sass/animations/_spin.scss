@@ -1,36 +1,38 @@
-.hamburger--spin {
-    > .inner {
-        transition: transform .5s / $hamburger-animation-speed $hamburger-easing;
-    }
-
-    span.bar {
-        transition: transform .5s / $hamburger-animation-speed $hamburger-easing,
-                    top .25s / $hamburger-animation-speed $hamburger-easing .25s / $hamburger-animation-speed,
-                    opacity .25s / $hamburger-animation-speed $hamburger-easing .25s / $hamburger-animation-speed;
-    }
-
-    &.active {
-        span.bar {
-            top: 0;
-            transition: transform .5s / $hamburger-animation-speed $hamburger-easing,
-                        top .25s / $hamburger-animation-speed $hamburger-easing,
-                        opacity .25s / $hamburger-animation-speed $hamburger-easing;
-
-            &:nth-child(1) {
-                transform: rotate(135deg);
-            }
-
-            &:nth-child(2) {
-                opacity: 0;
-            }
-
-            &:nth-child(3) {
-                transform: rotate(45deg);
-            }
+@if index($hamburger-animations, spin) {
+    .hamburger--spin {
+        > .inner {
+            transition: transform .5s / $hamburger-animation-speed $hamburger-easing;
         }
 
-        > .inner {
-            transform: rotate(180deg) translate3d(0, -$hamburger-thickness, 0);
+        span.bar {
+            transition: transform .5s / $hamburger-animation-speed $hamburger-easing,
+                        top .25s / $hamburger-animation-speed $hamburger-easing .25s / $hamburger-animation-speed,
+                        opacity .25s / $hamburger-animation-speed $hamburger-easing .25s / $hamburger-animation-speed;
+        }
+
+        &.active {
+            span.bar {
+                top: 0;
+                transition: transform .5s / $hamburger-animation-speed $hamburger-easing,
+                            top .25s / $hamburger-animation-speed $hamburger-easing,
+                            opacity .25s / $hamburger-animation-speed $hamburger-easing;
+
+                &:nth-child(1) {
+                    transform: rotate(135deg);
+                }
+
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+
+                &:nth-child(3) {
+                    transform: rotate(45deg);
+                }
+            }
+
+            > .inner {
+                transform: rotate(180deg) translate3d(0, -$hamburger-thickness, 0);
+            }
         }
     }
 }

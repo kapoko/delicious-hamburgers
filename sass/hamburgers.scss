@@ -1,8 +1,9 @@
-// $hamburger-size: 200px;
-// $hamburger-padding: 15px;
-// $hamburger-bar-spacing: 15px;
-// $hamburger-thickness: 2px;
-$hamburger-color: #000;
+/*!
+ * delicious-hamburgers
+ * @description Beautiful SASS powered hamburger menu toggle buttons
+ * @author Kasper Koman
+ * @link https://github.com/kasperientje/delicious-hamburgers
+ */
 
 // Variables
 $hamburger-size:            50px !default;
@@ -21,7 +22,22 @@ $hamburger-easing:          cubic-bezier(0.645, 0.045, 0.355, 1);
 // "Constants"
 $ROOT-TWO:                  1.41421356237309504880;
 
-// The button backbone
+$hamburger-animations: (
+    apple,
+    arrow,
+    arrow-r,
+    collapse,
+    converge,
+    criss-cross,
+    default,
+    dive,
+    minimal,
+    spin,
+    stack,
+    twist
+) !default;
+
+// Hamburger base
 @mixin hamburger-bar() {
     content: "";
     width: 100%;
