@@ -27,7 +27,7 @@ Beautiful hamburger menu buttons with pure CSS animations, customizable with SAS
     </button>
     ```
 
-3. Use the class `active` on the button to trigger the animation. The implemention is up to you. You could use jQuery for example. Here's [a list](#animations) of the available animations to choose from!
+3. Use the class `active` on the button to trigger the animation. The implemention is up to you. You could use jQuery for example. [Here's a list](#animations) of the available animations to choose from!
 
 ### Install via Yarn, NPM or Bower. 
 
