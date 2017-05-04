@@ -45,7 +45,7 @@ Get that juicy SASS game on. Get your Delicious Hamburgers served up by your fav
 
 2. Import the main `hamburgers.scss` file in your SASS file. 
     
-    <sub>Note the the URL could be different depending on your project setup</sub>
+    <sub>Note that the URL could be different depending on your project setup</sub>
 
     ```sass
     @import "~delicious-hamburgers/sass/hamburgers";
@@ -90,41 +90,41 @@ $hamburger-color:       #fff;
 
 Here's a full list of the customizable options available with their default values:
 
-```sass
-$hamburger-size:            50px;
 ```
-```sass
+$hamburger-size:            50px;               // Thickness of the bars. Note: when using `hamburger--arrow` or `hamburger--arrow-r`, uneven `px` values don't seem to work well in some browsers.
+```
+```
 $hamburger-thickness:       2px;
 ```
-<sup>Thickness of the bars. Note: when using `hamburger--arrow` or `hamburger--arrow-r`, uneven `px` values don't seem to work well in some browsers.</sup>
+↳ <sup>Thickness of the bars. Note: when using `hamburger--arrow` or `hamburger--arrow-r`, uneven `px` values don't seem to work well in some browsers.</sup>
 
-```sass
+```
 $hamburger-color:           #000;
 ```
-```sass
+```
 $hamburger-color-active:    $hamburger-color;
 ```
-```sass
+```
 $hamburger-opacity:         1;
 ```
-```sass
+```
 $hamburger-opacity-hover:   1;
 ```
-```sass
+```
 $hamburger-padding:         $hamburger-size / 10;
 ```
-<sup>The space between the button border and the actual bars. There's a little padding by default so the clickable area is a little bigger than the visual button. You can also use a `px` value here instead of a relative one.</sup>
+↳ <sup>The space between the button border and the actual bars. There's a little padding by default so the clickable area is a little bigger than the visual button. You can also use a `px` value here instead of a relative one.</sup>
 
-```sass
+```
 $hamburger-bar-spacing:     $hamburger-size / 5;
 ```
-<sup>How far the bars are apart from eachother. You can also use a `px` value here instead of a relative one.</sup>
+↳ <sup>How far the bars are apart from eachother. You can also use a `px` value here instead of a relative one.</sup>
 
-```sass
+```
 $hamburger-animation-speed: 1;
 ```
-<sup>The timings of the animations are carefully chosen. But you can use this factor variable to slow down or speed up the animations. Use `.5` for twice as slow, `2` for twice as fast etc.</sup>
+↳ <sup>The timings of the animations are carefully chosen. But you can use this factor variable to slow down or speed up the animations. Use `.5` for twice as slow, `2` for twice as fast etc.</sup>
 
-```sass
+```
 $hamburger-border-radius:   0;
 ```
