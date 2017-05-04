@@ -1,4 +1,4 @@
-.hamburger-toggle.criss-cross {
+.hamburger--criss-cross {
     > .inner {
         &::before, &::after {
             @include hamburger-bar();

@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="../dist/hamburgers.min.css">
     </head>
     <body>
-        <button class="hamburger-toggle default">
+        <button class="hamburger hamburger--default">
             <div class="inner">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -14,7 +14,7 @@
             </div>
         </button>
 
-        <button class="hamburger-toggle criss-cross">
+        <button class="hamburger hamburger--criss-cross">
             <div class="inner">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -22,7 +22,7 @@
             </div>
         </button>
 
-        <button class="hamburger-toggle apple">
+        <button class="hamburger hamburger--apple">
             <div class="inner">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -30,7 +30,7 @@
             </div>
         </button>
 
-        <button class="hamburger-toggle arrow">
+        <button class="hamburger hamburger--arrow">
             <div class="inner">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -38,7 +38,7 @@
             </div>
         </button>
 
-        <button class="hamburger-toggle spin">
+        <button class="hamburger hamburger--arrow-right">
             <div class="inner">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -46,7 +46,7 @@
             </div>
         </button>
 
-        <button class="hamburger-toggle collapse">
+        <button class="hamburger hamburger--spin">
             <div class="inner">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -54,7 +54,7 @@
             </div>
         </button>
 
-        <button class="hamburger-toggle minimal">
+        <button class="hamburger hamburger--collapse">
             <div class="inner">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -62,7 +62,7 @@
             </div>
         </button>
 
-        <button class="hamburger-toggle dive">
+        <button class="hamburger hamburger--minimal">
             <div class="inner">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -70,7 +70,7 @@
             </div>
         </button>
 
-        <button class="hamburger-toggle stack">
+        <button class="hamburger hamburger--dive">
             <div class="inner">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -78,7 +78,7 @@
             </div>
         </button>
 
-       <button class="hamburger-toggle converge">
+        <button class="hamburger hamburger--stack">
             <div class="inner">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -86,7 +86,15 @@
             </div>
         </button>
 
-       <button class="hamburger-toggle twist">
+       <button class="hamburger hamburger--converge">
+            <div class="inner">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </button>
+
+       <button class="hamburger hamburger--twist">
             <div class="inner">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -108,7 +116,7 @@
             */
             var forEach=function(t,o,r){if("[object Object]"===Object.prototype.toString.call(t))for(var c in t)Object.prototype.hasOwnProperty.call(t,c)&&o.call(r,t[c],c,t);else for(var e=0,l=t.length;l>e;e++)o.call(r,t[e],e,t)};
             
-            var hamburgers = document.querySelectorAll(".hamburger-toggle");
+            var hamburgers = document.querySelectorAll(".hamburger");
             
             if (hamburgers.length > 0) {
                 forEach(hamburgers, function(hamburger) {
