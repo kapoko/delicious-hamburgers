@@ -2,11 +2,15 @@
 $hamburger-size:            50px !default;
 $hamburger-thickness:       2px !default; 
 $hamburger-color:           #000 !default;
+$hamburger-color-active:    $hamburger-color !default;
+$hamburger-opacity:         1 !default;
+$hamburger-opacity-hover:   1 !default;
 
 $hamburger-bar-size:        $hamburger-size - ($hamburger-size * 0.2);
 $hamburger-bar-offset:      $hamburger-size / 5;
 $hamburger-easing:          cubic-bezier(0.645, 0.045, 0.355, 1);
 
+// "Constants"
 $ROOT-TWO:                  1.41421356237309504880;
 
 // The button backbone
@@ -19,7 +23,7 @@ $ROOT-TWO:                  1.41421356237309504880;
     background-color: $hamburger-color;
 }
 
-.hamburger-toggle {
+.hamburger {
     width:  $hamburger-size;
     height: $hamburger-size;
     background: rgba(255, 0, 0, .1);
@@ -32,9 +36,15 @@ $ROOT-TWO:                  1.41421356237309504880;
     text-transform: none;
     margin: 0;
     overflow: visible;
-    
+    opacity: $hamburger-opacity;
+    transition: opacity .2s $hamburger-easing;
+
     &.active {
         background-color: rgba(0, 255, 0, .1);
+
+        span.bar {
+            background-color: $hamburger-color-active;
+        }
     }
     
     > .inner {
@@ -60,6 +70,10 @@ $ROOT-TWO:                  1.41421356237309504880;
     
     &:focus {
         outline: 0;
+    }
+
+    &:hover {
+        opacity: $hamburger-opacity-hover;
     }
 }
 
