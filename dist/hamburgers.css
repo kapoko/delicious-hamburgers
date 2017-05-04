@@ -34,13 +34,13 @@
   margin: 0;
   width: 40px;
   top: 50%;
-  margin-top: -2px;
+  margin-top: -1px;
 }
 
 .hamburger span.bar {
   content: "";
   width: 100%;
-  height: 4px;
+  height: 2px;
   display: block;
   position: absolute;
   background-color: #000;
@@ -86,7 +86,7 @@
 .hamburger--criss-cross > .inner::before, .hamburger--criss-cross > .inner::after {
   content: "";
   width: 100%;
-  height: 4px;
+  height: 2px;
   display: block;
   position: absolute;
   background-color: #000;
@@ -194,8 +194,8 @@
   transition: -webkit-transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -webkit-transform: rotate(90deg) translate3d(2px, -2px, 0);
-          transform: rotate(90deg) translate3d(2px, -2px, 0);
+  -webkit-transform: rotate(90deg) translate3d(1px, -1px, 0);
+          transform: rotate(90deg) translate3d(1px, -1px, 0);
 }
 
 .hamburger--apple.active span.bar {
@@ -253,25 +253,25 @@
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
-  top: 2px;
+  top: 1px;
   width: 40%;
 }
 
 .hamburger--arrow.active span.bar:nth-child(2), .hamburger--arrow-right.active span.bar:nth-child(2) {
-  width: 36px;
+  width: 38px;
 }
 
 .hamburger--arrow.active span.bar:nth-child(3), .hamburger--arrow-right.active span.bar:nth-child(3) {
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  top: -2px;
+  top: -1px;
   width: 40%;
 }
 
 .hamburger--arrow.active > .inner, .hamburger--arrow-right.active > .inner {
-  -webkit-transform: rotate(180deg) translate3d(0, -4px, 0);
-          transform: rotate(180deg) translate3d(0, -4px, 0);
+  -webkit-transform: rotate(180deg) translate3d(0, -2px, 0);
+          transform: rotate(180deg) translate3d(0, -2px, 0);
 }
 
 .hamburger--arrow-right span.bar:nth-child(1) {
@@ -305,8 +305,8 @@
 }
 
 .hamburger--arrow-right.active > .inner {
-  -webkit-transform: rotate(-180deg) translate3d(0, -4px, 0);
-          transform: rotate(-180deg) translate3d(0, -4px, 0);
+  -webkit-transform: rotate(-180deg) translate3d(0, -2px, 0);
+          transform: rotate(-180deg) translate3d(0, -2px, 0);
 }
 
 .hamburger--spin > .inner {
@@ -345,8 +345,8 @@
 }
 
 .hamburger--spin.active > .inner {
-  -webkit-transform: rotate(180deg) translate3d(0, -4px, 0);
-          transform: rotate(180deg) translate3d(0, -4px, 0);
+  -webkit-transform: rotate(180deg) translate3d(0, -2px, 0);
+          transform: rotate(180deg) translate3d(0, -2px, 0);
 }
 
 .hamburger--collapse span.bar {

@@ -7,7 +7,7 @@
 
 // Variables
 $hamburger-size:            50px !default;
-$hamburger-thickness:       4px !default; 
+$hamburger-thickness:       2px !default; 
 $hamburger-color:           #000 !default;
 $hamburger-color-active:    $hamburger-color !default;
 $hamburger-opacity:         1 !default;
@@ -17,12 +17,8 @@ $hamburger-bar-spacing:     $hamburger-size / 5 !default;
 $hamburger-animation-speed: 1 !default;
 $hamburger-border-radius:   0 !default;
 
-$hamburger-bar-size:        $hamburger-size - ($hamburger-padding * 2);
-$hamburger-easing:          cubic-bezier(0.645, 0.045, 0.355, 1);
-
-// "Constants"
-$ROOT-TWO:                  1.41421356237309504880;
-
+// Animation types. Use this as a variable and remove the animations
+// you don't need so they won't get compiled in your css.
 $hamburger-animations: (
     apple,
     arrow,
@@ -37,6 +33,12 @@ $hamburger-animations: (
     stack,
     twist
 ) !default;
+
+$hamburger-bar-size:        $hamburger-size - ($hamburger-padding * 2);
+$hamburger-easing:          cubic-bezier(0.645, 0.045, 0.355, 1);
+
+// "Constants"
+$ROOT-TWO:                  1.41421356237309504880;
 
 // Hamburger base
 @mixin hamburger-bar() {
