@@ -34,16 +34,17 @@
   margin: 0;
   width: 40px;
   top: 50%;
-  margin-top: -1px;
+  margin-top: -2px;
 }
 
 .hamburger span.bar {
   content: "";
   width: 100%;
-  height: 2px;
+  height: 4px;
   display: block;
   position: absolute;
   background-color: #000;
+  border-radius: 0;
 }
 
 .hamburger span.bar:nth-child(1) {
@@ -85,10 +86,11 @@
 .hamburger--criss-cross > .inner::before, .hamburger--criss-cross > .inner::after {
   content: "";
   width: 100%;
-  height: 2px;
+  height: 4px;
   display: block;
   position: absolute;
   background-color: #000;
+  border-radius: 0;
   left: 5.85786px;
   -webkit-transform-origin: 0 50%;
       -ms-transform-origin: 0 50%;
@@ -192,8 +194,8 @@
   transition: -webkit-transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -webkit-transform: rotate(90deg) translate3d(1px, -1px, 0);
-          transform: rotate(90deg) translate3d(1px, -1px, 0);
+  -webkit-transform: rotate(90deg) translate3d(2px, -2px, 0);
+          transform: rotate(90deg) translate3d(2px, -2px, 0);
 }
 
 .hamburger--apple.active span.bar {
@@ -251,25 +253,25 @@
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
-  top: 1px;
+  top: 2px;
   width: 40%;
 }
 
 .hamburger--arrow.active span.bar:nth-child(2), .hamburger--arrow-right.active span.bar:nth-child(2) {
-  width: 38px;
+  width: 36px;
 }
 
 .hamburger--arrow.active span.bar:nth-child(3), .hamburger--arrow-right.active span.bar:nth-child(3) {
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  top: -1px;
+  top: -2px;
   width: 40%;
 }
 
 .hamburger--arrow.active > .inner, .hamburger--arrow-right.active > .inner {
-  -webkit-transform: rotate(180deg) translate3d(0, -2px, 0);
-          transform: rotate(180deg) translate3d(0, -2px, 0);
+  -webkit-transform: rotate(180deg) translate3d(0, -4px, 0);
+          transform: rotate(180deg) translate3d(0, -4px, 0);
 }
 
 .hamburger--arrow-right span.bar:nth-child(1) {
@@ -303,8 +305,8 @@
 }
 
 .hamburger--arrow-right.active > .inner {
-  -webkit-transform: rotate(-180deg) translate3d(0, -2px, 0);
-          transform: rotate(-180deg) translate3d(0, -2px, 0);
+  -webkit-transform: rotate(-180deg) translate3d(0, -4px, 0);
+          transform: rotate(-180deg) translate3d(0, -4px, 0);
 }
 
 .hamburger--spin > .inner {
@@ -343,8 +345,8 @@
 }
 
 .hamburger--spin.active > .inner {
-  -webkit-transform: rotate(180deg) translate3d(0, -2px, 0);
-          transform: rotate(180deg) translate3d(0, -2px, 0);
+  -webkit-transform: rotate(180deg) translate3d(0, -4px, 0);
+          transform: rotate(180deg) translate3d(0, -4px, 0);
 }
 
 .hamburger--collapse span.bar {

@@ -7,7 +7,7 @@
 
 // Variables
 $hamburger-size:            50px !default;
-$hamburger-thickness:       2px !default; 
+$hamburger-thickness:       4px !default; 
 $hamburger-color:           #000 !default;
 $hamburger-color-active:    $hamburger-color !default;
 $hamburger-opacity:         1 !default;
@@ -15,6 +15,7 @@ $hamburger-opacity-hover:   1 !default;
 $hamburger-padding:         $hamburger-size / 10 !default;
 $hamburger-bar-spacing:     $hamburger-size / 5 !default;
 $hamburger-animation-speed: 1 !default;
+$hamburger-border-radius:   0 !default;
 
 $hamburger-bar-size:        $hamburger-size - ($hamburger-padding * 2);
 $hamburger-easing:          cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -45,6 +46,7 @@ $hamburger-animations: (
     display: block;
     position: absolute;
     background-color: $hamburger-color;
+    border-radius: $hamburger-border-radius;
 }
 
 .hamburger {
