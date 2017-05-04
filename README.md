@@ -3,7 +3,7 @@
 [![npm version](https://img.shields.io/npm/v/delicious-hamburgers.svg)](https://www.npmjs.com/package/delicious-hamburgers)
 [![Build Status](https://travis-ci.org/kapoko/delicious-hamburgers.svg?branch=master)](https://travis-ci.org/kapoko/delicious-hamburgers)
 
-Beautiful hamburger menu buttons with pure CSS animations, customizable with SASS.
+Beautiful hamburger menu buttons with pure CSS animations, customisable with SASS.
 
 ## Usage
 
@@ -76,11 +76,11 @@ hamburger--stack
 hamburger--twist
 ```
 
-## Customization
+## Customisation
 
 ### How-to 
 
-With the power of SASS you can customize the buttons to fit your project even better. Declare your variables before including `hamburgers.scss`, only then they will override the default values. Like so: 
+With the power of SASS you can customise the buttons to fit your project even better. Declare your variables before including `hamburgers.scss`, only then they will override the default values. Like so: 
 
 ```sass
 $hamburger-color:               #fff;
