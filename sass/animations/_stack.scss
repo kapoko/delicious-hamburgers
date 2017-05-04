@@ -1,26 +1,28 @@
-.hamburger--stack {
-    span.bar {
-        transition: transform .3s / $hamburger-animation-speed $hamburger-easing,
-                    top .4s / $hamburger-animation-speed $hamburger-easing .3s / $hamburger-animation-speed;
-    }
-
-    &.active {
+@if index($hamburger-animations, stack) {
+    .hamburger--stack {
         span.bar {
-            transition: transform .3s / $hamburger-animation-speed $hamburger-easing .4s / $hamburger-animation-speed,
-                        top .4s / $hamburger-animation-speed $hamburger-easing;
+            transition: transform .3s / $hamburger-animation-speed $hamburger-easing,
+                        top .4s / $hamburger-animation-speed $hamburger-easing .3s / $hamburger-animation-speed;
+        }
 
-            &:nth-child(1) {
-                transform: rotate(45deg);
-                top: 0;
-            }
+        &.active {
+            span.bar {
+                transition: transform .3s / $hamburger-animation-speed $hamburger-easing .4s / $hamburger-animation-speed,
+                            top .4s / $hamburger-animation-speed $hamburger-easing;
 
-            &:nth-child(2) {
-                transform: rotate(45deg);
-            }
+                &:nth-child(1) {
+                    transform: rotate(45deg);
+                    top: 0;
+                }
 
-            &:nth-child(3) {
-                transform: rotate(-45deg);
-                top: 0;
+                &:nth-child(2) {
+                    transform: rotate(45deg);
+                }
+
+                &:nth-child(3) {
+                    transform: rotate(-45deg);
+                    top: 0;
+                }
             }
         }
     }
