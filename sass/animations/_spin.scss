@@ -1,20 +1,20 @@
 .hamburger--spin {
     > .inner {
-        transition: transform .5s $hamburger-easing;
+        transition: transform .5s / $hamburger-animation-speed $hamburger-easing;
     }
 
     span.bar {
-        transition: transform .5s $hamburger-easing,
-                    top .25s $hamburger-easing .25s,
-                    opacity .25s $hamburger-easing .25s;
+        transition: transform .5s / $hamburger-animation-speed $hamburger-easing,
+                    top .25s / $hamburger-animation-speed $hamburger-easing .25s / $hamburger-animation-speed,
+                    opacity .25s / $hamburger-animation-speed $hamburger-easing .25s / $hamburger-animation-speed;
     }
 
     &.active {
         span.bar {
             top: 0;
-            transition: transform .5s $hamburger-easing,
-                        top .25s $hamburger-easing,
-                        opacity .25s $hamburger-easing;
+            transition: transform .5s / $hamburger-animation-speed $hamburger-easing,
+                        top .25s / $hamburger-animation-speed $hamburger-easing,
+                        opacity .25s / $hamburger-animation-speed $hamburger-easing;
 
             &:nth-child(1) {
                 transform: rotate(135deg);

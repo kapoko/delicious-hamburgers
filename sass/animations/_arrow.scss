@@ -1,14 +1,14 @@
 .hamburger--arrow, .hamburger--arrow-right {
     > .inner {
-        transition: transform .5s $hamburger-easing;
+        transition: transform .5s / $hamburger-animation-speed $hamburger-easing;
     }
 
     span.bar {
-        transition: transform .3s $hamburger-easing,
-                    width .3s $hamburger-easing,
-                    top .3s $hamburger-easing,
-                    right .3s $hamburger-easing;
-        transition-delay: .1s;
+        transition: transform .3s / $hamburger-animation-speed $hamburger-easing,
+                    width .3s / $hamburger-animation-speed $hamburger-easing,
+                    top .3s / $hamburger-animation-speed $hamburger-easing,
+                    right .3s / $hamburger-animation-speed $hamburger-easing;
+        transition-delay: .1s / $hamburger-animation-speed;
 
         &:nth-child(1) {
             transform-origin: 100% 0;

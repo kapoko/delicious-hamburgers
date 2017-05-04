@@ -1,16 +1,16 @@
 .hamburger--collapse {
     span.bar {
-        transition: transform .4s $hamburger-easing,
-                    top .25s $hamburger-easing .25s,
-                    opacity .25s $hamburger-easing .25s;
+        transition: transform .4s / $hamburger-animation-speed $hamburger-easing,
+                    top .25s / $hamburger-animation-speed $hamburger-easing .25s / $hamburger-animation-speed,
+                    opacity .25s / $hamburger-animation-speed $hamburger-easing .25s / $hamburger-animation-speed;
     }
     
     &.active {
         span.bar {
             top: 0;
-            transition: transform .4s $hamburger-easing .1s,
-                        top .25s $hamburger-easing,
-                        opacity .25s $hamburger-easing;
+            transition: transform .4s / $hamburger-animation-speed $hamburger-easing .1s / $hamburger-animation-speed,
+                        top .25s / $hamburger-animation-speed $hamburger-easing,
+                        opacity .25s / $hamburger-animation-speed $hamburger-easing;
 
             &:nth-child(1) {
                 transform: rotate(135deg);

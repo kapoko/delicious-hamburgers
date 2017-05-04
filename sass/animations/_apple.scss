@@ -1,15 +1,15 @@
 .hamburger--apple {
     > .inner {
-        transition: transform .5s $hamburger-easing,
-                    top .5s $hamburger-easing;
+        transition: transform .5s / $hamburger-animation-speed $hamburger-easing,
+                    top .5s / $hamburger-animation-speed $hamburger-easing;
     }
 
     span.bar {
 
         &:nth-child(1) {
-            top: -$hamburger-bar-offset * .8;
-            transition: top .5s $hamburger-easing,
-                        transform .25s $hamburger-easing;
+            top: -$hamburger-bar-spacing * .8;
+            transition: top .5s / $hamburger-animation-speed $hamburger-easing,
+                        transform .25s / $hamburger-animation-speed $hamburger-easing;
         }
 
         &:nth-child(2) {
@@ -17,22 +17,22 @@
         }
 
         &:nth-child(3) {
-            top: $hamburger-bar-offset * .8;
-            transition: top .5s $hamburger-easing,
-                        transform .35s $hamburger-easing;
+            top: $hamburger-bar-spacing * .8;
+            transition: top .5s / $hamburger-animation-speed $hamburger-easing,
+                        transform .35s / $hamburger-animation-speed $hamburger-easing;
         }
     }
 
     &.active {
 
         > .inner {
-            transition: transform .35s $hamburger-easing;
+            transition: transform .35s / $hamburger-animation-speed $hamburger-easing;
             transform: rotate(90deg) translate3d($hamburger-thickness / 2, -$hamburger-thickness / 2, 0);
         }
 
         span.bar {
-            transition: top .5s $hamburger-easing,
-                        transform .35s $hamburger-easing .15s;
+            transition: top .5s / $hamburger-animation-speed $hamburger-easing,
+                        transform .35s / $hamburger-animation-speed $hamburger-easing .15s / $hamburger-animation-speed;
 
             &:nth-child(1) {
                 top: 0;

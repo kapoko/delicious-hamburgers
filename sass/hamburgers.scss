@@ -1,3 +1,9 @@
+// $hamburger-size: 200px;
+// $hamburger-padding: 15px;
+// $hamburger-bar-spacing: 15px;
+// $hamburger-thickness: 2px;
+$hamburger-color: #000;
+
 // Variables
 $hamburger-size:            50px !default;
 $hamburger-thickness:       2px !default; 
@@ -5,9 +11,11 @@ $hamburger-color:           #000 !default;
 $hamburger-color-active:    $hamburger-color !default;
 $hamburger-opacity:         1 !default;
 $hamburger-opacity-hover:   1 !default;
+$hamburger-padding:         $hamburger-size / 10 !default;
+$hamburger-bar-spacing:     $hamburger-size / 5 !default;
+$hamburger-animation-speed: 1 !default;
 
-$hamburger-bar-size:        $hamburger-size - ($hamburger-size * 0.2);
-$hamburger-bar-offset:      $hamburger-size / 5;
+$hamburger-bar-size:        $hamburger-size - ($hamburger-padding * 2);
 $hamburger-easing:          cubic-bezier(0.645, 0.045, 0.355, 1);
 
 // "Constants"
@@ -28,7 +36,7 @@ $ROOT-TWO:                  1.41421356237309504880;
     height: $hamburger-size;
     background: rgba(255, 0, 0, .1);
     border: none;
-    padding: 0;
+    padding: $hamburger-padding;
     display: inline-block;
     cursor: pointer;
     font: inherit;
@@ -49,8 +57,7 @@ $ROOT-TWO:                  1.41421356237309504880;
     
     > .inner {
         position: relative;
-        margin-left: $hamburger-size * 0.1;
-        margin-right: $hamburger-size * 0.1;
+        margin: 0;
         width: $hamburger-bar-size;
         top: 50%;
         margin-top: -$hamburger-thickness / 2;
@@ -60,11 +67,11 @@ $ROOT-TWO:                  1.41421356237309504880;
         @include hamburger-bar();
 
         &:nth-child(1) {
-            top: -$hamburger-bar-offset;
+            top: -$hamburger-bar-spacing;
         }
 
         &:nth-child(3) {
-            top: $hamburger-bar-offset;
+            top: $hamburger-bar-spacing;
         }
     }
     
