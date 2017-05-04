@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kasperientje/delicious-hamburgers.git"
+    "url": "git+https://github.com/kapoko/delicious-hamburgers.git"
   },
   "keywords": [
     "sass",
@@ -18,9 +18,9 @@
   "author": "Kasper Koman",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kasperientje/delicious-hamburgers/issues"
+    "url": "https://github.com/kapoko/delicious-hamburgers/issues"
   },
-  "homepage": "https://github.com/kasperientje/delicious-hamburgers#readme",
+  "homepage": "https://github.com/kapoko/delicious-hamburgers#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
