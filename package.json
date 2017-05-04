@@ -7,6 +7,9 @@
     "type": "git",
     "url": "git+https://github.com/kapoko/delicious-hamburgers.git"
   },
+  "scripts": {
+    "test": "gulp",
+  },
   "keywords": [
     "sass",
     "css",
