@@ -15,7 +15,7 @@ gulp.task('clean', function() {
 gulp.task('css', function() {
     return gulp.src('sass/hamburgers.scss')
         .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
-        .pipe(autoprefixer('last 2 versions'))
+        .pipe(autoprefixer('last 5 versions'))
         .pipe(gulp.dest('dist'))
         .pipe(rename({suffix: '.min'}))
         .pipe(sass({outputStyle: 'compressed'}))
