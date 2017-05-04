@@ -83,7 +83,7 @@ hamburger--twist
 With the power of SASS you can customize the buttons to fit your project even better. Declare your variables before including `hamburgers.scss`, only then they will override the default values. Like so: 
 
 ```sass
-$hamburger-color:       #fff;
+$hamburger-color:               #fff;
 
 @import "~delicious-hamburgers/sass/hamburgers";
 ```
