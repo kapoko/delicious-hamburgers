@@ -132,3 +132,7 @@ $hamburger-animation-speed:     1;
 ```sass
 $hamburger-border-radius:       0;
 ```
+
+## Copyright and license
+
+Code released under [MIT License](https://github.com/kapoko/delicious-hamburgers/blob/master/LICENSE). Hack away! 🤘
