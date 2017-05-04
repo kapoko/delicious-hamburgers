@@ -86,17 +86,16 @@ $hamburger-color:       #fff;
 
 Here's a full list of the customizable options available:
 
-| Variable                    | Default              | Notes |
-| --------------------------- | -------------------- | ----- |
-| $hamburger-size             | 50px                 | |
-| $hamburger-thickness        | 2px                  | Thickness of the bars.<br><sub>Note: when using `hamburger--arrow` or `hamburger--arrow-r`, uneven `px` values don't seem to work well in some browsers.</sub> |
-| $hamburger-color            | #000                 | |
-| $hamburger-color-active     | $hamburger-color     | |
-| $hamburger-opacity          | 1                    | |
-| $hamburger-opacity-hover    | 1                    | |
-| $hamburger-padding          | $hamburger-size / 10 | The space between the button border and the actualbars. There's a little padding by default so the clickable area is a little bigger than the visual button. |
-| $hamburger-bar-spacing      | $hamburger-size / 5  | How far the bars are apart from eachother. |
-| $hamburger-animation-speed  | 1                    | The timings of the animations are carefully chosen. But you can use this factor variable to slow down or speed up the animations. Use `.5` for twice as slow, `2` for twice as fast etc. |
-| $hamburger-border-radius    | 0                    | Border-radius of the bars. |
-
+| Variable                                                                 | Default              | Notes                                                                                                                                                                                    |
+|--------------------------------------------------------------------------|----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| $hamburger-size                                                          | 50px                 |                                                                                                                                                                                          |
+| $hamburger-thickness                                                     | 2px                  | Thickness of the bars.<br><sub>Note: when using `hamburger--arrow` or `hamburger--arrow-r`, uneven `px` values don't seem to work well in some browsers.</sub>                           |
+| $hamburger-color                                                         | #000                 |                                                                                                                                                                                          |
+| $hamburger-color-active                                                  | $hamburger-color     |                                                                                                                                                                                          |
+| $hamburger-opacity                                                       | 1                    |                                                                                                                                                                                          |
+| $hamburger-opacity-hover                                                 | 1                    |                                                                                                                                                                                          |
+| $hamburger-padding                                                       | $hamburger-size / 10 | The space between the button border and the actualbars. There's a little padding by default so the clickable area is a little bigger than the visual button.                             |
+| $hamburger-bar-spacing                                                   | $hamburger-size / 5  | How far the bars are apart from eachother.                                                                                                                                               |
+| $hamburger-animation-speed                                               | 1                    | The timings of the animations are carefully chosen. But you can use this factor variable to slow down or speed up the animations. Use `.5` for twice as slow, `2` for twice as fast etc. |
+| $hamburger-border-radius                                                 | 0                    | Border-radius of the bars.                                                                                                                                                               |
 
