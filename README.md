@@ -76,6 +76,8 @@ hamburger--twist
 
 ## Customization
 
+### How-to 
+
 With the power of SASS you can customize the buttons to fit your project even better. Declare your variables before including `hamburgers.scss`, only then they will override the default values. Like so: 
 
 ```sass
@@ -84,18 +86,45 @@ $hamburger-color:       #fff;
 @import "~delicious-hamburgers/sass/hamburgers";
 ```
 
-Here's a full list of the customizable options available:
+### List
 
-| Variable                                                                 | Default                | Notes                                                                                                                                                                                                     |
-|--------------------------------------------------------------------------|------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `$hamburger-size`                                                        | `50px`                 |                                                                                                                                                                                                           |
-| `$hamburger-thickness`                                                   | `2px`                  | <sup>Thickness of the bars. Note: when using `hamburger--arrow` or `hamburger--arrow-r`, uneven `px` values don't seem to work well in some browsers.</sup>                                           |
-| `$hamburger-color`                                                       | `#000`                 |                                                                                                                                                                                                           |
-| `$hamburger-color-active`                                                | `$hamburger-color`     |                                                                                                                                                                                                           |
-| `$hamburger-opacity`                                                     | `1`                    |                                                                                                                                                                                                           |
-| `$hamburger-opacity-hover`                                               | `1`                    |                                                                                                                                                                                                           |
-| `$hamburger-padding`                                                     | `$hamburger-size / 10` | <sup>The space between the button border and the actual bars. There's a little padding by default so the clickable area is a little bigger than the visual button.</sup>                              |
-| `$hamburger-bar-spacing`                                                 | `$hamburger-size / 5`  | <sup>How far the bars are apart from eachother. You can also use a `px` value here instead of a relative one.</sup>                                                                                   |
-| `$hamburger-animation-speed`                                             | `1`                    | <sup>The timings of the animations are carefully chosen. But you can use this factor variable to slow down or speed up the animations. Use `.5` for twice as slow, `2` for twice as fast etc.</sup>   |
-| `$hamburger-border-radius`                                               | `0`                    | <sup>Border-radius of the bars.</sup>                                                                                                                                                                 |
+Here's a full list of the customizable options available with their default values:
 
+```sass
+$hamburger-size:            50px;
+```
+```sass
+$hamburger-thickness:       2px;
+```
+<sup>Thickness of the bars. Note: when using `hamburger--arrow` or `hamburger--arrow-r`, uneven `px` values don't seem to work well in some browsers.</sup>
+
+```sass
+$hamburger-color:           #000;
+```
+```sass
+$hamburger-color-active:    $hamburger-color;
+```
+```sass
+$hamburger-opacity:         1;
+```
+```sass
+$hamburger-opacity-hover:   1;
+```
+```sass
+$hamburger-padding:         $hamburger-size / 10;
+```
+<sup>The space between the button border and the actual bars. There's a little padding by default so the clickable area is a little bigger than the visual button. You can also use a `px` value here instead of a relative one.</sup>
+
+```sass
+$hamburger-bar-spacing:     $hamburger-size / 5;
+```
+<sup>How far the bars are apart from eachother. You can also use a `px` value here instead of a relative one.</sup>
+
+```sass
+$hamburger-animation-speed: 1;
+```
+<sup>The timings of the animations are carefully chosen. But you can use this factor variable to slow down or speed up the animations. Use `.5` for twice as slow, `2` for twice as fast etc.</sup>
+
+```sass
+$hamburger-border-radius:   0;
+```
