@@ -9,7 +9,7 @@ Beautiful hamburger menu buttons with pure CSS animations, customizable with SAS
 
 ### Plain CSS
 
-1. [Download this stylesheet](https://github.com/kapoko/delicious-hamburgers/blob/master/dist/hamburgers.min.css) and include it on your page inside the `<head>` tags.
+1. [Download this stylesheet](https://github.com/kapoko/delicious-hamburgers/blob/master/dist/hamburgers.min.css), it's all you need. Include it on your page inside the `<head>` tags.
 
     ```html
     <link href="path/to/hamburgers.min.css" rel="stylesheet">
