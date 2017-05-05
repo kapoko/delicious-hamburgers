@@ -13,7 +13,7 @@ gulp.task('clean', function() {
 });
 
 gulp.task('css', function() {
-    return gulp.src('sass/hamburgers.scss')
+    return gulp.src('scss/hamburgers.scss')
         .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
         .pipe(autoprefixer('last 5 versions'))
         .pipe(gulp.dest('dist'))
@@ -24,7 +24,7 @@ gulp.task('css', function() {
 
 gulp.task('watch', function (callback) {
     gulpSequence('build')(callback);
-    gulp.watch('sass/**/*.scss', ['build'])
+    gulp.watch('scss/**/*.scss', ['build'])
 });
 
 gulp.task('build', function(callback) {
