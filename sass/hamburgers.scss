@@ -6,16 +6,20 @@
  */
 
 // Variables
-$hamburger-size:            50px !default;
-$hamburger-thickness:       2px !default; 
-$hamburger-color:           #000 !default;
-$hamburger-color-active:    $hamburger-color !default;
-$hamburger-opacity:         1 !default;
-$hamburger-opacity-hover:   1 !default;
-$hamburger-padding:         $hamburger-size / 10 !default;
-$hamburger-bar-spacing:     $hamburger-size / 5 !default;
-$hamburger-animation-speed: 1 !default;
-$hamburger-border-radius:   0 !default;
+$hamburger-size:                50px !default;
+$hamburger-thickness:           2px !default; 
+$hamburger-color:               #000 !default;
+$hamburger-color-active:        $hamburger-color !default;
+$hamburger-background:          transparent !default;
+$hamburger-background-active:   $hamburger-background !default;
+$hamburger-border-color:        transparent !default;
+$hamburger-border-width:        0 !default;
+$hamburger-opacity:             1 !default;
+$hamburger-opacity-hover:       1 !default;
+$hamburger-padding:             $hamburger-size / 10 !default;
+$hamburger-bar-spacing:         $hamburger-size / 5 !default;
+$hamburger-animation-speed:     1 !default;
+$hamburger-border-radius:       0 !default;
 
 // Animation types. Use this as a variable and remove the animations
 // you don't need so they won't get compiled in your css.
@@ -34,7 +38,7 @@ $hamburger-animations: (
     twist
 ) !default;
 
-$hamburger-bar-size:        $hamburger-size - ($hamburger-padding * 2);
+$hamburger-bar-size:        $hamburger-size - ($hamburger-padding * 2) - ($hamburger-border-width * 2);
 $hamburger-easing:          cubic-bezier(0.645, 0.045, 0.355, 1);
 
 // "Constants"
@@ -51,11 +55,19 @@ $ROOT-TWO:                  1.41421356237309504880;
     border-radius: $hamburger-border-radius;
 }
 
-.hamburger {
+button.hamburger {
     width:  $hamburger-size;
-    height: $hamburger-size;
-    background: rgba(255, 0, 0, .1);
-    border: none;
+    height: $hamburger-size;    
+}
+
+div.hamburger {
+    width:  $hamburger-size - ($hamburger-padding * 2) - ($hamburger-border-width * 2);
+    height: $hamburger-size - ($hamburger-padding * 2) - ($hamburger-border-width * 2);     
+}
+
+.hamburger {
+    background: $hamburger-background;
+    border: $hamburger-border-width $hamburger-border-color solid;
     padding: $hamburger-padding;
     display: inline-block;
     cursor: pointer;
@@ -65,10 +77,10 @@ $ROOT-TWO:                  1.41421356237309504880;
     margin: 0;
     overflow: visible;
     opacity: $hamburger-opacity;
-    transition: opacity .2s $hamburger-easing;
+    transition: opacity .2s $hamburger-easing, background .2s $hamburger-easing;
 
     &.active {
-        background-color: rgba(0, 255, 0, .1);
+        background: $hamburger-background-active;
 
         span.bar {
             background-color: $hamburger-color-active;
@@ -78,7 +90,7 @@ $ROOT-TWO:                  1.41421356237309504880;
     > .inner {
         position: relative;
         margin: 0;
-        width: $hamburger-bar-size;
+        width: 100%; //$hamburger-bar-size;
         top: 50%;
         margin-top: -$hamburger-thickness / 2;
     }
