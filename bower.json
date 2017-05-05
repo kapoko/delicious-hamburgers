@@ -4,7 +4,7 @@
     "Kasper Koman <kasper.koman@gmail.com>"
   ],
   "description": "Beautiful SASS powered hamburger menu toggle buttons",
-  "main": "sass/hamburgers.scss",
+  "main": "scss/hamburgers.scss",
   "keywords": [
     "sass",
     "css",
