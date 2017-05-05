@@ -2,13 +2,21 @@
  * delicious-hamburgers
  * @description Beautiful SASS powered hamburger menu toggle buttons
  * @author Kasper Koman
- * @link https://github.com/kasperientje/delicious-hamburgers
+ * @link https://github.com/kapoko/delicious-hamburgers
  */
-.hamburger {
+button.hamburger {
   width: 50px;
   height: 50px;
-  background: rgba(255, 0, 0, 0.1);
-  border: none;
+}
+
+div.hamburger {
+  width: 40px;
+  height: 40px;
+}
+
+.hamburger {
+  background: transparent;
+  border: 0 transparent solid;
   padding: 5px;
   display: inline-block;
   cursor: pointer;
@@ -18,11 +26,11 @@
   margin: 0;
   overflow: visible;
   opacity: 1;
-  transition: opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), background 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .hamburger.active {
-  background-color: rgba(0, 255, 0, 0.1);
+  background: transparent;
 }
 
 .hamburger.active span.bar {
@@ -32,7 +40,7 @@
 .hamburger > .inner {
   position: relative;
   margin: 0;
-  width: 40px;
+  width: 100%;
   top: 50%;
   margin-top: -1px;
 }
