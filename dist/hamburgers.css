@@ -14,6 +14,10 @@ div.hamburger {
   height: 40px;
 }
 
+div.hamburger > .inner {
+  top: 50%;
+}
+
 .hamburger {
   background: transparent;
   border: 0 transparent solid;
@@ -41,7 +45,6 @@ div.hamburger {
   position: relative;
   margin: 0;
   width: 100%;
-  top: 50%;
   margin-top: -1px;
 }
 
