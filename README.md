@@ -3,7 +3,7 @@
 [![npm version](https://img.shields.io/npm/v/delicious-hamburgers.svg)](https://www.npmjs.com/package/delicious-hamburgers)
 [![Build Status](https://travis-ci.org/kapoko/delicious-hamburgers.svg?branch=master)](https://travis-ci.org/kapoko/delicious-hamburgers)
 
-Beautiful hamburger menu buttons with pure CSS animations, customisable with SASS.
+Beautiful hamburger menu buttons animated in pure CSS, customisable with Sass.
 
 ## Usage
 
@@ -33,7 +33,7 @@ Beautiful hamburger menu buttons with pure CSS animations, customisable with SAS
 
 ### Install via Yarn, NPM or Bower. 
 
-Get that juicy SASS game on. Get your Delicious Hamburgers served up by your favourite package manager.
+Get that juicy Sass game on. Get your Delicious Hamburgers served up by your favourite package manager.
 
 1. Install through the command line.
 
@@ -45,7 +45,7 @@ Get that juicy SASS game on. Get your Delicious Hamburgers served up by your fav
     bower install delicious-hamburgers
     ```
 
-2. Import the main `hamburgers.scss` file in your SASS file. 
+2. Import the main `hamburgers.scss` file in your Sass file. 
     
     <sub>Note that the URL could be different depending on your project setup</sub>
 
@@ -53,7 +53,7 @@ Get that juicy SASS game on. Get your Delicious Hamburgers served up by your fav
     @import "~delicious-hamburgers/sass/hamburgers";
     ```
 
-3. Compile your SASS. 
+3. Compile your Sass. 
 
 You can of course also [download](https://github.com/kapoko/delicious-hamburgers/archive/master.zip) the source and add it to your project manually.
 
@@ -80,7 +80,7 @@ hamburger--twist
 
 ### How-to 
 
-With the power of SASS you can customise the buttons to fit your project even better. Declare your variables before including `hamburgers.scss`, only then they will override the default values. Like so: 
+With the power of Sass you can customise the buttons to fit your project even better. Declare your variables before including `hamburgers.scss`, only then they will override the default values. Like so: 
 
 ```sass
 $hamburger-color:               #fff;
