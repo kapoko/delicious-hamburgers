@@ -4,3 +4,5 @@
 # NPM & Bower
 node_modules/
 bower_components/
+
+*.sublime-workspace
