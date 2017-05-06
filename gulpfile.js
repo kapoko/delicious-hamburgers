@@ -19,12 +19,12 @@ gulp.task('css', function() {
         .pipe(gulp.dest('dist'))
         .pipe(rename({suffix: '.min'}))
         .pipe(sass({outputStyle: 'compressed'}))
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('dist'));
 });
 
 gulp.task('watch', function (callback) {
     gulpSequence('build')(callback);
-    gulp.watch('scss/**/*.scss', ['build'])
+    gulp.watch('scss/**/*.scss', ['build']);
 });
 
 gulp.task('build', function(callback) {
