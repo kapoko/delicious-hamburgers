@@ -61,8 +61,8 @@ button.hamburger {
 }
 
 div.hamburger {
-    width:  $hamburger-size - ($hamburger-padding * 2) - ($hamburger-border-width * 2);
-    height: $hamburger-size - ($hamburger-padding * 2) - ($hamburger-border-width * 2);
+    width:  $hamburger-size - ($hamburger-border-width * 2);
+    height: $hamburger-size - ($hamburger-border-width * 2);
 
     > .inner {
         top: 50%;
