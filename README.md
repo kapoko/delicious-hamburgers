@@ -115,16 +115,16 @@ $hamburger-color:               #000;
 $hamburger-color-active:        $hamburger-color;
 ```
 ```sass
-$hamburger-background:          transparent !default;
+$hamburger-background:          transparent;
 ```
 ```sass
-$hamburger-background-active:   $hamburger-background !default;
+$hamburger-background-active:   $hamburger-background;
 ```
 ```sass
-$hamburger-border-color:        transparent !default;
+$hamburger-border-color:        transparent;
 ```
 ```sass
-$hamburger-border-width:        0 !default;
+$hamburger-border-width:        0;
 ```
 
 > <sup>Note: the border will always act like it's inset, even if you use a `div` element. I wanted to keep consistency between the `button` and `div` element, which normally react differently to a border. If you're using a `div` element, changing this won't affect the real size of the button.</sup>
