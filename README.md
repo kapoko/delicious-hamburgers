@@ -40,7 +40,7 @@ This was inspired by [Jonsuh](https://github.com/jonsuh)'s great [hamburgers](ht
 
 ### Install via Yarn, NPM or Bower. 
 
-Get that juicy Sass game on. Get your Delicious Hamburgers served up by your favourite package manager.
+Get that juicy Sass game on. Get your delicious hamburgers served up by your favourite package manager.
 
 1. Install through the command line.
 
@@ -156,6 +156,29 @@ $hamburger-animation-speed:     1;
 ```sass
 $hamburger-border-radius:       0;
 ```
+
+> <sup>Border-radius of the bars.</sup>
+
+### For extra lean burgers, remove the animations you don't need
+
+```sass
+$hamburger-animations: (
+    apple,
+    arrow,
+    arrow-r,
+    collapse,
+    converge,
+    criss-cross,
+    default,
+    dive,
+    minimal,
+    spin,
+    stack,
+    twist
+) !default;
+```
+
+Copy this, place it before loading the `hamburgers.scss` just like the other variables and remove the animations you're not using. Now they won't get compiled, resulting in a smaller filesize. 
 
 ## Copyright and license
 
