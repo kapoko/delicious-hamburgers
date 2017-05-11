@@ -6,7 +6,7 @@
 
 Beautiful hamburger menu buttons animated in pure CSS, customisable with Sass.
 
-![gif](http://i.imgur.com/wkFbZjL.gif)
+![gif](http://i.imgur.com/oj9xd5W.gif)
 
 This was inspired by [Jonsuh](https://github.com/jonsuh)'s great [hamburgers](https://github.com/jonsuh/hamburgers), however I felt the need for a little more elegant and modern animations, so here they are! 
 
