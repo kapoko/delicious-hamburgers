@@ -1,5 +1,5 @@
 @if index($hamburger-animations, criss-cross) {
-    .hamburger--criss-cross {
+    .#{$hamburger-class-name}--criss-cross {
         > .inner {
             &::before, &::after {
                 @include hamburger-bar();

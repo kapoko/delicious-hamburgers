@@ -6,6 +6,7 @@
  */
 
 // Variables
+$hamburger-class-name:          'hamburger';   
 $hamburger-size:                50px !default;
 $hamburger-thickness:           2px !default; 
 $hamburger-color:               #000 !default;
@@ -55,12 +56,12 @@ $ROOT-TWO:                  1.41421356237309504880;
     border-radius: $hamburger-border-radius;
 }
 
-button.hamburger {
+button.#{$hamburger-class-name} {
     width:  $hamburger-size;
     height: $hamburger-size;    
 }
 
-div.hamburger {
+div.#{$hamburger-class-name} {
     width:  $hamburger-size - ($hamburger-border-width * 2);
     height: $hamburger-size - ($hamburger-border-width * 2);
 
@@ -69,7 +70,7 @@ div.hamburger {
     }   
 }
 
-.hamburger {
+.#{$hamburger-class-name} {
     background: $hamburger-background;
     border: $hamburger-border-width $hamburger-border-color solid;
     padding: $hamburger-padding;

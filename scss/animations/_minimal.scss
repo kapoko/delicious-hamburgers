@@ -1,5 +1,5 @@
 @if index($hamburger-animations, minimal) {
-    .hamburger--minimal {
+    .#{$hamburger-class-name}--minimal {
         span.bar {
             transition: transform .5s / $hamburger-animation-speed $hamburger-easing,
                         opacity .35s / $hamburger-animation-speed $hamburger-easing .15s / $hamburger-animation-speed;

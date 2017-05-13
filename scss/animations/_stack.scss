@@ -1,5 +1,5 @@
 @if index($hamburger-animations, stack) {
-    .hamburger--stack {
+    .#{$hamburger-class-name}--stack {
         span.bar {
             transition: transform .3s / $hamburger-animation-speed $hamburger-easing,
                         top .4s / $hamburger-animation-speed $hamburger-easing .3s / $hamburger-animation-speed;

@@ -1,5 +1,5 @@
 @if index($hamburger-animations, spin) {
-    .hamburger--spin {
+    .#{$hamburger-class-name}--spin {
         > .inner {
             transition: transform .5s / $hamburger-animation-speed $hamburger-easing;
         }

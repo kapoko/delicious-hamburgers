@@ -1,5 +1,5 @@
 @if index($hamburger-animations, arrow) or index($hamburger-animations, arrow-r)  {
-    .hamburger--arrow, .hamburger--arrow-right {
+    .#{$hamburger-class-name}--arrow, .#{$hamburger-class-name}--arrow-right {
         > .inner {
             transition: transform .5s / $hamburger-animation-speed $hamburger-easing;
         }
@@ -51,7 +51,7 @@
 }
 
 @if index($hamburger-animations, arrow-r) {
-    .hamburger--arrow-right {
+    .#{$hamburger-class-name}--arrow-right {
         span.bar {
             &:nth-child(1) {
                 transform-origin: 0 0;

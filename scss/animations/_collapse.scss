@@ -1,5 +1,5 @@
 @if index($hamburger-animations, collapse) {
-    .hamburger--collapse {
+    .#{$hamburger-class-name}--collapse {
         span.bar {
             transition: transform .4s / $hamburger-animation-speed $hamburger-easing,
                         top .25s / $hamburger-animation-speed $hamburger-easing .25s / $hamburger-animation-speed,
