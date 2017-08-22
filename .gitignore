@@ -1,8 +1,15 @@
 # macOS
 .DS_Store
+*.sublime-workspace
 
 # NPM & Bower
-node_modules/
-bower_components/
+node_modules
+bower_components
 
-*.sublime-workspace
+# Jekyll
+_site
+_assets
+.sass-cache
+.asset-cache
+.jekyll-metadata
+_assets/bower
