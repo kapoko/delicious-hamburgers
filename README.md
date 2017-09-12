@@ -101,73 +101,23 @@ $hamburger-color:               #fff;
 
 Here's a full list of the customizable options available with their default values:
 
-```sass
-$hamburger-size:                50px;
-```
-```sass
-$hamburger-thickness:           2px;
-```
-
-> <sup>Thickness of the bars. Note: when using `hamburger--arrow` or `hamburger--arrow-r`, uneven `px` values don't seem to work well in some browsers.</sup>
-
-```sass
-$hamburger-color:               #000;
-```
-```sass
-$hamburger-color-active:        $hamburger-color;
-```
-```sass
-$hamburger-background:          transparent;
-```
-```sass
-$hamburger-background-active:   $hamburger-background;
-```
-```sass
-$hamburger-border-color:        transparent;
-```
-```sass
-$hamburger-border-width:        0;
-```
-
-> <sup>Note: the border will always act like it's inset, even if you use a `div` element. I wanted to keep consistency between the `button` and `div` element, which normally react differently to a border. If you're using a `div` element, changing this won't affect the real size of the button.</sup>
-
-```sass
-$hamburger-opacity:             1;
-```
-```sass
-$hamburger-opacity-hover:       1;
-```
-```sass
-$hamburger-padding:             $hamburger-size / 10;
-```
-
-> <sup>The space between the button border and the actual bars. There's a little padding by default so the clickable area is a little bigger than the visual button. You can also use a `px` value here instead of a relative one.</sup>
-
-```sass
-$hamburger-bar-spacing:         $hamburger-size / 5;
-```
-
-> <sup>How far the bars are apart from eachother. You can also use a `px` value here instead of a relative one.</sup>
-
-```sass
-$hamburger-animation-speed:     1;
-```
-
-> <sup>The timings of the animations are carefully chosen. But you can use this factor variable to slow down or speed up the animations. Use `.5` for twice as slow, `2` for twice as fast etc.</sup>
-
-```sass
-$hamburger-border-radius:       0;
-```
-
-> <sup>Border-radius of the bars.</sup>
-
-```sass
-$hamburger-class-name:          'hamburger';   
-```
-
-> <sup>The main class and prefixes of the animation classes can be changed. This allows for different buttons on the same page.</sup>
-
-
+Variable | Default Value | Comments
+--- | --- | ---
+`$hamburger-size` | `50px` | 
+`$hamburger-thickness` | `2px` | <sup>Thickness of the bars. Note: when using `hamburger--arrow` or `hamburger--arrow-r`, uneven `px` values don't seem to work well in some browsers.</sup>
+`$hamburger-color` | `#000` |
+`$hamburger-color-active` | `$hamburger-color` |
+`$hamburger-background` | `transparent` |
+`$hamburger-background-active` | `$hamburger-background` |
+`$hamburger-border-color` | `transparent` |
+`$hamburger-border-width` | `0` | <sup>Note: the border will always act like it's inset, even if you use a `div` element. I wanted to keep consistency between the `button` and `div` element, which normally react differently to a border. If you're using a `div` element, changing this won't affect the real size of the button.</sup>
+`$hamburger-opacity` | `1` |
+`$hamburger-opacity-hover` | `1` |
+`$hamburger-padding` | `$hamburger-size / 10` | <sup>The space between the button border and the actual bars. There's a little padding by default so the clickable area is a little bigger than the visual button. You can also use a `px` value here instead of a relative one.</sup>
+`$hamburger-bar-spacing` | `$hamburger-size / 5` | <sup>How far the bars are apart from eachother. You can also use a `px` value here instead of a relative one.</sup>
+`$hamburger-animation-speed` | `1` | <sup>The timings of the animations are carefully chosen. But you can use this factor variable to slow down or speed up the animations. Use `.5` for twice as slow, `2` for twice as fast etc.</sup>
+`$hamburger-border-radius` | `0` | <sup>Border-radius of the bars.</sup>
+`$hamburger-class-name` | `'hamburger'` | <sup>The main class and prefixes of the animation classes can be changed. This allows for different buttons on the same page.</sup>
 
 ### For extra lean burgers, remove the animations you don't need
 
