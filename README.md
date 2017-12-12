@@ -59,7 +59,7 @@ Get your delicious hamburgers served up by your favourite package manager.
     <sub>Note that the URL could be different depending on your project setup</sub>
 
     ```sass
-    @import "~delicious-hamburgers/sass/hamburgers";
+    @import "~delicious-hamburgers/scss/hamburgers";
     ```
 
 3. Compile your Sass. 
