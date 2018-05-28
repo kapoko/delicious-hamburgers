@@ -30,6 +30,8 @@ div.hamburger > .inner {
   margin: 0;
   overflow: visible;
   opacity: 1;
+  -webkit-transition: opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), background 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), background 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), background 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
@@ -106,6 +108,8 @@ div.hamburger > .inner {
   -webkit-transform-origin: 0 50%;
       -ms-transform-origin: 0 50%;
           transform-origin: 0 50%;
+  -webkit-transition: opacity 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), width 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: opacity 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), width 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: opacity 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), width 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   width: 0;
   opacity: 0;
@@ -123,25 +127,35 @@ div.hamburger > .inner {
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
   top: 14.14214px;
-  transition-delay: 0.1s;
+  -webkit-transition-delay: 0.1s;
+       -o-transition-delay: 0.1s;
+          transition-delay: 0.1s;
 }
 
 .hamburger--criss-cross span.bar {
+  -webkit-transition: opacity 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), width 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: opacity 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), width 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), width 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), width 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), width 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .hamburger--criss-cross span.bar:nth-child(1) {
-  transition-delay: 0.33s;
+  -webkit-transition-delay: 0.33s;
+       -o-transition-delay: 0.33s;
+          transition-delay: 0.33s;
 }
 
 .hamburger--criss-cross span.bar:nth-child(2) {
-  transition-delay: 0.36s;
+  -webkit-transition-delay: 0.36s;
+       -o-transition-delay: 0.36s;
+          transition-delay: 0.36s;
 }
 
 .hamburger--criss-cross span.bar:nth-child(3) {
-  transition-delay: 0.39s;
+  -webkit-transition-delay: 0.39s;
+       -o-transition-delay: 0.39s;
+          transition-delay: 0.39s;
 }
 
 .hamburger--criss-cross.active > .inner::before, .hamburger--criss-cross.active > .inner::after {
@@ -150,11 +164,15 @@ div.hamburger > .inner {
 }
 
 .hamburger--criss-cross.active > .inner::before {
-  transition-delay: 0.4s;
+  -webkit-transition-delay: 0.4s;
+       -o-transition-delay: 0.4s;
+          transition-delay: 0.4s;
 }
 
 .hamburger--criss-cross.active > .inner::after {
-  transition-delay: 0.5s;
+  -webkit-transition-delay: 0.5s;
+       -o-transition-delay: 0.5s;
+          transition-delay: 0.5s;
 }
 
 .hamburger--criss-cross.active span.bar {
@@ -166,26 +184,36 @@ div.hamburger > .inner {
 }
 
 .hamburger--criss-cross.active span.bar:nth-child(1) {
-  transition-delay: 0s;
+  -webkit-transition-delay: 0s;
+       -o-transition-delay: 0s;
+          transition-delay: 0s;
 }
 
 .hamburger--criss-cross.active span.bar:nth-child(2) {
-  transition-delay: 0.2s;
+  -webkit-transition-delay: 0.2s;
+       -o-transition-delay: 0.2s;
+          transition-delay: 0.2s;
 }
 
 .hamburger--criss-cross.active span.bar:nth-child(3) {
-  transition-delay: 0.1s;
+  -webkit-transition-delay: 0.1s;
+       -o-transition-delay: 0.1s;
+          transition-delay: 0.1s;
 }
 
 .hamburger--apple > .inner {
+  -webkit-transition: top 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: top 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .hamburger--apple span.bar:nth-child(1) {
   top: -8px;
+  -webkit-transition: top 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: top 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: top 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: top 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: top 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
@@ -196,13 +224,17 @@ div.hamburger > .inner {
 
 .hamburger--apple span.bar:nth-child(3) {
   top: 8px;
+  -webkit-transition: top 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: top 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: top 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: top 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: top 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .hamburger--apple.active > .inner {
+  -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: -webkit-transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
   -webkit-transform: rotate(90deg) translate3d(1px, -1px, 0);
@@ -210,7 +242,9 @@ div.hamburger > .inner {
 }
 
 .hamburger--apple.active span.bar {
+  -webkit-transition: top 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1) 0.15s;
   transition: top 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1) 0.15s;
+  -o-transition: top 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1) 0.15s;
   transition: top 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1) 0.15s;
   transition: top 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1) 0.15s, -webkit-transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1) 0.15s;
 }
@@ -230,16 +264,22 @@ div.hamburger > .inner {
 }
 
 .hamburger--arrow > .inner, .hamburger--arrow-right > .inner {
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: -webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .hamburger--arrow span.bar, .hamburger--arrow-right span.bar {
+  -webkit-transition: width 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), right 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: width 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), right 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), width 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), right 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), width 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), right 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), width 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), right 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition-delay: 0.1s;
+  -webkit-transition-delay: 0.1s;
+       -o-transition-delay: 0.1s;
+          transition-delay: 0.1s;
 }
 
 .hamburger--arrow span.bar:nth-child(1), .hamburger--arrow-right span.bar:nth-child(1) {
@@ -257,7 +297,9 @@ div.hamburger > .inner {
 }
 
 .hamburger--arrow.active span.bar, .hamburger--arrow-right.active span.bar {
-  transition-delay: 0s;
+  -webkit-transition-delay: 0s;
+       -o-transition-delay: 0s;
+          transition-delay: 0s;
 }
 
 .hamburger--arrow.active span.bar:nth-child(1), .hamburger--arrow-right.active span.bar:nth-child(1) {
@@ -321,20 +363,26 @@ div.hamburger > .inner {
 }
 
 .hamburger--spin > .inner {
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: -webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .hamburger--spin span.bar {
+  -webkit-transition: top 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s, opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s, -webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: top 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s, opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s, -webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s, opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s;
   transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s, opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s;
   transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s, opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s, -webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .hamburger--spin.active span.bar {
   top: 0;
+  -webkit-transition: top 0.25s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: top 0.25s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.25s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.25s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.25s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
@@ -361,14 +409,18 @@ div.hamburger > .inner {
 }
 
 .hamburger--collapse span.bar {
+  -webkit-transition: top 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s, opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s, -webkit-transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: top 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s, opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s, -webkit-transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s, opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s;
   transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s, opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s;
   transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s, opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.25s, -webkit-transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .hamburger--collapse.active span.bar {
   top: 0;
+  -webkit-transition: top 0.25s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
   transition: top 0.25s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+  -o-transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s, top 0.25s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s, top 0.25s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s, top 0.25s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
 }
@@ -390,7 +442,9 @@ div.hamburger > .inner {
 }
 
 .hamburger--minimal span.bar {
+  -webkit-transition: opacity 0.35s cubic-bezier(0.645, 0.045, 0.355, 1) 0.15s, -webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: opacity 0.35s cubic-bezier(0.645, 0.045, 0.355, 1) 0.15s, -webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.35s cubic-bezier(0.645, 0.045, 0.355, 1) 0.15s;
   transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.35s cubic-bezier(0.645, 0.045, 0.355, 1) 0.15s;
   transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.35s cubic-bezier(0.645, 0.045, 0.355, 1) 0.15s, -webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
@@ -408,7 +462,9 @@ div.hamburger > .inner {
 }
 
 .hamburger--minimal.active span.bar {
+  -webkit-transition: opacity 0.35s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: opacity 0.35s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.35s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
@@ -425,7 +481,9 @@ div.hamburger > .inner {
 }
 
 .hamburger--dive span.bar {
+  -webkit-transition: top 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), right 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: top 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), right 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), right 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), right 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), right 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
@@ -462,13 +520,17 @@ div.hamburger > .inner {
 }
 
 .hamburger--stack span.bar {
+  -webkit-transition: top 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.3s, -webkit-transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: top 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.3s, -webkit-transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.3s;
   transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.3s;
   transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.3s, -webkit-transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .hamburger--stack.active span.bar {
+  -webkit-transition: top 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0.4s;
   transition: top 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0.4s;
+  -o-transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0.4s, top 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0.4s, top 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0.4s, top 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0.4s;
 }
@@ -494,7 +556,9 @@ div.hamburger > .inner {
 }
 
 .hamburger--converge span.bar {
+  -webkit-transition: top 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: top 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
@@ -522,7 +586,9 @@ div.hamburger > .inner {
 }
 
 .hamburger--twist span.bar {
+  -webkit-transition: top 0.6s cubic-bezier(0.645, 0.045, 0.355, 1), left 0.6s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: top 0.6s cubic-bezier(0.645, 0.045, 0.355, 1), left 0.6s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.6s cubic-bezier(0.645, 0.045, 0.355, 1), left 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.6s cubic-bezier(0.645, 0.045, 0.355, 1), left 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.6s cubic-bezier(0.645, 0.045, 0.355, 1), left 0.6s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
@@ -536,6 +602,8 @@ div.hamburger > .inner {
 
 .hamburger--twist span.bar:nth-child(2) {
   opacity: 1;
+  -webkit-transition: opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) 0.4s;
+  -o-transition: opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) 0.4s;
   transition: opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) 0.4s;
 }
 
@@ -548,6 +616,8 @@ div.hamburger > .inner {
 }
 
 .hamburger--twist.active span.bar:nth-child(2) {
+  -webkit-transition: opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
   opacity: 0;
 }
