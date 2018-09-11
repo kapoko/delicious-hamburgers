@@ -13,7 +13,8 @@ gulp.task('clean', function() {
 });
 
 gulp.task('css', function() {
-    return gulp.src('scss/hamburgers.scss')
+    return gulp
+        .src('scss/hamburgers.scss')
         .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
         .pipe(autoprefixer('last 5 versions'))
         .pipe(gulp.dest('dist'))
@@ -22,13 +23,10 @@ gulp.task('css', function() {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('watch', function (callback) {
-    gulpSequence('build')(callback);
-    gulp.watch('scss/**/*.scss', ['build']);
+gulp.task('watch', function() {
+    gulp.watch('scss/**/*.scss', gulp.series('build'));
 });
 
-gulp.task('build', function(callback) {
-    gulpSequence('clean', ['css'])(callback);
-});
+gulp.task('build', gulp.series('clean', 'css'));
 
-gulp.task('default', ['build']);
+gulp.task('default', gulp.series('build'));
