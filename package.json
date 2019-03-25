@@ -8,7 +8,7 @@
     "url": "git+https://github.com/kapoko/delicious-hamburgers.git"
   },
   "scripts": {
-    "test": "gulp",
+    "test": "yarn build",
     "build": "webpack --mode production",
     "start": "webpack --watch --mode development",
     "watch": "yarn start"
