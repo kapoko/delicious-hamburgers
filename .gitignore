@@ -2,9 +2,10 @@
 .DS_Store
 *.sublime-workspace
 
-# NPM & Bower
+# NPM & Bower & Yarn
 node_modules
 bower_components
+yarn-error.log
 
 # Jekyll
 _site

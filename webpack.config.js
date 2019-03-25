@@ -1,31 +1,64 @@
 const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const webpack = require('webpack');
 
+const TerserJSPlugin = require("terser-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
-module.exports = {
-    entry: './scss/hamburgers.scss',
-    output: {
-        path: path.join(__dirname, './dist/'),
-        filename: '[name].css' // output js file name is identical to css file name
-    },
-    module: {
-        rules: [{
-            test: /\.scss$/,
-            use: [
-                // fallback to style-loader in development
-                process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader,
-                "css-loader",
-                "sass-loader"
+module.exports = [
+    // Minified css
+    {
+        entry: './scss/hamburgers.scss',
+        output: {
+            path: path.resolve(process.cwd(), 'dist'),
+        },
+        optimization: {
+            minimizer: [
+                new TerserJSPlugin({}),
+                new OptimizeCSSAssetsPlugin({})
             ]
-        }]
+        },
+        module: {
+            rules: [{
+                test: /\.scss$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    "css-loader",
+                    "sass-loader"
+                ]
+            }]
+        },
+        plugins: [
+            new webpack.ProgressPlugin(),
+            new FixStyleOnlyEntriesPlugin(),
+            new MiniCssExtractPlugin({
+                filename: "hamburgers.min.css",
+            }),
+            new CleanWebpackPlugin(),
+        ]
     },
-    plugins: [
-        new MiniCssExtractPlugin({
-            // Options similar to the same options in webpackOptions.output
-            // both options are optional
-            filename: "[name].css",
-            chunkFilename: "[id].css"
-        })
-    ]
-};
+    // Normal css
+    {
+        entry: './scss/hamburgers.scss',
+        module: {
+            rules: [{
+                test: /\.scss$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    "css-loader",
+                    "sass-loader"
+                ]
+            }]
+        },
+        plugins: [
+            new webpack.ProgressPlugin(),
+            new FixStyleOnlyEntriesPlugin(),
+            new MiniCssExtractPlugin({
+                filename: "hamburgers.css",
+            }),
+            new CleanWebpackPlugin(),
+        ]
+    }
+];  
