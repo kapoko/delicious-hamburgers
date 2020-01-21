@@ -8,10 +8,10 @@
     "url": "git+https://github.com/kapoko/delicious-hamburgers.git"
   },
   "scripts": {
-    "test": "yarn build",
-    "build": "webpack --mode production",
+    "test": "npm run build",
+    "build": "webpack",
     "start": "webpack --watch --mode development",
-    "watch": "yarn start"
+    "watch": "npm run start"
   },
   "keywords": [
     "sass",
@@ -31,14 +31,14 @@
     "clean-webpack-plugin": "^2.0.1",
     "css-loader": "^2.1.1",
     "mini-css-extract-plugin": "^0.5.0",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.13.1",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
-    "remove-files-webpack-plugin": "^1.1.1",
-    "sass-loader": "^7.1.0",
+    "remove-files-webpack-plugin": "^1.2.2",
+    "sass-loader": "^7.3.1",
     "style-loader": "^0.23.1",
-    "terser-webpack-plugin": "^1.2.3",
-    "webpack": "^4.29.6",
-    "webpack-cli": "^3.3.0",
+    "terser-webpack-plugin": "^1.4.3",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
     "webpack-fix-style-only-entries": "^0.2.1"
   }
 }

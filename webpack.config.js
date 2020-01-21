@@ -11,6 +11,7 @@ module.exports = [
     // Minified css
     {
         entry: './scss/hamburgers.scss',
+        mode: 'production',
         output: {
             path: path.resolve(process.cwd(), 'dist'),
         },
@@ -42,6 +43,7 @@ module.exports = [
     // Normal css
     {
         entry: './scss/hamburgers.scss',
+        mode: 'none',
         module: {
             rules: [{
                 test: /\.scss$/,
@@ -52,6 +54,9 @@ module.exports = [
                 ]
             }]
         },
+        optimization: {
+            minimize: false
+        },
         plugins: [
             new webpack.ProgressPlugin(),
             new FixStyleOnlyEntriesPlugin(),
@@ -61,4 +66,4 @@ module.exports = [
             new CleanWebpackPlugin(),
         ]
     }
-];  
+];
