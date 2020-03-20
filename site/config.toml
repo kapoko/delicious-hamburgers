@@ -2,7 +2,8 @@ baseURL = "https://kapoko.github.io/delicious-hamburgers/"
 languageCode = "en-us"
 title = "Delicious Hamburgers 🍔"
 staticDir = ["static", "dist"]
-
+disableKinds = ["taxonomy", "taxonomyTerm"]
 [params]
     author = "Kasper Koman"
     description = "Beautiful hamburger menu buttons"
+
