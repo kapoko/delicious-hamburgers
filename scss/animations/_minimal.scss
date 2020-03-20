@@ -1,11 +1,12 @@
 @if index($hamburger-animations, minimal) {
     .#{$hamburger-class-name}--minimal {
         span.bar {
-            transition: transform .5s / $hamburger-animation-speed $hamburger-easing,
-                        opacity .35s / $hamburger-animation-speed $hamburger-easing .15s / $hamburger-animation-speed;
+            transition:
+                transform 0.5s / $hamburger-animation-speed $hamburger-easing,
+                opacity 0.35s / $hamburger-animation-speed $hamburger-easing 0.15s / $hamburger-animation-speed;
 
             &:nth-child(1) {
-                top: -$hamburger-bar-spacing * .8;
+                top: -$hamburger-bar-spacing * 0.8;
             }
 
             &:nth-child(2) {
@@ -13,22 +14,23 @@
             }
 
             &:nth-child(3) {
-                top: $hamburger-bar-spacing * .8;
+                top: $hamburger-bar-spacing * 0.8;
             }
         }
 
         &.active {
             span.bar {
-                transition: transform .5s / $hamburger-animation-speed $hamburger-easing,
-                            opacity .35s / $hamburger-animation-speed $hamburger-easing;
+                transition:
+                    transform 0.5s / $hamburger-animation-speed $hamburger-easing,
+                    opacity 0.35s / $hamburger-animation-speed $hamburger-easing;
 
                 &:nth-child(1) {
-                    transform: translate3d(0, $hamburger-bar-spacing * .8, 0);
+                    transform: translate3d(0, $hamburger-bar-spacing * 0.8, 0);
                 }
 
                 &:nth-child(3) {
-                    transform: translate3d(0, -$hamburger-bar-spacing * .8, 0);
                     opacity: 0;
+                    transform: translate3d(0, -$hamburger-bar-spacing * 0.8, 0);
                 }
             }
         }

@@ -1,17 +1,19 @@
 @if index($hamburger-animations, collapse) {
     .#{$hamburger-class-name}--collapse {
         span.bar {
-            transition: transform .4s / $hamburger-animation-speed $hamburger-easing,
-                        top .25s / $hamburger-animation-speed $hamburger-easing .25s / $hamburger-animation-speed,
-                        opacity .25s / $hamburger-animation-speed $hamburger-easing .25s / $hamburger-animation-speed;
+            transition:
+                transform 0.4s / $hamburger-animation-speed $hamburger-easing,
+                top 0.25s / $hamburger-animation-speed $hamburger-easing 0.25s / $hamburger-animation-speed,
+                opacity 0.25s / $hamburger-animation-speed $hamburger-easing 0.25s / $hamburger-animation-speed;
         }
-        
+
         &.active {
             span.bar {
                 top: 0;
-                transition: transform .4s / $hamburger-animation-speed $hamburger-easing .1s / $hamburger-animation-speed,
-                            top .25s / $hamburger-animation-speed $hamburger-easing,
-                            opacity .25s / $hamburger-animation-speed $hamburger-easing;
+                transition:
+                    transform 0.4s / $hamburger-animation-speed $hamburger-easing 0.1s / $hamburger-animation-speed,
+                    top 0.25s / $hamburger-animation-speed $hamburger-easing,
+                    opacity 0.25s / $hamburger-animation-speed $hamburger-easing;
 
                 &:nth-child(1) {
                     transform: rotate(135deg);

@@ -1,59 +1,64 @@
 @if index($hamburger-animations, criss-cross) {
     .#{$hamburger-class-name}--criss-cross {
         > .inner {
-            &::before, &::after {
+            &::before,
+            &::after {
                 @include hamburger-bar();
-                left: ($hamburger-bar-size - ($hamburger-bar-size / $ROOT-TWO)) / 2;
-                transform-origin: 0 50%;
-                transition: opacity .4s / $hamburger-animation-speed $hamburger-easing, 
-                            width .4s / $hamburger-animation-speed $hamburger-easing;
-                width: 0;
+
+                left: ($hamburger-bar-size - ($hamburger-bar-size / $root-two)) / 2;
                 opacity: 0;
+                transform-origin: 0 50%;
+                transition:
+                    opacity 0.4s / $hamburger-animation-speed $hamburger-easing,
+                    width 0.4s / $hamburger-animation-speed $hamburger-easing;
+                width: 0;
             }
 
             &::before {
+                top: -($hamburger-bar-size / $root-two) / 2;
                 transform: rotate(45deg);
-                top: -($hamburger-bar-size / $ROOT-TWO) / 2;
             }
 
             &::after {
+                top: ($hamburger-bar-size / $root-two) / 2;
                 transform: rotate(-45deg);
-                top: ($hamburger-bar-size / $ROOT-TWO) / 2;
-                transition-delay: .1s / $hamburger-animation-speed;
+                transition-delay: 0.1s / $hamburger-animation-speed;
             }
         }
 
         span.bar {
-            transition: transform .4s / $hamburger-animation-speed $hamburger-easing, 
-                        opacity .4s / $hamburger-animation-speed $hamburger-easing,
-                        width .4s / $hamburger-animation-speed $hamburger-easing;
+            transition:
+                transform 0.4s / $hamburger-animation-speed $hamburger-easing,
+                opacity 0.4s / $hamburger-animation-speed $hamburger-easing,
+                width 0.4s / $hamburger-animation-speed $hamburger-easing;
 
             @for $i from 1 through 3 {
                 &:nth-child(#{$i}) {
-                    transition-delay: (.3 + ($i * .03s)) / $hamburger-animation-speed;
+                    transition-delay: (0.3 + ($i * 0.03s)) / $hamburger-animation-speed;
                 }
             }
         }
 
         &.active {
             > .inner {
-                &::before, &::after {
+                &::before,
+                &::after {
                     opacity: 1;
                     width: 100%;
                 }
 
                 &::before {
-                    transition-delay: .4s / $hamburger-animation-speed;
+                    transition-delay: 0.4s / $hamburger-animation-speed;
                 }
 
-                &::after { 
-                    transition-delay: .5s / $hamburger-animation-speed;
+                &::after {
+                    transition-delay: 0.5s / $hamburger-animation-speed;
                 }
             }
 
             span.bar {
-                transform: translate3D(-10px, 0, 0);
                 opacity: 0;
+                transform: translate3d(-10px, 0, 0);
                 width: 50%;
 
                 &:nth-child(1) {
@@ -61,11 +66,11 @@
                 }
 
                 &:nth-child(2) {
-                    transition-delay: .2s / $hamburger-animation-speed;
+                    transition-delay: 0.2s / $hamburger-animation-speed;
                 }
 
                 &:nth-child(3) {
-                    transition-delay: .1s / $hamburger-animation-speed;
+                    transition-delay: 0.1s / $hamburger-animation-speed;
                 }
             }
         }

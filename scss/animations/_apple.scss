@@ -1,15 +1,17 @@
 @if index($hamburger-animations, apple) {
     .#{$hamburger-class-name}--apple {
         > .inner {
-            transition: transform .5s / $hamburger-animation-speed $hamburger-easing,
-                        top .5s / $hamburger-animation-speed $hamburger-easing;
+            transition:
+                transform 0.5s / $hamburger-animation-speed $hamburger-easing,
+                top 0.5s / $hamburger-animation-speed $hamburger-easing;
         }
 
         span.bar {
             &:nth-child(1) {
-                top: -$hamburger-bar-spacing * .8;
-                transition: top .5s / $hamburger-animation-speed $hamburger-easing,
-                            transform .25s / $hamburger-animation-speed $hamburger-easing;
+                top: -$hamburger-bar-spacing * 0.8;
+                transition:
+                    top 0.5s / $hamburger-animation-speed $hamburger-easing,
+                    transform 0.25s / $hamburger-animation-speed $hamburger-easing;
             }
 
             &:nth-child(2) {
@@ -17,27 +19,28 @@
             }
 
             &:nth-child(3) {
-                top: $hamburger-bar-spacing * .8;
-                transition: top .5s / $hamburger-animation-speed $hamburger-easing,
-                            transform .35s / $hamburger-animation-speed $hamburger-easing;
+                top: $hamburger-bar-spacing * 0.8;
+                transition:
+                    top 0.5s / $hamburger-animation-speed $hamburger-easing,
+                    transform 0.35s / $hamburger-animation-speed $hamburger-easing;
             }
         }
 
         &.active {
-
             > .inner {
-                transition: transform .35s / $hamburger-animation-speed $hamburger-easing;
                 transform: rotate(90deg) translate3d($hamburger-thickness / 2, -$hamburger-thickness / 2, 0);
+                transition: transform 0.35s / $hamburger-animation-speed $hamburger-easing;
             }
 
             span.bar {
-                transition: top .5s / $hamburger-animation-speed $hamburger-easing,
-                            transform .35s / $hamburger-animation-speed $hamburger-easing .15s / $hamburger-animation-speed;
+                transition:
+                    top 0.5s / $hamburger-animation-speed $hamburger-easing,
+                    transform 0.35s / $hamburger-animation-speed $hamburger-easing 0.15s / $hamburger-animation-speed;
 
                 &:nth-child(1) {
                     top: 0;
                     transform: rotate(45deg);
-                }           
+                }
 
                 &:nth-child(3) {
                     top: 0;

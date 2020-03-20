@@ -6,64 +6,64 @@
  */
 
 // Variables
-$hamburger-class-name:          'hamburger' !default;   
-$hamburger-size:                50px !default;
-$hamburger-thickness:           2px !default; 
-$hamburger-color:               #000 !default;
-$hamburger-color-active:        $hamburger-color !default;
-$hamburger-background:          transparent !default;
-$hamburger-background-active:   $hamburger-background !default;
-$hamburger-border-color:        transparent !default;
-$hamburger-border-width:        0 !default;
-$hamburger-opacity:             1 !default;
-$hamburger-opacity-hover:       1 !default;
-$hamburger-padding:             $hamburger-size / 10 !default;
-$hamburger-bar-spacing:         $hamburger-size / 5 !default;
-$hamburger-animation-speed:     1 !default;
-$hamburger-border-radius:       0 !default;
+$hamburger-class-name: 'hamburger' !default;
+$hamburger-size: 50px !default;
+$hamburger-thickness: 2px !default;
+$hamburger-color: #000 !default;
+$hamburger-color-active: $hamburger-color !default;
+$hamburger-background: transparent !default;
+$hamburger-background-active: $hamburger-background !default;
+$hamburger-border-color: transparent !default;
+$hamburger-border-width: 0 !default;
+$hamburger-opacity: 1 !default;
+$hamburger-opacity-hover: 1 !default;
+$hamburger-padding: $hamburger-size / 10 !default;
+$hamburger-bar-spacing: $hamburger-size / 5 !default;
+$hamburger-animation-speed: 1 !default;
+$hamburger-border-radius: 0 !default;
 
 // Animation types. Use this as a variable and remove the animations
 // you don't need so they won't get compiled in your css.
 $hamburger-animations: (
-    apple,
-    arrow,
-    arrow-r,
-    collapse,
-    converge,
-    criss-cross,
-    default,
-    dive,
-    minimal,
-    spin,
-    stack,
-    twist
+    'apple',
+    'arrow',
+    'arrow-r',
+    'collapse',
+    'converge',
+    'criss-cross',
+    'default',
+    'dive',
+    'minimal',
+    'spin',
+    'stack',
+    'twist'
 ) !default;
 
-$hamburger-bar-size:        $hamburger-size - ($hamburger-padding * 2) - ($hamburger-border-width * 2);
-$hamburger-easing:          cubic-bezier(0.645, 0.045, 0.355, 1);
+$hamburger-bar-size: $hamburger-size - ($hamburger-padding * 2) - ($hamburger-border-width * 2);
+$hamburger-easing: cubic-bezier(0.645, 0.045, 0.355, 1);
 
 // "Constants"
-$ROOT-TWO:                  1.41421356237309504880;
+$root-two: 1.4142135623730950488;
 
 // Hamburger base
 @mixin hamburger-bar() {
-    content: "";
-    width: 100%;
-    height: $hamburger-thickness;
-    display: block;
-    position: absolute;
     background-color: $hamburger-color;
     border-radius: $hamburger-border-radius;
+    content: '';
+    display: block;
+    height: $hamburger-thickness;
+    position: absolute;
+    width: 100%;
 }
 
 button.#{$hamburger-class-name} {
-    width:  $hamburger-size;
-    height: $hamburger-size;    
+    height: $hamburger-size;
+    width: $hamburger-size;    
 }
 
 div.#{$hamburger-class-name} {
-    width:  $hamburger-size - ($hamburger-border-width * 2);
     height: $hamburger-size - ($hamburger-border-width * 2);
+    width: $hamburger-size - ($hamburger-border-width * 2);
 
     > .inner {
         top: 50%;
@@ -73,16 +73,16 @@ div.#{$hamburger-class-name} {
 .#{$hamburger-class-name} {
     background: $hamburger-background;
     border: $hamburger-border-width $hamburger-border-color solid;
-    padding: $hamburger-padding;
-    display: inline-block;
-    cursor: pointer;
-    font: inherit;
     color: inherit;
-    text-transform: none;
+    cursor: pointer;
+    display: inline-block;
+    font: inherit;
     margin: 0;
-    overflow: visible;
     opacity: $hamburger-opacity;
-    transition: opacity .2s $hamburger-easing, background .2s $hamburger-easing;
+    overflow: visible;
+    padding: $hamburger-padding;
+    text-transform: none;
+    transition: opacity 0.2s $hamburger-easing, background 0.2s $hamburger-easing;
 
     &.active {
         background: $hamburger-background-active;
@@ -93,10 +93,10 @@ div.#{$hamburger-class-name} {
     }
     
     > .inner {
-        position: relative;
         margin: 0;
-        width: 100%; //$hamburger-bar-size;
         margin-top: -$hamburger-thickness / 2;
+        position: relative;
+        width: 100%; //$hamburger-bar-size;
     }
 
     span.bar {
