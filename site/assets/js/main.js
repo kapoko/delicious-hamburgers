@@ -32,9 +32,11 @@ domReady(() => {
             switch(action) {
                 case 'reset': {
                     hamburgers.forEach(hamburger => hamburger.classList.remove('active'));
+                    break;
                 }
                 case 'toggle-all': {
                     hamburgers.forEach(hamburger => hamburger.classList.toggle('active'));
+                    break;
                 }
             }
         })
