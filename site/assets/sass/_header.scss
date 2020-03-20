@@ -1,0 +1,16 @@
+header > div {
+    margin-bottom: 2em;
+
+    @include desktop() {
+        margin-top: 3em;
+        margin-bottom: 3em;
+    }
+
+    h2 {
+        margin-top: -1rem;
+
+        @include desktop() {
+            margin-top: -2rem;
+        }
+    }
+}

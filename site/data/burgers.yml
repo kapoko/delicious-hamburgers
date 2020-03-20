@@ -1,0 +1,35 @@
+- class: criss-cross
+  title: Criss Cross
+
+- class: apple
+  title: Apple
+
+- class: twist
+  title: Twist
+
+- class: spin
+  title: Spin
+
+- class: converge
+  title: Converge
+
+- class: dive
+  title: Dive
+
+- class: minimal
+  title: Minimal
+
+- class: collapse
+  title: Collapse
+
+- class: arrow
+  title: Arrow
+
+- class: arrow-right
+  title: Arrow Right
+
+- class: stack
+  title: Stack
+
+- class: default
+  title: Default

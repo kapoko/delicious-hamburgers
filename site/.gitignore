@@ -1,0 +1,5 @@
+dist/
+data/manifest.json
+node_modules/
+public/
+resources/_gen

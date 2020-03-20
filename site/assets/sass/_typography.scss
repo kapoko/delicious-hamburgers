@@ -1,0 +1,59 @@
+
+h1 {
+    font-family: $family-headers;
+    font-weight: 700;
+    color: $primary;
+    font-size: 5.5rem;
+
+    @include desktop() {
+        font-size: 7rem;
+    }
+
+    @include widescreen() {
+        font-size: 9rem;
+    }
+}
+
+h2 {
+    font-size: 1.1em;
+
+    @include desktop() {
+        font-size: 1.3em;
+    }
+
+    @include widescreen() {
+        font-size: 1.4em;
+    }
+}
+
+h2, h3 {
+    font-family: $family-sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+a {
+    color: #000;
+    border-bottom: 1px dotted #000;
+    text-decoration: none;
+
+    svg {
+        border-bottom: none;
+    }
+
+    &:hover, &:focus, &:active {
+        text-decoration: none;
+        color: #292b2c;
+    }
+}
+
+span.middot {
+    margin-left: .4em;
+    margin-right: .4em;
+
+    @include desktop() {
+        margin-left: .8em;
+        margin-right: .8em;
+    }
+}

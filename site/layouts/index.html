@@ -1,0 +1,34 @@
+{{ define "above-main" }}
+    <div class="columns is-multiline">
+        <div class="column is-8 is-offset-2 is-6-widescreen is-offset-3-widescreen has-text-centered">
+            <p class="is-size-5">Beautiful hamburger menu buttons animated in pure CSS, customisable with Sass.</p>
+        </div>
+        <div class="column is-12 has-text-centered">
+            <p class="is-size-6 is-size-7-mobile mt-xl">
+                <a href="https://github.com/kapoko/delicious-hamburgers" target="_blank" title="View on GitHub"><i class="fab fa-fw fa-github"></i> View on GitHub</a>
+                <span class="middot">&middot;</span>
+                <a href="https://github.com/kapoko/delicious-hamburgers/archive/master.zip"><i class="fas fa-download"></i> Download ZIP</a>
+                <span class="middot">&middot;</span>
+                <i class="fas fa-code"></i> Created by <a href="https://github.com/kapoko" target="_blank">Kasper Koman</a>        
+            </p>
+        </div>
+    </div>
+{{ end }}
+
+{{ define "main" }}
+    <div class="columns mt-xxl is-multiline">
+        <div class="column is-12 has-text-centered"> 
+            <h2 class="mb-md">The Menu</h2>
+        </div>
+        {{ range $.Site.Data.burgers }}
+            {{ partial "burger.html" . }}
+        {{ end }}
+        <div class="column is-12">
+            <p class="has-text-right">
+                <a href="#" id="reset">Reset</a>
+                <span class="middot">&middot;</span>
+                <a href="#" id="toggle-all">Toggle all</a>
+            </p>
+        </div>
+    </div>
+{{ end }}
