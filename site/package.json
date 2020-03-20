@@ -8,7 +8,7 @@
     "start": "run-p start:**",
     "start:hugo": "hugo server -D",
     "start:webpack": "NODE_ENV=development webpack --watch",
-    "build": "NODE_ENV=production webpack && hugo"
+    "build": "NODE_ENV=production webpack && hugo --minify"
   },
   "repository": {
     "type": "git",
