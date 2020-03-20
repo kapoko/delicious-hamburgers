@@ -8,13 +8,13 @@
     "url": "git+https://github.com/kapoko/delicious-hamburgers.git"
   },
   "scripts": {
-    "prepublish": "npm-run-all test build",
-    "test": "npm-run-all stylelint build",
+    "test": "npm-run-all stylelint",
     "build": "webpack",
     "start": "webpack --watch --mode development",
     "watch": "npm run start",
     "stylelint": "stylelint 'scss/**/*.scss'",
-    "stylelint:fix": "stylelint 'scss/**/*.scss' --fix"
+    "stylelint:fix": "stylelint 'scss/**/*.scss' --fix",
+    "prepare": "npm-run-all test build"
   },
   "keywords": [
     "sass",
