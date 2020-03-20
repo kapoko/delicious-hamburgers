@@ -1,18 +1,3 @@
-# macOS
 .DS_Store
-*.sublime-workspace
-
-# NPM & Bower & Yarn
-node_modules
-bower_components
-yarn-error.log
-
-# Jekyll
-_site
-_assets
-.sass-cache
-.asset-cache
-.jekyll-metadata
-_assets/bower
-
+node_modules/
 dist/
