@@ -13,6 +13,7 @@ $hamburger-color: #000 !default;
 $hamburger-color-active: $hamburger-color !default;
 $hamburger-background: transparent !default;
 $hamburger-background-active: $hamburger-background !default;
+$hamburger-background-hover: $hamburger-background !default;
 $hamburger-border-color: transparent !default;
 $hamburger-border-width: 0 !default;
 $hamburger-opacity: 1 !default;
@@ -72,7 +73,7 @@ div.#{$hamburger-class-name} {
 }
 
 .#{$hamburger-class-name} {
-    background: $hamburger-background;
+    background-color: $hamburger-background;
     border: $hamburger-border-width $hamburger-border-color solid;
     color: inherit;
     cursor: pointer;
@@ -86,8 +87,13 @@ div.#{$hamburger-class-name} {
     transition: opacity 0.2s $hamburger-easing, background 0.2s $hamburger-easing;
     border-radius: $hamburger-border-radius;
 
+    &:hover {
+        background-color: $hamburger-background-hover;
+        opacity: $hamburger-opacity-hover;
+    }
+
     &.active {
-        background: $hamburger-background-active;
+        background-color: $hamburger-background-active;
 
         span.bar {
             background-color: $hamburger-color-active;
@@ -115,10 +121,6 @@ div.#{$hamburger-class-name} {
     
     &:focus {
         outline: 0;
-    }
-
-    &:hover {
-        opacity: $hamburger-opacity-hover;
     }
 }
 
