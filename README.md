@@ -110,10 +110,12 @@ Variable | Default Value | Comments
 `$hamburger-background` | `transparent` |
 `$hamburger-background-hover` | `$hamburger-background` |
 `$hamburger-background-active` | `$hamburger-background` |
+`$hamburger-background-transition-speed` | `0.2s` |
 `$hamburger-border-color` | `transparent` |
 `$hamburger-border-width` | `0` | <sup>Note: the border will always act like it's inset, even if you use a `div` element. I wanted to keep consistency between the `button` and `div` element, which normally react differently to a border. If you're using a `div` element, changing this won't affect the real size of the button.</sup>
 `$hamburger-opacity` | `1` |
 `$hamburger-opacity-hover` | `1` |
+`$hamburger-opacity-transition-speed` | `0.2s` |
 `$hamburger-padding` | `$hamburger-size / 10` | <sup>The space between the button border and the actual bars. There's a little padding by default so the clickable area is a little bigger than the visual button. You can also use a `px` value here instead of a relative one.</sup>
 `$hamburger-border-radius` | `0` | <sup>Border-radius of the button.</sup>
 `$hamburger-bar-border-radius` | `0` | <sup>Border-radius of the bars.</sup>
