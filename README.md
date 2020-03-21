@@ -114,9 +114,10 @@ Variable | Default Value | Comments
 `$hamburger-opacity` | `1` |
 `$hamburger-opacity-hover` | `1` |
 `$hamburger-padding` | `$hamburger-size / 10` | <sup>The space between the button border and the actual bars. There's a little padding by default so the clickable area is a little bigger than the visual button. You can also use a `px` value here instead of a relative one.</sup>
+`$hamburger-border-radius` | `0` | <sup>Border-radius of the button.</sup>
+`$hamburger-bar-border-radius` | `0` | <sup>Border-radius of the bars.</sup>
 `$hamburger-bar-spacing` | `$hamburger-size / 5` | <sup>How far the bars are apart from eachother. You can also use a `px` value here instead of a relative one.</sup>
 `$hamburger-animation-speed` | `1` | <sup>The timings of the animations are carefully chosen. But you can use this factor variable to slow down or speed up the animations. Use `.5` for twice as slow, `2` for twice as fast etc.</sup>
-`$hamburger-border-radius` | `0` | <sup>Border-radius of the bars.</sup>
 `$hamburger-class-name` | `'hamburger'` | <sup>The main class and prefixes of the animation classes can be changed. This allows for different buttons on the same page.</sup>
 
 ### For extra lean burgers, remove the animations you don't need
@@ -139,6 +140,16 @@ $hamburger-animations: (
 ```
 
 Copy this, place it before loading the `hamburgers.scss` just like the other variables and remove the animations you're not using. Now they won't get compiled, resulting in a smaller filesize. 
+
+## Migration from v0.x.x to v1.x.x
+
+There's some breaking changes when updating from v0.x.x to v1.x.x.
+
+### Variable name changes
+
+Old (v0.x.x) | New (v1.x.x) | Comments
+--- | --- | ---
+`$hamburger-border-radius` | `$hamburger-bar-border-radius` | <sup>`$hamburger-border-radius` is now used for the outside border.</sup>
 
 ## Copyright and license
 
