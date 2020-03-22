@@ -4,6 +4,8 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faDownload, faCode } from "@fortawesome/free-solid-svg-icons";
 import { render } from 'github-buttons'
 
+import '../sass/main.scss';
+
 library.add(faDownload, faGithub, faCode);
 dom.watch();
 

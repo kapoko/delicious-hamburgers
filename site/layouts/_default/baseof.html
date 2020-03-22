@@ -14,8 +14,12 @@
         {{ partial "head/metadata.html" . }}
         {{ partial "head/og.html" . }}
 
-        {{ $style := resources.Get "sass/main.scss" | toCSS | minify | fingerprint }}
-        <link rel="stylesheet" href="{{ $style.Permalink }}"> 
+        <!-- {{ $style := resources.Get "sass/main.scss" | toCSS | minify | fingerprint }} -->
+        {{ $script := .Site.Data.manifest.main }}
+        {{ with $script.css }}
+            <link rel="stylesheet" href="{{ absURL . }}"> 
+        {{ end }}
+        <!-- <link rel="stylesheet" href="{{ $style.Permalink }}">  -->
     </head>
     <body>
         <section class="section">
@@ -29,7 +33,7 @@
         </section>
         {{ partial "footer.html" . }}
 
-        {{ $script := .Site.Data.manifest.main }}
+        <!-- {{ $script := .Site.Data.manifest.main }} -->
         {{ with $script.js }}
             <script type="text/javascript" src="{{ absURL . }}"></script>
         {{ end }}
