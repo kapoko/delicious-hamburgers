@@ -1,4 +1,5 @@
 @import '../../node_modules/bulma/sass/utilities/all';
+@import '../../../scss/hamburgers';
 
 .test-default {
     $hamburger-class-name: 'default';
@@ -72,5 +73,14 @@
     $hamburger-border-width: 4px;
     $hamburger-thickness: 4px;
     $hamburger-border-color: #000;
+    @import '../../../scss/hamburgers';
+}
+
+.test-no-padding {
+    $hamburger-class-name: 'no-padding';
+    $hamburger-border-width: 2px;
+    $hamburger-border-color: #000;
+    $hamburger-padding: 0;
+    $hamburger-thickness: 6px;
     @import '../../../scss/hamburgers';
 }
