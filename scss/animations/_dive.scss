@@ -1,13 +1,11 @@
 @if index($hamburger-animations, dive) {
     .#{$hamburger-class-name}--dive {
         span.bar {
-            transition:
-                transform 0.4s / $hamburger-animation-speed $hamburger-easing,
-                top 0.4s / $hamburger-animation-speed $hamburger-easing,
-                right 0.4s / $hamburger-animation-speed $hamburger-easing;
+            transition: transform 0.4s / $hamburger-animation-speed $hamburger-easing;
 
             &:nth-child(1) {
-                top: -$hamburger-bar-spacing * 0.8;
+                top: 0;
+                transform: rotate(0) translate(0, -$hamburger-bar-spacing * 0.8);
             }
 
             &:nth-child(2) {
@@ -15,23 +13,21 @@
             }
 
             &:nth-child(3) {
-                right: 0;
-                top: $hamburger-bar-spacing * 0.8;
-                transform-origin: 100% 50%;
+                top: 0;
+                transform: rotate(0) translate(0, $hamburger-bar-spacing * 0.8);
             }
         }
 
         &.active {
             span.bar {
+                $offset: ($hamburger-bar-spacing * 0.8) / $root-two;
+
                 &:nth-child(1) {
-                    top: 0;
-                    transform: rotate(135deg);
+                    transform: rotate(135deg) translate(0, 0);
                 }
 
                 &:nth-child(3) {
-                    right: ($hamburger-bar-size - ($hamburger-bar-size / $root-two)) / 2;
-                    top: ($hamburger-bar-size / $root-two) / 2;
-                    transform: rotate(45deg);
+                    transform: rotate(45deg) translate(0, 0);
                 }
             }
         }
