@@ -6,6 +6,8 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const StylelintPlugin = require('stylelint-webpack-plugin');
+const autoprefixer = require("autoprefixer");
 
 module.exports = [
     // Minified css
@@ -27,6 +29,12 @@ module.exports = [
                 use: [
                     MiniCssExtractPlugin.loader,
                     "css-loader",
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            plugins: () => [autoprefixer]
+                        },
+                    },
                     "sass-loader"
                 ]
             }]
@@ -38,6 +46,10 @@ module.exports = [
                 filename: "hamburgers.min.css",
             }),
             new CleanWebpackPlugin(),
+            new StylelintPlugin({
+                fix: true,
+                files: 'scss/**/*.scss'
+            }),
         ]
     },
     // Normal css
@@ -50,6 +62,12 @@ module.exports = [
                 use: [
                     MiniCssExtractPlugin.loader,
                     "css-loader",
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            plugins: () => [autoprefixer]
+                        },
+                    },
                     "sass-loader"
                 ]
             }]
@@ -63,7 +81,6 @@ module.exports = [
             new MiniCssExtractPlugin({
                 filename: "hamburgers.css",
             }),
-            new CleanWebpackPlugin(),
         ]
     }
 ];
