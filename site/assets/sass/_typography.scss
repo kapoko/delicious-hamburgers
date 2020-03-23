@@ -1,9 +1,9 @@
 
 h1 {
-    font-family: $family-headers;
-    font-weight: 700;
     color: $primary;
+    font-family: $family-headers;
     font-size: 5.5rem;
+    font-weight: 700;
 
     @include desktop() {
         font-size: 7rem;
@@ -26,34 +26,37 @@ h2 {
     }
 }
 
-h2, h3 {
+h2,
+h3 {
     font-family: $family-sans-serif;
     font-weight: 700;
-    text-transform: uppercase;
     letter-spacing: 4px;
+    text-transform: uppercase;
 }
 
 a {
-    color: #000;
     border-bottom: 1px dotted #000;
+    color: #000;
     text-decoration: none;
 
     svg {
         border-bottom: none;
     }
 
-    &:hover, &:focus, &:active {
-        text-decoration: none;
+    &:hover,
+    &:focus,
+    &:active {
         color: #292b2c;
+        text-decoration: none;
     }
 }
 
 span.middot {
-    margin-left: .4em;
-    margin-right: .4em;
+    margin-left: 0.4em;
+    margin-right: 0.4em;
 
     @include desktop() {
-        margin-left: .8em;
-        margin-right: .8em;
+        margin-left: 0.8em;
+        margin-right: 0.8em;
     }
 }

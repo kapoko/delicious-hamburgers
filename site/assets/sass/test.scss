@@ -1,69 +1,70 @@
-@import "../../node_modules/bulma/sass/utilities/all";
+@import '../../node_modules/bulma/sass/utilities/all';
 
 .test-default {
     $hamburger-class-name: 'default';
-    @import "../../../scss/hamburgers";
+    @import '../../../scss/hamburgers';
 }
 
 .test-width-1px {
     $hamburger-class-name: 'width-1px';
     $hamburger-thickness: 1px;
-    @import "../../../scss/hamburgers";
+    @import '../../../scss/hamburgers';
 }
 
 .test-width-3px {
     $hamburger-class-name: 'width-3px';
     $hamburger-thickness: 3px;
-    @import "../../../scss/hamburgers";
+    @import '../../../scss/hamburgers';
 }
 
 .test-width-4px {
     $hamburger-class-name: 'width-4px';
     $hamburger-thickness: 4px;
-    @import "../../../scss/hamburgers";
+    @import '../../../scss/hamburgers';
 }
 
 .test-small {
     $hamburger-class-name: 'small';
     $hamburger-size: 30px;
-    @import "../../../scss/hamburgers";
+    @import '../../../scss/hamburgers';
 }
 
 .test-small-1px {
     $hamburger-class-name: 'small-1px';
     $hamburger-size: 30px;
     $hamburger-thickness: 1px;
-    @import "../../../scss/hamburgers";
+    @import '../../../scss/hamburgers';
 }
 
 .test-big {
     $hamburger-class-name: 'big';
     $hamburger-size: 80px;
-    @import "../../../scss/hamburgers";
+    @import '../../../scss/hamburgers';
 }
 
 .test-big-4px {
     $hamburger-class-name: 'big-4px';
     $hamburger-size: 80px;
     $hamburger-thickness: 4px;
-    @import "../../../scss/hamburgers";
+    @import '../../../scss/hamburgers';
 }
 
 .test-background-border-radius {
     $hamburger-class-name: 'background-border-radius';
+    $hamburger-color-hover: #fff;
+    $hamburger-color-active: $danger;
     $hamburger-background: $info;
     $hamburger-background-active: $success;
     $hamburger-background-hover: lighten($success, 15%);
     $hamburger-border-radius: 3px;
-    $hamburger-bar-spacing: 3px;
-    @import "../../../scss/hamburgers";
+    @import '../../../scss/hamburgers';
 }
 
 .test-border-2px {
     $hamburger-class-name: 'border-2px';
     $hamburger-border-width: 2px;
     $hamburger-border-color: #000;
-    @import "../../../scss/hamburgers";
+    @import '../../../scss/hamburgers';
 }
 
 .test-border-4px {
@@ -71,5 +72,5 @@
     $hamburger-border-width: 4px;
     $hamburger-thickness: 4px;
     $hamburger-border-color: #000;
-    @import "../../../scss/hamburgers";
+    @import '../../../scss/hamburgers';
 }

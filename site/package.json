@@ -7,7 +7,7 @@
     "lint": "eslint src",
     "start": "run-p start:**",
     "start:hugo": "hugo server -D",
-    "start:webpack": "NODE_ENV=development webpack --watch",
+    "start:webpack": "NODE_ENV=development webpack --watch --hide-modules",
     "build": "NODE_ENV=production webpack && hugo --minify"
   },
   "repository": {

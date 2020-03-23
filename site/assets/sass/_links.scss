@@ -1,9 +1,9 @@
 .links {
     .item {
-        display: block; 
+        display: block;
 
         @include mobile() {
-            padding: .25rem 0;
+            padding: 0.25rem 0;
         }
 
         @include tablet() {

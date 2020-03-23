@@ -2,8 +2,8 @@ header > div {
     margin-bottom: 2em;
 
     @include desktop() {
-        margin-top: 3em;
         margin-bottom: 3em;
+        margin-top: 3em;
     }
 
     h2 {

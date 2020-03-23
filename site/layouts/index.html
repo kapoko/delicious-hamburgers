@@ -22,12 +22,14 @@
 {{ end }}
 
 {{ define "main" }}
-    <div class="columns mt-xxl is-multiline">
+    <div class="columns mt-xxl is-multiline is-mobile">
         <div class="column is-12 has-text-centered"> 
             <h2 class="mb-md">The Menu</h2>
         </div>
-        {{ range $.Site.Data.burgers }}
-            {{ partial "burger.html" . }}
+        {{ with .Site.GetPage "/burger" }}
+            {{ range .Pages.ByWeight }}
+                {{ partial "burger.html" . }}
+            {{ end }}
         {{ end }}
         <div class="column is-12">
             <p class="has-text-centered has-text-right-tablet">
