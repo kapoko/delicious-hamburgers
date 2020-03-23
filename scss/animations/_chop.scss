@@ -1,0 +1,34 @@
+@if index($hamburger-animations, chop) {
+    .#{$hamburger-class-name}--chop {
+        span.bar {
+            transition:
+                transform 0.3s / $hamburger-animation-speed $hamburger-easing,
+                top 0.3s / $hamburger-animation-speed $hamburger-easing,
+                opacity 0.3s / $hamburger-animation-speed $hamburger-easing;
+
+            &:nth-child(2) {
+                opacity: 1;
+                transform-origin: 15% 50%;
+            }
+        }
+
+        &.active {
+            span.bar {
+                top: 0;
+
+                &:nth-child(1) {
+                    transform: rotate(45deg);
+                }
+
+                &:nth-child(2) {
+                    opacity: 0;
+                    transform: scale(0);
+                }
+
+                &:nth-child(3) {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+}

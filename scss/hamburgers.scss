@@ -10,6 +10,7 @@ $hamburger-class-name: 'hamburger' !default;
 $hamburger-size: 50px !default;
 $hamburger-thickness: 2px !default;
 $hamburger-color: #000 !default;
+$hamburger-color-hover: $hamburger-color !default;
 $hamburger-color-active: $hamburger-color !default;
 $hamburger-background: transparent !default;
 $hamburger-background-active: $hamburger-background !default;
@@ -40,11 +41,17 @@ $hamburger-animations: (
     'minimal',
     'spin',
     'stack',
-    'twist'
+    'twist',
+    'magnetic',
+    'chop',
+    'parallel',
+    'vertical'
 ) !default;
 
 $hamburger-bar-size: $hamburger-size - ($hamburger-padding * 2) - ($hamburger-border-width * 2);
 $hamburger-easing: cubic-bezier(0.645, 0.045, 0.355, 1);
+$hamburger-easing-in: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+$hamburger-easing-out: cubic-bezier(0.215, 0.61, 0.355, 1);
 
 // "Constants"
 $root-two: 1.4142135623730950488;
@@ -92,6 +99,10 @@ div.#{$hamburger-class-name} {
     &:hover {
         background-color: $hamburger-background-hover;
         opacity: $hamburger-opacity-hover;
+
+        span.bar {
+            background-color: $hamburger-color-hover;
+        }
     }
 
     &.active {
@@ -137,3 +148,7 @@ div.#{$hamburger-class-name} {
 @import 'animations/stack';
 @import 'animations/converge';
 @import 'animations/twist';
+@import 'animations/magnetic';
+@import 'animations/chop';
+@import 'animations/parallel';
+@import 'animations/vertical';
