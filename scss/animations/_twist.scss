@@ -2,6 +2,15 @@
 
 @if index($hamburger-animations, twist) {
     .#{$hamburger-class-name}--twist {
+        $origin-offset: 0.4;
+        $offset-factor: 1 - 2 * $origin-offset; //(0.5 - $offset) * 2;
+        $offset-y: $hamburger-bar-size / 2 / $root-two * $offset-factor;
+        $offset-x: $hamburger-bar-size / 2* $offset-factor + $offset-y;
+        // $offset: 2;
+        // $offset-factor: 1 - 2 * $offset; //(0.5 - $offset) * 2;
+        // $offset-y: $hamburger-bar-size / 2 / $root-two * $offset-factor;
+        // $offset-x: $hamburger-bar-size / 2 * $offset-factor - $offset-y;
+
         span.bar {
             transition: transform 0.6s / $hamburger-animation-speed $hamburger-easing;
 
@@ -18,6 +27,7 @@
             &:nth-child(3) {
                 top: 0;
                 transform: rotate(0) translate(0, $hamburger-bar-spacing);
+                transform-origin: (100% * $origin-offset) 50%;
             }
         }
 
@@ -33,7 +43,7 @@
                 }
 
                 &:nth-child(3) {
-                    transform: rotate(-225deg);
+                    transform: rotate(-225deg) translate3d(-$offset-x, -$offset-y, 0);
                 }
             }
         }

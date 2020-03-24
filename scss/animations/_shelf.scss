@@ -5,33 +5,10 @@
         $offset-y: $hamburger-bar-size / 2 / $root-two;
         $offset-x: $hamburger-bar-size / 2 - $offset-y;
 
-        > .inner {
-            // &::before,
-            // &::after {
-            //     @include hamburger-bar();
-            //     display: none;
-            //     opacity: 0;
-            //     transform-origin: 0 50%;
-            //     transition: 
-            //         transform 0.5s / $hamburger-animation-speed $hamburger-easing-out,
-            //         opacity 0.5s / $hamburger-animation-speed $hamburger-easing;
-            // }
-
-            // &::before {
-            //     // background-color: rgb(255, 125, 0);
-            //     transform: rotate(45deg) translate3d(-$offset-x, -$offset-y, 0) scaleX(0);
-            // }
-
-            // &::after {
-            //     // display: none;
-            //     transform: rotate(-45deg) translate3d(-$offset-x, $offset-y, 0) scaleX(0);
-            // }
-        }
-
         span.bar {
             transition: 
-            transform 0.3s / $hamburger-animation-speed $hamburger-easing-out,
-            opacity 0.3s / $hamburger-animation-speed $hamburger-easing;
+                transform 0.3s / $hamburger-animation-speed $hamburger-easing-out,
+                opacity 0.2s / $hamburger-animation-speed $hamburger-easing 0.1s / $hamburger-animation-speed;
 
             &:nth-child(1) {
                 top: 0;
@@ -47,8 +24,6 @@
                 top: 0;
                 transform: scaleX(0.75) translate3d(0, $hamburger-bar-spacing, 0);
                 transform-origin: 0 50%;
-                // transition: transform 0.2s / $hamburger-animation-speed $hamburger-easing;
-                // transition-delay: 0.15s;
             }
         }
 
@@ -60,63 +35,28 @@
 
                 &:nth-child(3) {
                     transform: scaleX(1) translate3d(0, $hamburger-bar-spacing, 0);
-                    // transition-delay: .1s;
                 }
             }
         }
 
         &.active {
-            // > .inner {    
-            //     &::before,
-            //     &::after {
-            //         opacity: 1;
-            //     }
-
-            //     &::before {
-            //         transform: rotate(45deg) translate3d(-$offset-x, -$offset-y, 0);
-            //         transition-delay: 0.25s / $hamburger-animation-speed;
-            //     }
-
-            //     &::after {
-            //         transform: rotate(-45deg) translate3d(-$offset-x, $offset-y, 0);
-            //         transition-delay: 0.3s / $hamburger-animation-speed;
-            //     }
-            // }
-
             span.bar {
-                // opacity: 0;
-
                 transition: 
                     transform 0.3s / $hamburger-animation-speed $hamburger-easing,
-                    opacity 0.3s / $hamburger-animation-speed $hamburger-easing;
-
-                // transition:
-                    // transform 0.5s / $hamburger-animation-speed $hamburger-easing,
-                    // top 0.25s / $hamburger-animation-speed $hamburger-easing,
+                    opacity 0.2s / $hamburger-animation-speed $hamburger-easing;
 
                 &:nth-child(1) {
-                    // display: none;
-                    // transform: rotate(-45deg) translate3d(0, 0, 0);
                     transform: rotate(45deg) translate3d(0, 0, 0);
                 }
 
                 &:nth-child(2) {
                     opacity: 0;
                     transform: scaleX(0);
-                    // transform: rotate(0) translate3d($hamburger-bar-size / 2, 0, 0);
-                    // transition-delay: 0.05s;
                 }
 
                 &:nth-child(3) {
-                    // display: none;
-                    // transform: rotate(45deg) translate3d(0, 0, 0);
-                    // transition-delay: 0 !important;
                     transform: rotate(-45deg) translate3d(-$offset-x, $offset-y, 0);
                 }
-            }
-
-            > .inner {
-                // transform: rotate(180deg) translate3d(0, -$hamburger-thickness, 0);
             }
         }
     }

@@ -52,9 +52,9 @@
 .test-background-border-radius {
     $hamburger-class-name: 'background-border-radius';
     $hamburger-color-hover: #fff;
-    $hamburger-color-active: $danger;
+    $hamburger-color-active: $info;
     $hamburger-background: $info;
-    $hamburger-background-active: $success;
+    $hamburger-background-active: $danger;
     $hamburger-background-hover: lighten($success, 15%);
     $hamburger-border-radius: 3px;
     @import '../../../scss/hamburgers';
@@ -70,7 +70,7 @@
 .test-border-4px {
     $hamburger-class-name: 'border-4px';
     $hamburger-border-width: 4px;
-    $hamburger-thickness: 3px;
+    $hamburger-thickness: 4px;
     $hamburger-border-color: #000;
     @import '../../../scss/hamburgers';
 }
