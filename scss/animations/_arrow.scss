@@ -53,7 +53,7 @@
     }
 }
 
-@if index($hamburger-animations, arrow-r) {
+@if index($hamburger-animations, arrow-right) {
     .#{$hamburger-class-name}--arrow-right {
         span.bar {
             &:nth-child(1) {

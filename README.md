@@ -129,7 +129,7 @@ Variable | Default Value | Comments
 $hamburger-animations: (
     apple,
     arrow,
-    arrow-r,
+    arrow-right,
     collapse,
     converge,
     criss-cross,
