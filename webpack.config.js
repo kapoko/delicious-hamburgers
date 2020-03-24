@@ -8,11 +8,12 @@ const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
 const StylelintPlugin = require('stylelint-webpack-plugin');
 const autoprefixer = require("autoprefixer");
 
+const isDev = process.env.NODE_ENV === 'development'
 module.exports = [
     // Minified css
     {
         entry: './scss/hamburgers.scss',
-        mode: 'production',
+        mode: isDev ? 'development' : 'production',
         output: {
             path: path.resolve(process.cwd(), 'dist'),
         },
@@ -34,6 +35,7 @@ module.exports = [
                             plugins: () => [autoprefixer]
                         },
                     },
+                    // "postcss-loader",
                     "sass-loader"
                 ]
             }]

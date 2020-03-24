@@ -1,27 +1,30 @@
+@import 'variables';
+
 @if index($hamburger-animations, criss-cross) {
     .#{$hamburger-class-name}--criss-cross {
+        $offset-y: $hamburger-bar-size / 2 / $root-two;
+        $offset-x: $hamburger-bar-size / 2 - $offset-y;
+        
         > .inner {
             &::before,
             &::after {
                 @include hamburger-bar();
 
-                left: ($hamburger-bar-size - ($hamburger-bar-size / $root-two)) / 2;
+                // left: ($hamburger-bar-size - ($hamburger-bar-size / $root-two)) / 2;
                 opacity: 0;
                 transform-origin: 0 50%;
                 transition:
                     opacity 0.4s / $hamburger-animation-speed $hamburger-easing,
-                    width 0.4s / $hamburger-animation-speed $hamburger-easing;
-                width: 0;
+                    transform 0.4s / $hamburger-animation-speed $hamburger-easing;
             }
 
             &::before {
-                top: -($hamburger-bar-size / $root-two) / 2;
-                transform: rotate(45deg);
+                transform: rotate(45deg) translate3d(-$offset-x, -$offset-y, 0) scaleX(0);
             }
 
             &::after {
-                top: ($hamburger-bar-size / $root-two) / 2;
-                transform: rotate(-45deg);
+                // top: ($hamburger-bar-size / $root-two) / 2;
+                transform: rotate(-45deg) translate3d(-$offset-x, $offset-y, 0) scaleX(0);
                 transition-delay: 0.1s / $hamburger-animation-speed;
             }
         }
@@ -44,14 +47,15 @@
                 &::before,
                 &::after {
                     opacity: 1;
-                    width: 100%;
-                }
+                }           
 
                 &::before {
+                    transform: rotate(45deg) translate3d(-$offset-x, -$offset-y, 0);
                     transition-delay: 0.4s / $hamburger-animation-speed;
                 }
 
                 &::after {
+                    transform: rotate(-45deg) translate3d(-$offset-x, $offset-y, 0);
                     transition-delay: 0.5s / $hamburger-animation-speed;
                 }
             }

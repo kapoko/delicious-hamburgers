@@ -1,4 +1,10 @@
 .frame {
     border: 2px #000 solid;
-    padding: 3em 5px 2.5em; 
+    padding: 3em 5px 2.5em;
+    
+    h3 {
+        @include mobile() {
+            font-size: .8em;
+        }
+    }
 }

@@ -1,3 +1,5 @@
+@import 'variables';
+
 @if index($hamburger-animations, collapse) {
     .#{$hamburger-class-name}--collapse {
         span.bar {

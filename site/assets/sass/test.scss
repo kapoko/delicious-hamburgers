@@ -70,14 +70,14 @@
 .test-border-4px {
     $hamburger-class-name: 'border-4px';
     $hamburger-border-width: 4px;
-    $hamburger-thickness: 4px;
+    $hamburger-thickness: 3px;
     $hamburger-border-color: #000;
     @import '../../../scss/hamburgers';
 }
 
 .test-no-padding {
     $hamburger-class-name: 'no-padding';
-    $hamburger-border-width: 2px;
+    $hamburger-border-width: 0;
     $hamburger-border-color: #000;
     $hamburger-padding: 0;
     $hamburger-thickness: 6px;

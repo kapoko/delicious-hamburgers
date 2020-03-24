@@ -1,0 +1,42 @@
+@import 'variables';
+
+@if index($hamburger-animations, simple) {
+    .#{$hamburger-class-name}--simple {
+        span.bar {
+            // top: 0;
+            transition: transform 0.3s / $hamburger-animation-speed $hamburger-easing;
+
+            &:nth-child(1) {
+                // top: -$hamburger-bar-spacing * 0.8;
+                top: 0;
+                transform: translate3d(0, -$hamburger-bar-spacing * 0.8, 0);
+                
+            }
+
+            &:nth-child(2) {
+                display: none;
+            }
+
+            &:nth-child(3) {
+                top: 0;
+                // top: $hamburger-bar-spacing * 0.8;
+                transform: translate3d(0, $hamburger-bar-spacing * 0.8, 0);
+            }
+        }
+
+        &.active {
+            span.bar {
+                // top: 0;
+                // transition: transform 0.4s / $hamburger-animation-speed $hamburger-easing;
+
+                &:nth-child(1) {
+                    transform: rotate(-45deg) translate3d(0, 0, 0);
+                }
+
+                &:nth-child(3) {
+                    transform: rotate(45deg) translate3d(0, 0, 0);
+                }
+            }
+        }
+    }
+}

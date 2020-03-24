@@ -1,3 +1,5 @@
+@import 'variables';
+
 @if index($hamburger-animations, dive) {
     .#{$hamburger-class-name}--dive {
         span.bar {

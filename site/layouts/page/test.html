@@ -1,7 +1,11 @@
-{{ define "main" }}
-    {{ $testStyles := resources.Get "sass/test.scss" | toCSS | fingerprint }}
-    <link rel="stylesheet" href="{{ $testStyles.Permalink }}"> 
+{{ define "additional-css" }}
+    {{ $script := .Site.Data.manifest.test }}
+    {{ with $script.css }}
+        <link rel="stylesheet" href="{{ absURL . }}"> 
+    {{ end }}
+{{ end }}
 
+{{ define "main" }}
     {{ range .Site.Data.test }}
         {{ $currentConfig := . }}
         <div class="columns">

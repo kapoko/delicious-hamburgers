@@ -5,11 +5,13 @@ const autoprefixer = require("autoprefixer");
 const AssetsPlugin = require("assets-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
 
 module.exports = {
     mode: isDev ? 'development' : 'production',
     entry: {
-        main: path.join(__dirname, "assets", "js", "main.js")
+        main: path.join(__dirname, "assets", "js", "main.js"),
+        test: path.join(__dirname, "assets", "sass", "test.scss"),
     },
     output: {
         filename: '[name].[contenthash:8].js',
@@ -51,6 +53,7 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: '[name].[contenthash:8].css'
         }),
+        new FixStyleOnlyEntriesPlugin(),
     ]
 }
   

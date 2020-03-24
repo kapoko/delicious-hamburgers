@@ -1,16 +1,18 @@
+@import 'variables';
+
 @if index($hamburger-animations, stack) {
     .#{$hamburger-class-name}--stack {
         span.bar {
             transition:
-                transform 0.3s / $hamburger-animation-speed $hamburger-easing,
-                top 0.4s / $hamburger-animation-speed $hamburger-easing 0.3s / $hamburger-animation-speed;
+                transform 0.25s / $hamburger-animation-speed $hamburger-easing,
+                top 0.3s / $hamburger-animation-speed $hamburger-easing 0.25s / $hamburger-animation-speed;
         }
 
         &.active {
             span.bar {
                 transition:
-                    transform 0.3s / $hamburger-animation-speed $hamburger-easing 0.4s / $hamburger-animation-speed,
-                    top 0.4s / $hamburger-animation-speed $hamburger-easing;
+                    transform 0.25s / $hamburger-animation-speed $hamburger-easing 0.3s / $hamburger-animation-speed,
+                    top 0.3s / $hamburger-animation-speed $hamburger-easing;
 
                 &:nth-child(1) {
                     top: 0;

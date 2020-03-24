@@ -1,3 +1,5 @@
+@import 'variables';
+
 @if index($hamburger-animations, twist) {
     .#{$hamburger-class-name}--twist {
         span.bar {

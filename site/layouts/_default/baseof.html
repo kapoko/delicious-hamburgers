@@ -6,9 +6,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <base href="{{ .Site.BaseURL }}">
-        <title>{{ block "title" . }}
-            {{ .Site.Title }} | {{ .Site.Params.description }}
-        {{ end }}</title>
+        <title>
+            {{ with .Params.Title }}
+                {{ . }} | {{ $.Site.Title }}
+            {{ else }}
+                {{ .Site.Title }} | {{ .Site.Params.description }}
+            {{ end }}
+        </title>
 
         {{ partial "head/favicons.html" . }}
         {{ partial "head/metadata.html" . }}
@@ -18,6 +22,7 @@
         {{ with $script.css }}
             <link rel="stylesheet" href="{{ absURL . }}"> 
         {{ end }}
+        {{ block "additional-css" . }}{{ end }}
     </head>
     <body>
         <section class="section">

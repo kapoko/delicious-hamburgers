@@ -9,8 +9,8 @@
   },
   "scripts": {
     "test": "npm-run-all stylelint",
-    "build": "webpack",
-    "start": "webpack --watch --mode development --hide-modules",
+    "build": "NODE_ENV=production webpack",
+    "start": "NODE_ENV=development webpack --watch --hide-modules",
     "watch": "npm run start",
     "stylelint": "stylelint 'scss/**/*.scss'",
     "stylelint:fix": "stylelint 'scss/**/*.scss' --fix",

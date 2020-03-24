@@ -1,3 +1,5 @@
+@import 'variables';
+
 @if index($hamburger-animations, push) {
     .#{$hamburger-class-name}--push {
         overflow: hidden;
@@ -8,7 +10,7 @@
             &::before,
             &::after {
                 @include hamburger-bar();
-                top: -$hamburger-size + $hamburger-padding;
+                top: -$hamburger-size * 1.1;
             }
 
             &::before {
@@ -22,7 +24,7 @@
         
         &.active {
             > .inner {
-                transform: translate3d(0, $hamburger-size - $hamburger-padding, 0);
+                transform: translate3d(0, $hamburger-size * 1.1, 0);
             }
         }
     }

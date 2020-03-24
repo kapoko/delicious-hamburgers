@@ -1,3 +1,5 @@
+@import 'variables';
+
 @if index($hamburger-animations, vertical) {
     .#{$hamburger-class-name}--vertical {
         > .inner {
