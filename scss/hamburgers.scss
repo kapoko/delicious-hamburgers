@@ -45,7 +45,8 @@ $hamburger-animations: (
     'magnetic',
     'chop',
     'parallel',
-    'vertical'
+    'vertical',
+    'push'
 ) !default;
 
 $hamburger-bar-size: $hamburger-size - ($hamburger-padding * 2) - ($hamburger-border-width * 2);
@@ -95,13 +96,20 @@ div.#{$hamburger-class-name} {
     padding: $hamburger-padding;
     text-transform: none;
     transition: opacity $hamburger-opacity-transition-speed $hamburger-easing, background $hamburger-background-transition-speed $hamburger-easing;
-    
+
     &:hover {
         background-color: $hamburger-background-hover;
         opacity: $hamburger-opacity-hover;
 
         span.bar {
             background-color: $hamburger-color-hover;
+        }
+
+        > .inner {
+            &::before,
+            &::after {
+                background-color: $hamburger-color-hover;
+            }
         }
     }
 
@@ -110,6 +118,13 @@ div.#{$hamburger-class-name} {
 
         span.bar {
             background-color: $hamburger-color-active;
+        }
+
+        > .inner {
+            &::before,
+            &::after {
+                background-color: $hamburger-color-active;
+            }
         }
     }
     
@@ -152,3 +167,4 @@ div.#{$hamburger-class-name} {
 @import 'animations/chop';
 @import 'animations/parallel';
 @import 'animations/vertical';
+@import 'animations/push';

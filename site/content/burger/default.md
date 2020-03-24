@@ -1,5 +1,5 @@
 ---
 title: Default
 class: default
-weight: 160
+weight: 170
 ---

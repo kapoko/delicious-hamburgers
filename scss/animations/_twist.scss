@@ -1,37 +1,36 @@
 @if index($hamburger-animations, twist) {
     .#{$hamburger-class-name}--twist {
         span.bar {
-            transition:
-                transform 0.6s / $hamburger-animation-speed $hamburger-easing,
-                top 0.6s / $hamburger-animation-speed $hamburger-easing,
-                left 0.6s / $hamburger-animation-speed $hamburger-easing;
+            transition: transform 0.6s / $hamburger-animation-speed $hamburger-easing;
 
             &:nth-child(1) {
-                left: 0;
-                transform-origin: 0 50%;
+                top: 0;
+                transform: translate(0, -$hamburger-bar-spacing);
             }
 
             &:nth-child(2) {
                 opacity: 1;
                 transition: opacity 0.2s / $hamburger-animation-speed $hamburger-easing 0.4s / $hamburger-animation-speed;
             }
+
+            &:nth-child(3) {
+                top: 0;
+                transform: rotate(0) translate(0, $hamburger-bar-spacing);
+            }
         }
 
         &.active {
             span.bar {
                 &:nth-child(1) {
-                    left: ($hamburger-bar-size - ($hamburger-bar-size / $root-two)) / 2;
-                    top: -($hamburger-bar-size / $root-two) / 2;
                     transform: rotate(45deg);
                 }
 
                 &:nth-child(2) {
                     opacity: 0;
-                    transition: opacity 0.2s $hamburger-easing;
+                    transition: opacity 0.3s $hamburger-easing;
                 }
 
                 &:nth-child(3) {
-                    top: 0;
                     transform: rotate(-225deg);
                 }
             }

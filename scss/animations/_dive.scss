@@ -5,7 +5,7 @@
 
             &:nth-child(1) {
                 top: 0;
-                transform: rotate(0) translate(0, -$hamburger-bar-spacing * 0.8);
+                transform: translate(0, -$hamburger-bar-spacing * 0.8);
             }
 
             &:nth-child(2) {
@@ -14,7 +14,7 @@
 
             &:nth-child(3) {
                 top: 0;
-                transform: rotate(0) translate(0, $hamburger-bar-spacing * 0.8);
+                transform: translate(0, $hamburger-bar-spacing * 0.8);
             }
         }
 
@@ -23,11 +23,11 @@
                 $offset: ($hamburger-bar-spacing * 0.8) / $root-two;
 
                 &:nth-child(1) {
-                    transform: rotate(135deg) translate(0, 0);
+                    transform: rotate(135deg);
                 }
 
                 &:nth-child(3) {
-                    transform: rotate(45deg) translate(0, 0);
+                    transform: rotate(45deg);
                 }
             }
         }
