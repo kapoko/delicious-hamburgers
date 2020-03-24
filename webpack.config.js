@@ -5,7 +5,6 @@ const TerserJSPlugin = require("terser-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
 const autoprefixer = require("autoprefixer");
 
@@ -45,7 +44,6 @@ module.exports = [
             new MiniCssExtractPlugin({
                 filename: "hamburgers.min.css",
             }),
-            new CleanWebpackPlugin(),
             new StylelintPlugin({
                 fix: true,
                 files: 'scss/**/*.scss'
