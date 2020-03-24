@@ -6,13 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <base href="{{ .Site.BaseURL }}">
-        <title>
-            {{ with .Params.Title }}
-                {{ . }} | {{ $.Site.Title }}
-            {{ else }}
-                {{ .Site.Title }} | {{ .Site.Params.description }}
-            {{ end }}
-        </title>
+        <title>{{ partial "head/title.html" . }}</title>
 
         {{ partial "head/favicons.html" . }}
         {{ partial "head/metadata.html" . }}
