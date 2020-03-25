@@ -1,12 +1,12 @@
 import domReady from './helpers/domReady';
 import { library, dom } from "@fortawesome/fontawesome-svg-core";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faDownload, faCode } from "@fortawesome/free-solid-svg-icons";
+import { faDownload, faCode, faEllipsisH } from "@fortawesome/free-solid-svg-icons";
 import { render } from 'github-buttons'
 
 import '../sass/main.scss';
 
-library.add(faDownload, faGithub, faCode);
+library.add(faDownload, faGithub, faCode, faEllipsisH);
 dom.watch();
 
 domReady(() => {
