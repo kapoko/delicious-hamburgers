@@ -58,7 +58,7 @@ Get your delicious hamburgers served up by your favourite package manager.
     
     <sub>Note that the URL could be different depending on your project setup</sub>
 
-    ```sass
+    ```scss
     @import "~delicious-hamburgers/scss/hamburgers";
     ```
 
@@ -91,10 +91,10 @@ hamburger--twist
 
 With the power of Sass you can customise the buttons to fit your project even better. Declare your variables before including `hamburgers.scss`, only then they will override the default values. Like so: 
 
-```sass
+```scss
 $hamburger-color:               #fff;
 
-@import "~delicious-hamburgers/sass/hamburgers";
+@import "~delicious-hamburgers/scss/hamburgers";
 ```
 
 ### List of default variables
@@ -125,7 +125,7 @@ Variable | Default Value | Comments
 
 ### For extra lean burgers, remove the animations you don't need
 
-```sass
+```scss
 $hamburger-animations: (
     apple,
     arrow,
@@ -153,6 +153,7 @@ There's some breaking changes when updating from v0.x.x to v1.x.x.
 Old (v0.x.x) | New (v1.x.x) | Comments
 --- | --- | ---
 `$hamburger-border-radius` | `$hamburger-bar-border-radius` | <sup>`$hamburger-border-radius` is now used for the outside border.</sup>
+`$hamburger-animations: (arrow-r)` | `$hamburger-animations: (arrow-right)` | <sup>Variable is the same, but arrow-r is now arrow-right.</sup>
 
 ## Copyright and license
 
