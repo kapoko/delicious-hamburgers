@@ -1,3 +1,4 @@
+@use 'sass:math';
 @import 'variables';
 
 @if index($hamburger-animations, minimal) {
@@ -8,7 +9,7 @@
                 opacity 0.3s / $hamburger-animation-speed $hamburger-easing 0.1s / $hamburger-animation-speed;
 
             &:nth-child(1) {
-                top: -$hamburger-bar-spacing * 0.8;
+                top: round(-$hamburger-bar-spacing * 0.8);
             }
 
             &:nth-child(2) {
@@ -16,7 +17,7 @@
             }
 
             &:nth-child(3) {
-                top: $hamburger-bar-spacing * 0.8;
+                top: round($hamburger-bar-spacing * 0.8);
             }
         }
 
@@ -27,12 +28,12 @@
                     opacity 0.3s / $hamburger-animation-speed $hamburger-easing;
 
                 &:nth-child(1) {
-                    transform: translate3d(0, $hamburger-bar-spacing * 0.8, 0);
+                    transform: translate3d(0, round($hamburger-bar-spacing * 0.8), 0);
                 }
 
                 &:nth-child(3) {
                     opacity: 0;
-                    transform: translate3d(0, -$hamburger-bar-spacing * 0.8, 0);
+                    transform: translate3d(0, round(-$hamburger-bar-spacing * 0.8), 0);
                 }
             }
         }

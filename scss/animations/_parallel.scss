@@ -1,15 +1,16 @@
+@use 'sass:math';
 @import 'variables';
 
 @if index($hamburger-animations, parallel) {
     .#{$hamburger-class-name}--parallel {
         span.bar {
-            transform: scaleX(1) translate(0, 0);
+            transform: scaleX(1) translate3d(0, 0, 0);
             transition:
                 transform 0.2s / $hamburger-animation-speed $hamburger-easing,
                 top 0.2s / $hamburger-animation-speed $hamburger-easing;
 
             &:nth-child(1) {
-                top: -$hamburger-bar-spacing * 0.8;
+                top: round(-$hamburger-bar-spacing * 0.8);
             }
 
             &:nth-child(2) {
@@ -17,18 +18,18 @@
             }
 
             &:nth-child(3) {
-                top: $hamburger-bar-spacing * 0.8;
+                top: round($hamburger-bar-spacing * 0.8);
             }
         }
 
         &:hover {
             span.bar {
                 &:nth-child(1) { 
-                    transform: scaleX(0.85) translate(15%, 0);
+                    transform: scaleX(0.85) translate3d(15%, 0, 0);
                 }
 
                 &:nth-child(3) { 
-                    transform: scaleX(0.85) translate(-15%, 0);
+                    transform: scaleX(0.85) translate3d(-15%, 0, 0);
                 }
             }
         }

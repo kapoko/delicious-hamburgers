@@ -1,31 +1,60 @@
+@use 'sass:math';
 @import 'variables';
 
 @if index($hamburger-animations, stack) {
     .#{$hamburger-class-name}--stack {
         span.bar {
-            transition:
-                transform 0.25s / $hamburger-animation-speed $hamburger-easing,
-                top 0.3s / $hamburger-animation-speed $hamburger-easing 0.25s / $hamburger-animation-speed;
+            transition: transform 0.3s / $hamburger-animation-speed $hamburger-easing 0.2s / $hamburger-animation-speed,
+                opacity 0.25s / $hamburger-animation-speed $hamburger-easing 0.25s / $hamburger-animation-speed,;
+
+            &:nth-child(1),
+            &:nth-child(3) {
+                background: none;
+                top: 0;
+
+                &::before {
+                    @include hamburger-bar();
+                    transition: transform 0.35s / $hamburger-animation-speed $hamburger-easing;
+                }
+            }
+
+            &:nth-child(1) {
+                transform: translate3d(0, -$hamburger-bar-spacing, 0);
+            }
+            
+            &:nth-child(3) {
+                transform: translate3d(0, $hamburger-bar-spacing, 0);
+            }
         }
 
         &.active {
             span.bar {
-                transition:
-                    transform 0.25s / $hamburger-animation-speed $hamburger-easing 0.3s / $hamburger-animation-speed,
-                    top 0.3s / $hamburger-animation-speed $hamburger-easing;
+                transition: transform 0.25s / $hamburger-animation-speed $hamburger-easing, 
+                    opacity 0.25s / $hamburger-animation-speed $hamburger-easing;
+
+                &:nth-child(1),
+                &:nth-child(3) {
+                    transform: translate3d(0, 0, 0);
+
+                    &::before {
+                        transition: transform 0.35s / $hamburger-animation-speed $hamburger-easing 0.15s / $hamburger-animation-speed;
+                    }
+                }
 
                 &:nth-child(1) {
-                    top: 0;
-                    transform: rotate(45deg);
+                    &::before {
+                        transform: rotate(45deg);
+                    }
                 }
 
                 &:nth-child(2) {
-                    transform: rotate(45deg);
-                }
+                    opacity: 0;
+                } 
 
                 &:nth-child(3) {
-                    top: 0;
-                    transform: rotate(-45deg);
+                    &::before {
+                        transform: rotate(-45deg);
+                    }
                 }
             }
         }

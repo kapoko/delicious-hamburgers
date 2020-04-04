@@ -1,14 +1,24 @@
+@use 'sass:math';
 @import 'variables';
 
 @if index($hamburger-animations, magnetic) {
     .#{$hamburger-class-name}--magnetic {
         span.bar {
-            transition:
-                transform 0.4s / $hamburger-animation-speed $hamburger-easing,
-                top 0.2s / $hamburger-animation-speed $hamburger-easing 0.2s / $hamburger-animation-speed;
+            transition: transform 0.2s / $hamburger-animation-speed $hamburger-easing 0.2s / $hamburger-animation-speed;
+
+            &:nth-child(1),
+            &:nth-child(3) {
+                background: none;
+                top: 0;
+
+                &::before {
+                    @include hamburger-bar();
+                    transition: transform 0.4s / $hamburger-animation-speed $hamburger-easing;
+                }
+            }
 
             &:nth-child(1) {
-                top: -$hamburger-bar-spacing * 0.8;
+                transform: translate3d(0, round(-$hamburger-bar-spacing * 0.8), 0);
             }
 
             &:nth-child(2) {
@@ -16,23 +26,35 @@
             }
 
             &:nth-child(3) {
-                top: $hamburger-bar-spacing * 0.8;
+                transform: translate3d(0, round($hamburger-bar-spacing * 0.8), 0);
             }
         }
 
         &.active {
             span.bar {
-                top: 0;
-                transition:
-                    transform 0.4s / $hamburger-animation-speed $hamburger-easing,
-                    top 0.2s / $hamburger-animation-speed $hamburger-easing;
+                transition: transform 0.2s / $hamburger-animation-speed $hamburger-easing;
+
+                &:nth-child(1),
+                &:nth-child(3) {
+                    &::before {
+                        transition: transform 0.4s / $hamburger-animation-speed $hamburger-easing;
+                    }
+                }
 
                 &:nth-child(1) {
-                    transform: rotate(-45deg);
+                    transform: translate3d(0, 0, 0);
+
+                    &::before {
+                        transform: rotate(45deg);
+                    }
                 }
 
                 &:nth-child(3) {
-                    transform: rotate(45deg);
+                    transform: translate3d(0, 0, 0);
+
+                    &::before {
+                        transform: rotate(-45deg);
+                    }
                 }
             }
         }

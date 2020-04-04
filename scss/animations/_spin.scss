@@ -2,40 +2,57 @@
 
 @if index($hamburger-animations, spin) {
     .#{$hamburger-class-name}--spin {
+        $origin-offset: 0.4;
+        $offset-factor: 1 - 2 * $origin-offset;
+        $offset-y: $hamburger-bar-size / 2 / $root-two * $offset-factor;
+        $offset-x-a: $hamburger-bar-size / 2 * $offset-factor + $offset-y;
+        $offset-x-b: $hamburger-bar-size / 2 * $offset-factor - $offset-y;
+
         > .inner {
             transition: transform 0.5s / $hamburger-animation-speed $hamburger-easing;
         }
 
         span.bar {
             transition:
-                transform 0.5s / $hamburger-animation-speed $hamburger-easing,
-                top 0.25s / $hamburger-animation-speed $hamburger-easing 0.25s / $hamburger-animation-speed,
-                opacity 0.25s / $hamburger-animation-speed $hamburger-easing 0.25s / $hamburger-animation-speed;
+                transform 0.4s / $hamburger-animation-speed $hamburger-easing,
+                opacity 0.2s / $hamburger-animation-speed $hamburger-easing 0.2s /$hamburger-animation-speed;
+
+            &:nth-child(1) {
+                top: 0;
+                transform: rotate(0deg) translate3d(0, -$hamburger-bar-spacing, 0);
+                transform-origin: (100% * $origin-offset) 50%;
+            }
+
+            &:nth-child(3) {
+                top: 0;
+                transform: rotate(0deg) translate3d(0, $hamburger-bar-spacing, 0);
+                transform-origin: (100% * $origin-offset) 50%;
+            }
         }
 
         &.active {
+            > .inner {
+                transform: rotate(180deg) translate3d(0, -$hamburger-thickness, 0);
+            }
+
             span.bar {
-                top: 0;
                 transition:
-                    transform 0.5s / $hamburger-animation-speed $hamburger-easing,
-                    top 0.25s / $hamburger-animation-speed $hamburger-easing,
-                    opacity 0.25s / $hamburger-animation-speed $hamburger-easing;
+                    transform 0.3s / $hamburger-animation-speed $hamburger-easing 0.1s, 
+                    opacity 0.2s / $hamburger-animation-speed $hamburger-easing;
 
                 &:nth-child(1) {
-                    transform: rotate(135deg);
-                }
+                    transform: rotate(135deg) translate3d(-$offset-x-a, -$offset-y, 0);
+                } 
 
                 &:nth-child(2) {
                     opacity: 0;
+                    transform: rotate(45deg);
                 }
 
                 &:nth-child(3) {
-                    transform: rotate(45deg);
+                    // opacity: 0;
+                    transform: rotate(45deg) translate3d(-$offset-x-b, -$offset-y, 0);
                 }
-            }
-
-            > .inner {
-                transform: rotate(180deg) translate3d(0, -$hamburger-thickness, 0);
             }
         }
     }

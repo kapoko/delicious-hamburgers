@@ -1,3 +1,4 @@
+@use 'sass:math';
 @import 'variables';
 
 @if index($hamburger-animations, vertical) {
@@ -16,7 +17,7 @@
 
             &:nth-child(1) {
                 top: 0;
-                transform: translate3d(0, -$hamburger-bar-spacing * 0.8, 0);
+                transform: translate3d(0, round(-$hamburger-bar-spacing * 0.8), 0);
                 transform-origin: (100% * $origin-offset) 50%;
             }
 
@@ -26,7 +27,7 @@
 
             &:nth-child(3) {
                 top: 0;
-                transform: translate3d(0, $hamburger-bar-spacing * 0.8, 0);
+                transform: translate3d(0, round($hamburger-bar-spacing * 0.8), 0);
                 transform-origin: (100% * $origin-offset) 50%;
             }
         }

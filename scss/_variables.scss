@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 // Variables
 $hamburger-class-name: 'hamburger' !default;
 $hamburger-size: 50px !default;
@@ -17,7 +19,7 @@ $hamburger-opacity-transition-speed: 0.2s !default;
 $hamburger-padding: $hamburger-size / 10 !default;
 $hamburger-border-radius: 0 !default;
 $hamburger-bar-border-radius: 0 !default;
-$hamburger-bar-spacing: $hamburger-size / 5 !default;
+$hamburger-bar-spacing: round($hamburger-size / 5) !default;
 $hamburger-animation-speed: 1 !default;
 
 // Animation types. Use this as a variable and remove the animations
@@ -51,4 +53,4 @@ $hamburger-easing-in: cubic-bezier(0.55, 0.055, 0.675, 0.19) !default;
 $hamburger-easing-out: cubic-bezier(0.215, 0.61, 0.355, 1) !default;
 
 // "Constants"
-$root-two: 1.4142135623730950488;
+$root-two: math.sqrt(2);
