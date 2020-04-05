@@ -22,13 +22,13 @@
             }
 
             &:nth-child(2) {
-                display: none;
-            }
-
-            &:nth-child(3) {
                 top: 0;
                 transform: translate3d(0, round($hamburger-bar-spacing * 0.8), 0);
                 transform-origin: (100% * $origin-offset) 50%;
+            }
+
+            &:nth-child(3) {
+                display: none;
             }
         }
 
@@ -45,7 +45,7 @@
                     transform: rotate(-45deg) translate3d(-$offset-x, $offset-y, 0);;
                 }
 
-                &:nth-child(3) {
+                &:nth-child(2) {
                     transform: rotate(45deg) translate3d(-$offset-x, -$offset-y, 0);
                 }
             }

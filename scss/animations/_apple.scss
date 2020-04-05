@@ -16,12 +16,12 @@
             }
 
             &:nth-child(2) {
-                display: none;
+                top: 0;
+                transform: translate3d(0, round($hamburger-bar-spacing * 0.8), 0);
             }
 
             &:nth-child(3) {
-                top: 0;
-                transform: translate3d(0, round($hamburger-bar-spacing * 0.8), 0);
+                display: none;
             }
         }
 
@@ -35,12 +35,10 @@
                 transition: transform 0.35s / $hamburger-animation-speed $hamburger-easing 0.15s / $hamburger-animation-speed;
 
                 &:nth-child(1) {
-                    // top: 0;
                     transform: rotate(45deg) translate3d(0, 0, 0);
                 }
 
-                &:nth-child(3) {
-                    // top: 0;
+                &:nth-child(2) {
                     transform: rotate(-45deg) translate3d(0, 0, 0);
                 }
             }

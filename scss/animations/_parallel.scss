@@ -14,11 +14,11 @@
             }
 
             &:nth-child(2) {
-                display: none;
+                top: round($hamburger-bar-spacing * 0.8);
             }
 
             &:nth-child(3) {
-                top: round($hamburger-bar-spacing * 0.8);
+                display: none;
             }
         }
 
@@ -28,7 +28,7 @@
                     transform: scaleX(0.85) translate3d(15%, 0, 0);
                 }
 
-                &:nth-child(3) { 
+                &:nth-child(2) { 
                     transform: scaleX(0.85) translate3d(-15%, 0, 0);
                 }
             }
@@ -45,7 +45,7 @@
                     transform: rotate(-45deg);
                 }
 
-                &:nth-child(3) {
+                &:nth-child(2) {
                     transform: rotate(45deg);
                 }
             }

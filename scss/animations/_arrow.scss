@@ -7,48 +7,46 @@
         }
 
         span.bar {
-            transition:
-                transform 0.3s / $hamburger-animation-speed $hamburger-easing,
-                width 0.3s / $hamburger-animation-speed $hamburger-easing,
-                top 0.3s / $hamburger-animation-speed $hamburger-easing,
-                right 0.3s / $hamburger-animation-speed $hamburger-easing;
+            transition: transform 0.3s / $hamburger-animation-speed $hamburger-easing;
             transition-delay: 0.1s / $hamburger-animation-speed;
 
             &:nth-child(1) {
-                right: 0;
                 transform-origin: 100% 0;
             }
 
+            &:nth-child(2) {
+                transform-origin: 0 0;
+            }
+
             &:nth-child(3) {
-                right: 0;
                 transform-origin: 100% 100%;
             }
         }
 
         &.active {
-            span.bar {
-                transition-delay: 0s;
-
-                &:nth-child(1) {
-                    top: $hamburger-thickness / 2;
-                    transform: rotate(45deg);
-                    width: 40%;
-                }
-
-                &:nth-child(2) {
-                    width: $hamburger-bar-size - $hamburger-thickness;
-                }
-
-                &:nth-child(3) {
-                    top: -$hamburger-thickness / 2;
-                    transform: rotate(-45deg);
-                    width: 40%;
-                }
-            }
-
             > .inner {
                 transform: rotate(180deg) translate3d(0, -$hamburger-thickness, 0);
             }
+
+            span.bar {
+                $scale: 0.4;
+                $offset: $hamburger-bar-spacing / $root-two + $hamburger-thickness / 2 / $root-two;
+
+                transition-delay: 0s;
+
+                &:nth-child(1) {
+                    transform: rotate(45deg) scaleX($scale) translate3d($offset / $scale, $offset, 0);
+                }
+
+                &:nth-child(2) {
+                    transform: scaleX(1 - $hamburger-thickness / $hamburger-bar-size);
+                }
+
+                &:nth-child(3) {
+                    transform: rotate(-45deg) scaleX($scale) translate3d($offset / $scale, -$offset, 0);
+                }
+            }
+
         }
     }
 }
@@ -57,12 +55,11 @@
     .#{$hamburger-class-name}--arrow-right {
         span.bar {
             &:nth-child(1) {
-                left: 0;
                 transform-origin: 0 0;
             }
 
             &:nth-child(2) {
-                right: 0;
+                transform-origin: 100% 0;
             }
 
             &:nth-child(3) {
@@ -72,19 +69,27 @@
         }
 
         &.active {
-            span.bar {
-                &:nth-child(1) {
-                    transform: rotate(-45deg);
-                }
-
-                &:nth-child(3) {
-                    transform: rotate(45deg);
-                }
-            }
-
             > .inner {
                 transform: rotate(-180deg) translate3d(0, -$hamburger-thickness, 0);
             }
+
+            span.bar {
+                $scale: 0.4;
+                $offset: $hamburger-bar-spacing / $root-two + $hamburger-thickness / 2 / $root-two;
+
+                &:nth-child(1) {
+                    transform: rotate(-45deg) scaleX($scale) translate3d(-$offset / $scale, $offset, 0);
+                }
+
+                &:nth-child(2) {
+                    transform: scaleX(1 - $hamburger-thickness / $hamburger-bar-size);
+                }
+
+                &:nth-child(3) {
+                    transform: rotate(45deg) scaleX($scale) translate3d(-$offset / $scale, -$offset, 0);
+                }
+            }
+
         }
     }
 }
