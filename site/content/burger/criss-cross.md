@@ -1,5 +1,5 @@
 ---
 title: Criss Cross
 class: criss-cross
-weight: 10
+weight: 1
 ---

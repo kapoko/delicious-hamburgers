@@ -1,5 +1,5 @@
 ---
 title: Minimal
 class: minimal
-weight: 100
+weight: 140
 ---

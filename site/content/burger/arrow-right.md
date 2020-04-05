@@ -1,5 +1,5 @@
 ---
 title: Arrow Right
 class: arrow-right
-weight: 140
+weight: 170
 ---

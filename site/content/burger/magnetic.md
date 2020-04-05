@@ -1,5 +1,5 @@
 ---
 title: Magnetic
 class: magnetic
-weight: 40
+weight: 10
 ---

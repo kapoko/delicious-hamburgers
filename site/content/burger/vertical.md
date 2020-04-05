@@ -1,5 +1,5 @@
 ---
 title: Vertical
 class: vertical
-weight: 80
+weight: 70
 ---

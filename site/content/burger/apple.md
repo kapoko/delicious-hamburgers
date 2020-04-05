@@ -1,5 +1,5 @@
 ---
 title: Apple
 class: apple
-weight: 20
+weight: 40
 ---

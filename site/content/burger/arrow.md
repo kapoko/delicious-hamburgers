@@ -1,5 +1,5 @@
 ---
 title: Arrow
 class: arrow
-weight: 130
+weight: 160
 ---

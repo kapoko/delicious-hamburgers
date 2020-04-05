@@ -1,5 +1,5 @@
 ---
 title: Twist
 class: twist
-weight: 30
+weight: 20
 ---

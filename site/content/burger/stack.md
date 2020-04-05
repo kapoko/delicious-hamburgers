@@ -1,5 +1,5 @@
 ---
 title: Stack
 class: stack
-weight: 150
+weight: 130
 ---

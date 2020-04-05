@@ -1,5 +1,5 @@
 ---
 title: Spin
 class: spin
-weight: 110
+weight: 80
 ---

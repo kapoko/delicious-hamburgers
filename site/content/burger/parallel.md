@@ -1,5 +1,5 @@
 ---
 title: Parallel
 class: parallel
-weight: 50
+weight: 90
 ---

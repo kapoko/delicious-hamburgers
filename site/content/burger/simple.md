@@ -1,5 +1,5 @@
 ---
 title: Simple
 class: simple
-weight: 5
+weight: 120
 ---
