@@ -181,10 +181,10 @@ Old (v0.x.x) | New (v1.x.x) | Comments
 --- | --- | ---
 `$hamburger-border-radius` | `$hamburger-bar-border-radius` | <sup>`$hamburger-border-radius` is now used for the outside border.</sup>
 `$hamburger-animations: (arrow-r)` | `$hamburger-animations: (arrow-right)` | <sup>Variable is the same, but arrow-r is now arrow-right.</sup>
-| `$hamburger-color-hover` |
-| `$hamburger-background-hover` |
-| `$hamburger-background-transition-speed` |
-| `$hamburger-opacity-transition-speed` |
+ | `$hamburger-color-hover` |
+ | `$hamburger-background-hover` |
+ | `$hamburger-background-transition-speed` |
+ | `$hamburger-opacity-transition-speed` |
 
 ## Copyright and license
 
