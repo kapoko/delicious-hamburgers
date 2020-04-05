@@ -118,16 +118,29 @@ $hamburger-background-hover:                $hamburger-background;
 $hamburger-background-active:               $hamburger-background;
 $hamburger-background-transition-speed:     0.2s;
 $hamburger-border-color:                    transparent;
-$hamburger-border-width:                    0; // Note: the border will always act like it's inset, even if you use a div element. I wanted to keep consistency between the button and div element, which normally react differently to a border. If you're using a div element, changing this won't affect the real size of the button.
+$hamburger-border-width:                    0; // Note: the border will always act like it's inset, even if 
+                                            // you use a div element. I wanted to keep consistency between 
+                                            // the button and div element, which normally react differently 
+                                            // to a border. If you're using a div element, changing this won't 
+                                            // affect the real size of the button.
 $hamburger-opacity:                         1;
 $hamburger-opacity-hover:                   1;
 $hamburger-opacity-transition-speed:        0.2s;
-$hamburger-padding:                         round($hamburger-size / 10); // The space between the button border and the actual bars. There's a little padding by default so the clickable area is a little bigger than the visual button. You can also use a px value here instead of a relative one.
+$hamburger-padding:                         round($hamburger-size / 10); // The space between the button border 
+                                            // and the actual bars. There's a little padding by default so the 
+                                            // clickable area is a little bigger than the visual button. You 
+                                            // can also use a px value here instead of a relative one.
 $hamburger-border-radius:                   0; // Border-radius of the button.
 $hamburger-bar-border-radius:               0; // Border-radius of the bars.
-$hamburger-bar-spacing:                     round($hamburger-size / 5); // How far the bars are apart from eachother. You can also use a px value here instead of a relative one.
-$hamburger-animation-speed:                 1; // The timings of the animations are carefully chosen. But you can use this factor variable to slow down or speed up the animations. Use .5 for twice as slow, 2 for twice as fast etc.
-$hamburger-class-name:                      'hamburger' // The main class and prefixes of the animation classes can be changed. This allows for different styled buttons on the same page.
+$hamburger-bar-spacing:                     round($hamburger-size / 5); // How far the bars are apart from 
+                                            // eachother. You can also use a px value here instead of a relative 
+                                            // one.
+$hamburger-animation-speed:                 1; // The timings of the animations are carefully chosen. But you 
+                                            // can use this factor variable to slow down or speed up the animations. 
+                                            // Use .5 for twice as slow, 2 for twice as fast etc.
+$hamburger-class-name:                      'hamburger' // The main class and prefixes of the animation classes 
+                                            // can be changed. This allows for different styled buttons on the 
+                                            // same page.
 ```
 
 #### Select which animations to compile by variable
