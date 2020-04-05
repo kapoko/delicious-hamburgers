@@ -21,7 +21,7 @@ domReady(() => {
     });
 
     // Buttons
-    ['reset', 'toggle-all'].forEach(action => {
+    ['reset', 'toggle-all', 'go'].forEach(action => {
         let button = document.getElementById(action);
 
         if (!button) {
@@ -39,6 +39,19 @@ domReady(() => {
                 case 'toggle-all': {
                     hamburgers.forEach(hamburger => hamburger.classList.toggle('active'));
                     break;
+                }
+                case 'go': {
+                    let count = 0;
+                    let interval = setInterval(() => {
+                        let current = hamburgers[count++ % hamburgers.length];
+                        current.classList.add('active');
+                        setTimeout(function() {
+                            current.classList.remove('active');
+                        }, 1500);
+                        if (count == hamburgers.length) {
+                            clearInterval(interval);
+                        }
+                    }, 400);
                 }
             }
         })
