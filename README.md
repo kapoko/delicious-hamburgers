@@ -1,9 +1,9 @@
 # [Delicious Hamburgers](https://kapoko.github.io/delicious-hamburgers) 🍔
 
 [![npm version](https://img.shields.io/npm/v/delicious-hamburgers.svg)](https://www.npmjs.com/package/delicious-hamburgers)
-[![npm](https://img.shields.io/npm/dm/delicious-hamburgers.svg)]()
-![](https://github.com/kapoko/delicious-hamburgers/workflows/Release/badge.svg)
-![](https://github.com/kapoko/delicious-hamburgers/workflows/Build%Site/badge.svg)
+[![npm](https://img.shields.io/npm/dm/delicious-hamburgers.svg)](https://www.npmjs.com/package/delicious-hamburgers)
+[![](https://github.com/kapoko/delicious-hamburgers/workflows/Release/badge.svg)](https://github.com/kapoko/delicious-hamburgers/actions)
+[![](https://github.com/kapoko/delicious-hamburgers/workflows/Build%20Site/badge.svg)](https://github.com/kapoko/delicious-hamburgers/actions)
 
 Beautiful hamburger menu buttons animated in pure CSS, customisable with Sass.
 
