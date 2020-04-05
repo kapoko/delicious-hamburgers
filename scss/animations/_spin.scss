@@ -50,7 +50,6 @@
                 }
 
                 &:nth-child(3) {
-                    // opacity: 0;
                     transform: rotate(45deg) translate3d(-$offset-x-b, -$offset-y, 0);
                 }
             }

@@ -4,7 +4,6 @@
 @if index($hamburger-animations, simple) {
     .#{$hamburger-class-name}--simple {
         span.bar {
-            // top: 0;
             transition: transform 0.3s / $hamburger-animation-speed $hamburger-easing;
 
             &:nth-child(1) {
