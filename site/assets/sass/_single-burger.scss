@@ -1,0 +1,43 @@
+.single {
+    .preview {
+        @include mobile() {
+            align-items: center;
+            justify-content: center;
+        }
+
+        @include tablet() {
+            justify-content: flex-start;
+            flex-direction: row-reverse;
+        }
+    }
+
+    .hamburger {
+        vertical-align: bottom;
+        margin: $gap / 2;
+
+        @include touch() {
+            display: inline-block;
+        }
+
+        @include desktop() {
+            margin: 0 0 $gap 0;
+        }
+    }
+}
+
+.nav-arrows {
+    font-size: 2em;
+
+    a {
+        border-bottom: 0;
+        opacity: 0.2;
+
+        &:hover, &.is-active {
+            opacity: 1;
+        }
+
+        &:not(:last-child) {
+            margin-right: 1em;
+        }
+    }
+}

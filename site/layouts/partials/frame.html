@@ -1,0 +1,7 @@
+<div class="column is-6-mobile is-6-tablet is-4-desktop is-3-widescreen">
+    <div class="frame has-text-centered has-hover-effect">
+        <a href="{{ .Permalink }}" class="info"><i class="fas fa-code"></i></a>
+            {{ partial "burger.html" (dict "class" $.Params.class "family" "front")  }}
+        <h3 class="mt-md"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+    </div>
+</div>

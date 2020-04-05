@@ -5,5 +5,15 @@ staticDir = ["static", "dist"]
 disableKinds = ["taxonomy", "taxonomyTerm"]
 [params]
     author = "Kasper Koman"
-    description = "Beautiful hamburger menu buttons"
+    description = "Beautifully animated Sass-powered hamburger menu buttons"
 
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    noClasses = true
+    style = "monokailight"
+    tabWidth = 4

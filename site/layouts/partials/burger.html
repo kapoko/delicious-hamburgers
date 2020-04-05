@@ -1,13 +1,7 @@
-<div class="column is-6-mobile is-6-tablet is-4-desktop is-3-widescreen">
-    <div class="frame has-text-centered">
-        <a href="{{ .Permalink }}" class="info"><i class="fas fa-code"></i></a>
-        <button class="hamburger hamburger--{{ .Params.class }}" type="button">
-            <div class="inner">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </button>
-        <h3 class="mt-md"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+<button class="hamburger {{ if .family }}{{ .family }} {{ .family }}{{ else }}hamburger hamburger{{ end }}--{{ .class }}" type="button">
+    <div class="inner">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
     </div>
-</div>
+</button>

@@ -1,7 +1,7 @@
 {{ define "above-main" }}
     <div class="columns is-multiline">
         <div class="column is-8 is-offset-2 is-6-widescreen is-offset-3-widescreen has-text-centered">
-            <p class="is-size-5">Beautiful hamburger menu buttons animated in pure CSS, customisable with Sass.</p>
+            <p class="is-size-6 is-size-5-desktop">Beautiful hamburger menu buttons animated in pure CSS, customisable with Sass.</p>
         </div>
         <div class="column is-12 has-text-centered">
             <p class="links is-size-7-mobile is-size-6 mt-xl">
@@ -22,13 +22,13 @@
 {{ end }}
 
 {{ define "main" }}
-    <div class="columns mt-xxl is-multiline is-mobile">
+    <div class="columns mt-xl is-multiline is-mobile front-page">
         <div class="column is-12 has-text-centered"> 
             <h2 class="mb-md">The Menu</h2>
         </div>
         {{ with .Site.GetPage "/burger" }}
             {{ range .Pages.ByWeight }}
-                {{ partial "burger.html" . }}
+                {{ partial "frame.html" . }}
             {{ end }}
         {{ end }}
         <div class="column is-12">

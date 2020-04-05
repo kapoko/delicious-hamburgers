@@ -16,7 +16,7 @@ $hamburger-border-width: 0 !default;
 $hamburger-opacity: 1 !default;
 $hamburger-opacity-hover: 1 !default;
 $hamburger-opacity-transition-speed: 0.2s !default;
-$hamburger-padding: $hamburger-size / 10 !default;
+$hamburger-padding: round($hamburger-size / 10) !default;
 $hamburger-border-radius: 0 !default;
 $hamburger-bar-border-radius: 0 !default;
 $hamburger-bar-spacing: round($hamburger-size / 5) !default;

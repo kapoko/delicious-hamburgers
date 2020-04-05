@@ -1,3 +1,50 @@
 {{ define "main" }}
-    <h2>{{ .Title }}</h2>
+    <div class="columns mt-lg is-variable is-8-desktop single"> 
+        <div class="column is-4 is-clearfix has-text-right preview is-flex-touch" id="auto-activate">
+            <div class="single-large is-hidden-touch">
+                {{ partial "burger.html" (dict "class" $.Params.class "family" "single-large")  }}
+            </div>
+            <div class="single-medium">
+                {{ partial "burger.html" (dict "class" $.Params.class "family" "single-medium")  }}
+            </div>
+            <div class="single-small">
+                {{ partial "burger.html" (dict "class" $.Params.class "family" "single-small")  }}
+            </div>
+        </div>
+        <div class="column is-8 content">
+            <div class="level is-mobile">
+                <div class="level-left">
+                    <h2 class="is-size-5 is-size-3-desktop">{{ .Title }}</h2>
+                </div>
+                <nav class="nav-arrows level-right">
+                    {{ with .NextInSection }}
+                        <a href="{{ .Permalink }}" id="prev"><i class="fas fa-angle-left"></i></a>
+                    {{ end }}
+                    {{ with .PrevInSection }}
+                        <a href="{{ .Permalink }}" id="next"><i class="fas fa-angle-right"></i></a>
+                    {{ end }}
+                </nav>
+            </div>
+            <p><strong>1.</strong> Install with npm or Yarn</p>
+            {{ highlight "npm install delicious-hamburgers --save" "bash" "" }}
+            {{ highlight "yarn add delicious-hamburgers" "bash" ""}}
+
+            <p><strong>2.</strong> Import Sass</p>
+            {{ $code := printf `@import "~delicious-hamburgers/scss/base";
+@import "~delicious-hamburgers/scss/animations/%s";` .Params.class }}
+            {{ highlight $code "scss" "" }}
+
+            <p><strong>3.</strong> Add markup</p>
+            {{ $code := printf `<button class="hamburger hamburger--%s" type="button">
+    <div class="inner">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+</button>` .Params.class }}
+            {{ highlight $code "html" "" }}
+
+            <p><strong>4.</strong> Add class <code>.active</code> to activate the animation. For all customisation options and more info check out the <a href="https://github.com/kapoko/delicious-hamburgers/blob/master/README.md" target="_blank">README</a> file.</p>
+        </div>
+    </div>
 {{ end }}

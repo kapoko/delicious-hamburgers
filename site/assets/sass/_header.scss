@@ -1,5 +1,10 @@
-header > div {
+header > a {
     margin-bottom: 2em;
+    border-bottom: 0;
+
+    h1, h2 {
+        line-height: 1;
+    }
 
     @include desktop() {
         margin-bottom:3em;
@@ -7,10 +12,6 @@ header > div {
     }
 
     h2 {
-        margin-top: -1rem;
-
-        @include desktop() {
-            margin-top: -2rem;
-        }
+        margin-top: .25em;
     }
 }

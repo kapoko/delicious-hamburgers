@@ -63,7 +63,7 @@ a {
             left: 0;
             bottom: -4px;
             transform: scale(0, 1);
-            transition: transform 0.3s $hamburger-easing-out;
+            transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
         }
 
         &:hover {
