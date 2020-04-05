@@ -2,12 +2,12 @@
 
 [![npm version](https://img.shields.io/npm/v/delicious-hamburgers.svg)](https://www.npmjs.com/package/delicious-hamburgers)
 [![npm](https://img.shields.io/npm/dm/delicious-hamburgers.svg)]()
-[![github release](https://github.com/kapoko/delicious-hamburgers/workflows/Build%Release/badge.svg)]()
-[![](https://github.com/kapoko/delicious-hamburgers/workflows/Build%Site/badge.svg)]()
+![](https://github.com/kapoko/delicious-hamburgers/workflows/Release/badge.svg)
+![](https://github.com/kapoko/delicious-hamburgers/workflows/Build%Site/badge.svg)
 
 Beautiful hamburger menu buttons animated in pure CSS, customisable with Sass.
 
-![gif](http://i.imgur.com/ZzPWjOY.gif)
+![gif](https://i.imgur.com/oVL1Zva.gif)
 
 This was inspired by [Jonsuh](https://github.com/jonsuh)'s great [hamburgers](https://github.com/jonsuh/hamburgers), however I felt the need for a little more elegant and modern animations, so here they are! 
 
@@ -155,7 +155,7 @@ $hamburger-animations: ( hamburger--apple, hamburger--arrow, etc... );
 
 There's some breaking changes when updating from v0.x.x to v1.x.x.
 
-### Compatiblity with different sass implementations
+### 1. Compatibility with different sass implementations
 
 For extra robustness this package makes use of [Sass' `math` module](https://sass-lang.com/documentation/modules/math). There are many different implementations of the Sass language and the primary one is [Dart Sass](https://sass-lang.com/dart-sass), which supports this math module. As of now `LibSass` (and because of that also `node-sass`) and `RubySass` haven't implemented this module yet, although in the future they most likely will.
 
@@ -163,19 +163,19 @@ If you get an error like `SassError: Invalid CSS after "$root-two: math": expect
 
 <sup>Other examples needed? Please post an [issue](https://github.com/kapoko/delicious-hamburgers/issues) on Github.</sup>
 
-#### Using webpack with `sass-loader`, or `node-sass` in general?
+#### 1.1 Using webpack with `sass-loader`, or `node-sass` in general?
 
 If you're using webpack try removing `node-sass` (which depends on LibSass) from your projects' devDependencies, and install `sass` (which is a Javascript distribution of Dart Sass). See [here](https://webpack.js.org/loaders/sass-loader/#implementation) for more information.
 
-#### Using parcel-bundler?
+#### 1.2 Using parcel-bundler?
 
 Parcel officially uses `sass` so you're good to go!
 
-### Bower support dropped
+### 2. Bower support dropped
 
 From v1.0.0 and on Bower support has been dropped. Versions v0.x.x will still be available on Bower as deprecated package.
 
-### Variable name changes
+### 3. Variable name changes
 
 Old (v0.x.x) | New (v1.x.x) | Comments
 --- | --- | ---
@@ -183,6 +183,8 @@ Old (v0.x.x) | New (v1.x.x) | Comments
 `$hamburger-animations: (arrow-r)` | `$hamburger-animations: (arrow-right)` | <sup>Variable is the same, but arrow-r is now arrow-right.</sup>
 | `$hamburger-color-hover` |
 | `$hamburger-background-hover` |
+| `$hamburger-background-transition-speed` |
+| `$hamburger-opacity-transition-speed` |
 
 ## Copyright and license
 
