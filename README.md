@@ -2,7 +2,8 @@
 
 [![npm version](https://img.shields.io/npm/v/delicious-hamburgers.svg)](https://www.npmjs.com/package/delicious-hamburgers)
 [![npm](https://img.shields.io/npm/dm/delicious-hamburgers.svg)]()
-[![Build Status](https://travis-ci.org/kapoko/delicious-hamburgers.svg?branch=master)](https://travis-ci.org/kapoko/delicious-hamburgers)
+[![github release](https://github.com/kapoko/delicious-hamburgers/workflows/Build%Release/badge.svg)]()
+[![](https://github.com/kapoko/delicious-hamburgers/workflows/Build%Site/badge.svg)]()
 
 Beautiful hamburger menu buttons animated in pure CSS, customisable with Sass.
 
@@ -14,31 +15,7 @@ This was inspired by [Jonsuh](https://github.com/jonsuh)'s great [hamburgers](ht
 
 ## Usage
 
-### Plain CSS
-
-1. [Download this stylesheet](https://github.com/kapoko/delicious-hamburgers/blob/master/dist/hamburgers.min.css), it's all you need. Include it on your page inside the `<head>` tags.
-
-    ```html
-    <link href="path/to/hamburgers.min.css" rel="stylesheet">
-    ```
-
-2. Now add the markup:
-
-    ```html
-    <button class="hamburger hamburger--criss-cross" type="button">
-        <div class="inner">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-    </button>
-    ```
-    
-    <sup>By the way, you can also use `<div>` instead of `<button>` if you want/have to.</sup>
-
-3. Use the class `active` on the button to trigger the animation. The implemention is up to you. You could use jQuery for example ([fiddle](https://jsfiddle.net/kapoko/03wdj278/)).
-
-### Install via Yarn, NPM or Bower. 
+### Install via npm or Yarn
 
 Get your delicious hamburgers served up by your favourite package manager.
 
@@ -50,21 +27,41 @@ Get your delicious hamburgers served up by your favourite package manager.
     ```bash
     npm install delicious-hamburgers
     ```
-    ```bash
-    bower install delicious-hamburgers
-    ```
 
-2. Import the main `hamburgers.scss` file in your Sass file. 
+2. Import Sass. First import the base file and then whichever animation you want. 
     
-    <sub>Note that the URL could be different depending on your project setup</sub>
-
     ```scss
-    @import "~delicious-hamburgers/scss/hamburgers";
+    @import "~delicious-hamburgers/scss/base";
+    @import "~delicious-hamburgers/scss/animations/criss-cross";
     ```
 
-3. Compile your Sass. 
+    <sup>If you want to import everything you can also use `@import "~delicious-hamburgers/scss/hamburgers"`.</sup>
 
-You can of course also [download](https://github.com/kapoko/delicious-hamburgers/archive/master.zip) the source and add it to your project manually.
+3. Add HTML markup. Switch out `hamburger--criss-cross` for the animation you want.
+
+    ```html
+    <button class="hamburger hamburger--criss-cross" type="button">
+        <div class="inner">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </button>
+    ```
+
+    <sup>You can also use `<div>` instead of `<button>` if you want/have to.</sup>
+
+4. Add class `active` to the `button` element to trigger the animation. The implemention is up to you. Here's an example in Javascript: ([fiddle](https://jsfiddle.net/kapoko/03wdj278/6/)).
+
+### Plain CSS
+
+1. You can also [download this stylesheet](https://github.com/kapoko/delicious-hamburgers/releases/latest/download/hamburgers.min.css), it's all you need. Include it on your page inside the `<head>` tags.
+
+    ```html
+    <link href="path/to/hamburgers.min.css" rel="stylesheet">
+    ```
+
+2. Add the HTML markup like above.
 
 ## Animations
 
@@ -73,80 +70,97 @@ Here's a list of the animations you can choose from. Just switch out the class o
 ```
 hamburger--apple
 hamburger--arrow
-hamburger--arrow-r
+hamburger--arrow-right
+hamburger--chop
 hamburger--collapse
 hamburger--converge
 hamburger--criss-cross
 hamburger--default
 hamburger--dive
+hamburger--flatten
+hamburger--magnetic
 hamburger--minimal
+hamburger--parallel
+hamburger--push
+hamburger--shelf
+hamburger--simple
 hamburger--spin
 hamburger--stack
 hamburger--twist
+hamburger--vertical
 ```
 
 ## Customisation
 
 ### How-to 
 
-With the power of Sass you can customise the buttons to fit your project even better. Declare your variables before including `hamburgers.scss`, only then they will override the default values. Like so: 
+With the power of Sass you can customise the buttons to fit your project even better. Declare your variables **before** including the `base` file, only then they will override the default values. Like so: 
 
 ```scss
 $hamburger-color:               #fff;
 
-@import "~delicious-hamburgers/scss/hamburgers";
+@import "~delicious-hamburgers/scss/base";
+@import "~delicious-hamburgers/scss/animations/criss-cross";
 ```
 
 ### List of default variables
 
 Here's a full list of the customizable options available with their default values:
 
-Variable | Default Value | Comments
---- | --- | ---
-`$hamburger-size` | `50px` | 
-`$hamburger-thickness` | `2px` | <sup>Thickness of the bars. Note: when using `hamburger--arrow` or `hamburger--arrow-r`, uneven `px` values don't seem to work well in some browsers.</sup>
-`$hamburger-color` | `#000` |
-`$hamburger-color-active` | `$hamburger-color` |
-`$hamburger-background` | `transparent` |
-`$hamburger-background-hover` | `$hamburger-background` |
-`$hamburger-background-active` | `$hamburger-background` |
-`$hamburger-background-transition-speed` | `0.2s` |
-`$hamburger-border-color` | `transparent` |
-`$hamburger-border-width` | `0` | <sup>Note: the border will always act like it's inset, even if you use a `div` element. I wanted to keep consistency between the `button` and `div` element, which normally react differently to a border. If you're using a `div` element, changing this won't affect the real size of the button.</sup>
-`$hamburger-opacity` | `1` |
-`$hamburger-opacity-hover` | `1` |
-`$hamburger-opacity-transition-speed` | `0.2s` |
-`$hamburger-padding` | `$hamburger-size / 10` | <sup>The space between the button border and the actual bars. There's a little padding by default so the clickable area is a little bigger than the visual button. You can also use a `px` value here instead of a relative one.</sup>
-`$hamburger-border-radius` | `0` | <sup>Border-radius of the button.</sup>
-`$hamburger-bar-border-radius` | `0` | <sup>Border-radius of the bars.</sup>
-`$hamburger-bar-spacing` | `$hamburger-size / 5` | <sup>How far the bars are apart from eachother. You can also use a `px` value here instead of a relative one.</sup>
-`$hamburger-animation-speed` | `1` | <sup>The timings of the animations are carefully chosen. But you can use this factor variable to slow down or speed up the animations. Use `.5` for twice as slow, `2` for twice as fast etc.</sup>
-`$hamburger-class-name` | `'hamburger'` | <sup>The main class and prefixes of the animation classes can be changed. This allows for different buttons on the same page.</sup>
-
-### For extra lean burgers, remove the animations you don't need
-
 ```scss
-$hamburger-animations: (
-    apple,
-    arrow,
-    arrow-right,
-    collapse,
-    converge,
-    criss-cross,
-    default,
-    dive,
-    minimal,
-    spin,
-    stack,
-    twist
-);
+$hamburger-size:                            50px;
+$hamburger-thickness:                       2px; // Thickness of the bars
+$hamburger-color:                           #000;
+$hamburger-color-hover:                     $hamburger-color;
+$hamburger-color-active:                    $hamburger-color;
+$hamburger-background:                      transparent;
+$hamburger-background-hover:                $hamburger-background;
+$hamburger-background-active:               $hamburger-background;
+$hamburger-background-transition-speed:     0.2s;
+$hamburger-border-color:                    transparent;
+$hamburger-border-width:                    0; // Note: the border will always act like it's inset, even if you use a div element. I wanted to keep consistency between the button and div element, which normally react differently to a border. If you're using a div element, changing this won't affect the real size of the button.
+$hamburger-opacity:                         1;
+$hamburger-opacity-hover:                   1;
+$hamburger-opacity-transition-speed:        0.2s;
+$hamburger-padding:                         round($hamburger-size / 10); // The space between the button border and the actual bars. There's a little padding by default so the clickable area is a little bigger than the visual button. You can also use a px value here instead of a relative one.
+$hamburger-border-radius:                   0; // Border-radius of the button.
+$hamburger-bar-border-radius:               0; // Border-radius of the bars.
+$hamburger-bar-spacing:                     round($hamburger-size / 5); // How far the bars are apart from eachother. You can also use a px value here instead of a relative one.
+$hamburger-animation-speed:                 1; // The timings of the animations are carefully chosen. But you can use this factor variable to slow down or speed up the animations. Use .5 for twice as slow, 2 for twice as fast etc.
+$hamburger-class-name:                      'hamburger' // The main class and prefixes of the animation classes can be changed. This allows for different styled buttons on the same page.
 ```
 
-Copy this, place it before loading the `hamburgers.scss` just like the other variables and remove the animations you're not using. Now they won't get compiled, resulting in a smaller filesize. 
+#### Select which animations to compile by variable
+
+Even if you import all the animations by including `~delicious-hamburgers/scss/hamburgers.scss` you can use the following variable to choose which animations to compile. Since v1.x.x this is not really necessary anymore because you can import animations separately, but here's the option anyway. 
+
+```scss
+$hamburger-animations: ( hamburger--apple, hamburger--arrow, etc... );
+```
 
 ## Migration from v0.x.x to v1.x.x
 
 There's some breaking changes when updating from v0.x.x to v1.x.x.
+
+### Compatiblity with different sass implementations
+
+For extra robustness this package makes use of [Sass' `math` module](https://sass-lang.com/documentation/modules/math). There are many different implementations of the Sass language and the primary one is [Dart Sass](https://sass-lang.com/dart-sass), which supports this math module. As of now `LibSass` (and because of that also `node-sass`) and `RubySass` haven't implemented this module yet, although in the future they most likely will.
+
+If you get an error like `SassError: Invalid CSS after "$root-two: math": expected expression (e.g. 1px, bold), was ".sqrt(2);"` your project is probably not using Dart Sass, most likely `node-sass`. Read on for a possible solution.
+
+<sup>Other examples needed? Please post an [issue](https://github.com/kapoko/delicious-hamburgers/issues) on Github.</sup>
+
+#### Using webpack with `sass-loader`, or `node-sass` in general?
+
+If you're using webpack try removing `node-sass` (which depends on LibSass) from your projects' devDependencies, and install `sass` (which is a Javascript distribution of Dart Sass). See [here](https://webpack.js.org/loaders/sass-loader/#implementation) for more information.
+
+#### Using parcel-bundler?
+
+Parcel officially uses `sass` so you're good to go!
+
+### Bower support dropped
+
+From v1.0.0 and on Bower support has been dropped. Versions v0.x.x will still be available on Bower as deprecated package.
 
 ### Variable name changes
 
@@ -154,6 +168,8 @@ Old (v0.x.x) | New (v1.x.x) | Comments
 --- | --- | ---
 `$hamburger-border-radius` | `$hamburger-bar-border-radius` | <sup>`$hamburger-border-radius` is now used for the outside border.</sup>
 `$hamburger-animations: (arrow-r)` | `$hamburger-animations: (arrow-right)` | <sup>Variable is the same, but arrow-r is now arrow-right.</sup>
+| `$hamburger-color-hover` |
+| `$hamburger-background-hover` |
 
 ## Copyright and license
 
