@@ -13,6 +13,14 @@ This was inspired by [Jonsuh](https://github.com/jonsuh)'s great [hamburgers](ht
 
 ## [Demo](https://kapoko.github.io/delicious-hamburgers)
 
+### Why Delicious Hamburgers?
+
+- Performant: doesn't use position attributes like `top` to animate, but only CSS transforms which are often hardware accelerated, for the most buttery animations possible.
+- Simple: same markup for all animations, same implementation (just add class `active` the element).
+- Lightweight: Less than `~1kb` minified and gzipped if you import one animation.
+- No Javascript and no CSS `@keyframes` which can sometimes block animations in weird ways. Bash away!
+- Customisable: loads of variables to customise which work for all animations.
+
 ## Usage
 
 ### Install via npm or Yarn
@@ -63,7 +71,7 @@ Get your delicious hamburgers served up by your favourite package manager.
 
 2. Add the HTML markup like above.
 
-## Animations
+## Animations [browse](https://github.com/kapoko/delicious-hamburgers/burger/criss-cross/)
 
 Here's a list of the animations you can choose from. Just switch out the class on the `button` element, and you're done! 
 
