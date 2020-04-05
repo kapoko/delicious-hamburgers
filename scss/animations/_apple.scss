@@ -1,5 +1,5 @@
 @use 'sass:math';
-@import 'variables';
+@import '../variables';
 
 @if index($hamburger-animations, apple) {
     .#{$hamburger-class-name}--apple {

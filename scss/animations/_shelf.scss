@@ -1,4 +1,4 @@
-@import 'variables';
+@import '../variables';
 
 @if index($hamburger-animations, shelf) {
     .#{$hamburger-class-name}--shelf {

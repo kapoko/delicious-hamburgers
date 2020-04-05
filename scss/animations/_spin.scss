@@ -1,4 +1,4 @@
-@import 'variables';
+@import '../variables';
 
 @if index($hamburger-animations, spin) {
     .#{$hamburger-class-name}--spin {
