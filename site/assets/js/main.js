@@ -4,6 +4,11 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faDownload, faCode, faEllipsisH, faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { render } from 'github-buttons'
 
+import tippy, { animateFill } from 'tippy.js';
+import 'tippy.js/dist/tippy.css';
+import 'tippy.js/dist/backdrop.css';
+import 'tippy.js/animations/shift-away.css';
+
 import '../sass/main.scss';
 
 library.add(faDownload, faGithub, faCode, faEllipsisH, faAngleLeft, faAngleRight);
@@ -107,10 +112,15 @@ domReady(() => {
         }
     });
 
-
     // Github badge
     let anchor = document.getElementById('github-button')
     render(anchor, function (el) {
         anchor.parentNode.replaceChild(el, anchor)
     })
+
+    // Tooltips
+    tippy('[data-tippy-content]', {
+        animateFill: true,
+        plugins: [animateFill],
+    });
 });

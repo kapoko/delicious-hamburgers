@@ -18,10 +18,10 @@
                 </div>
                 <nav class="nav-arrows level-right">
                     {{ with .NextInSection }}
-                        <a href="{{ .Permalink }}" id="prev"><i class="fas fa-angle-left"></i></a>
+                        <a href="{{ .Permalink }}" id="prev" data-tippy-content="{{ .Title }}"><i class="fas fa-angle-left"></i></a>
                     {{ end }}
                     {{ with .PrevInSection }}
-                        <a href="{{ .Permalink }}" id="next"><i class="fas fa-angle-right"></i></a>
+                        <a href="{{ .Permalink }}" id="next" data-tippy-content="{{ .Title }}"><i class="fas fa-angle-right"></i></a>
                     {{ end }}
                 </nav>
             </div>

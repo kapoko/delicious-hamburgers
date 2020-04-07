@@ -31,13 +31,15 @@
     a {
         border-bottom: 0;
         opacity: 0.2;
+        display: flex;
+        padding: 0 0.25em;
 
         &:hover, &.is-active {
             opacity: 1;
         }
 
         &:not(:last-child) {
-            margin-right: 1em;
+            margin-right: .75em;
         }
     }
 }
