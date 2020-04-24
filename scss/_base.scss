@@ -48,9 +48,13 @@ div.#{$hamburger-class-name} {
 
         > .inner,
         span.bar {
-            &::before,
-            &::after {
-                background-color: $hamburger-color-hover;
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3) {
+                &::before,
+                &::after {
+                    background-color: $hamburger-color-hover;
+                }       
             }
         }
     }
@@ -64,9 +68,13 @@ div.#{$hamburger-class-name} {
 
         > .inner,
         span.bar {
-            &::before,
-            &::after {
-                background-color: $hamburger-color-active;
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3) {
+                &::before,
+                &::after {
+                    background-color: $hamburger-color-active;
+                }       
             }
         }
     }
