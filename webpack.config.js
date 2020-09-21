@@ -6,7 +6,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
 const StylelintPlugin = require('stylelint-webpack-plugin');
-const autoprefixer = require("autoprefixer");
 
 const isDev = process.env.NODE_ENV === 'development'
 module.exports = [
@@ -32,7 +31,16 @@ module.exports = [
                     {
                         loader: 'postcss-loader',
                         options: {
-                            plugins: () => [autoprefixer]
+                            postcssOptions: {
+                                plugins: [
+                                  [
+                                    'postcss-preset-env',
+                                    {
+                                      // Options
+                                    },
+                                  ],
+                                ],
+                              },
                         },
                     },
                     "sass-loader"
@@ -64,7 +72,16 @@ module.exports = [
                     {
                         loader: 'postcss-loader',
                         options: {
-                            plugins: () => [autoprefixer]
+                            postcssOptions: {
+                                plugins: [
+                                  [
+                                    'postcss-preset-env',
+                                    {
+                                      // Options
+                                    },
+                                  ],
+                                ],
+                              },
                         },
                     },
                     "sass-loader"
