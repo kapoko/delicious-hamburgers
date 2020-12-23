@@ -59,7 +59,7 @@ Get your delicious hamburgers served up by your favourite package manager.
 
     <sup>You can also use `<div>` instead of `<button>` if you want/have to.</sup>
 
-4. Add class `active` to the `button` element to trigger the animation. The implemention is up to you. Here's an example in Javascript: ([fiddle](https://jsfiddle.net/kapoko/03wdj278/6/)).
+4. Add class `active` to the `button` element to trigger the animation. The implemention is up to you. Here's an example in Javascript: ([fiddle](https://jsfiddle.net/kapoko/03wdj278/7/)).
 
 ### Plain CSS
 
