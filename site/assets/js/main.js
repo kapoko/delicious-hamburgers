@@ -6,6 +6,7 @@ import { render } from 'github-buttons'
 
 import tippy from 'tippy.js';
 
+import '../../node_modules/tippy.js/dist/tippy.css'
 import '../sass/main.scss';
 
 library.add(faDownload, faGithub, faCode, faEllipsisH, faAngleLeft, faAngleRight);
