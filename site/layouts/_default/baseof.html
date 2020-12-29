@@ -14,7 +14,7 @@
 
         {{ $script := .Site.Data.manifest.main }}
         {{ with $script.css }}
-            <link rel="stylesheet" href="{{ absURL . }}"> 
+            <link type="text/css" href="{{ absURL . }}"> 
         {{ end }}
         {{ block "additional-css" . }}{{ end }}
     </head>

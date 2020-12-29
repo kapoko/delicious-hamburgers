@@ -1,7 +1,6 @@
 const isDev = process.env.NODE_ENV === 'development'
 
 const path = require("path");
-const autoprefixer = require("autoprefixer");
 const AssetsPlugin = require("assets-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -14,7 +13,7 @@ module.exports = {
         test: path.join(__dirname, "assets", "sass", "test.scss"),
     },
     output: {
-        filename: '[name].[contenthash:8].js',
+        filename: '[name].[hash].js',
         path: path.join(__dirname, 'dist')
     },
     module: {
@@ -23,14 +22,13 @@ module.exports = {
                 loader: "babel-loader",
                 test: /\.js?$/,
                 exclude: /node_modules/,
-                query: {cacheDirectory: true}
+                options: {cacheDirectory: true}
             },
             {
                 test: /\.(sa|sc|c)ss$/,
                 exclude: /node_modules/,
                 use: [
-                    "style-loader", 
-                    MiniCssExtractPlugin.loader, 
+                    isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
                     "css-loader", 
                     {
                         loader: 'postcss-loader',
@@ -50,11 +48,7 @@ module.exports = {
                     },
                     "sass-loader"
                 ]
-            },
-            {
-                test: /\.css$/i,
-                use: ['style-loader', 'css-loader'],
-            },
+            }
         ],
     },
     plugins: [
@@ -62,12 +56,13 @@ module.exports = {
         new AssetsPlugin({
             filename: "manifest.json",
             path: path.join(process.cwd(), "data"),
-            prettyPrint: true
-        }),
-        new MiniCssExtractPlugin({
-            filename: '[name].[contenthash:8].css'
+            prettyPrint: true,
+            removeFullPathAutoPrefix: true
         }),
         new FixStyleOnlyEntriesPlugin(),
+        new MiniCssExtractPlugin({
+            filename: '[name].[hash].css'
+        }),
     ]
 }
   
