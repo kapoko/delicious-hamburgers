@@ -1,10 +1,17 @@
 const isDev = process.env.NODE_ENV === 'development'
 
 const path = require("path");
+const glob = require('glob-all');
 const AssetsPlugin = require("assets-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
+const PurgeCSSPlugin = require('purgecss-webpack-plugin')
+
+const purgeCSSPaths = glob.sync([
+    `${path.join(__dirname, 'layouts')}/**/*`,
+    `${path.join(__dirname, 'public')}/**/*.html`
+], { mark: true }).filter(function(f) { return !/\/$/.test(f); });
 
 module.exports = {
     mode: isDev ? 'development' : 'production',
@@ -13,7 +20,7 @@ module.exports = {
         test: path.join(__dirname, "assets", "sass", "test.scss"),
     },
     output: {
-        filename: '[name].[hash].js',
+        filename: '[name].[chunkhash].js',
         path: path.join(__dirname, 'dist')
     },
     module: {
@@ -52,7 +59,12 @@ module.exports = {
         ],
     },
     plugins: [
-        new CleanWebpackPlugin(),
+        new CleanWebpackPlugin({
+            cleanOnceBeforeBuildPatterns: [
+                path.join(__dirname, 'dist'), 
+                path.join(__dirname, 'public')
+            ]
+        }),
         new AssetsPlugin({
             filename: "manifest.json",
             path: path.join(process.cwd(), "data"),
@@ -61,8 +73,10 @@ module.exports = {
         }),
         new FixStyleOnlyEntriesPlugin(),
         new MiniCssExtractPlugin({
-            filename: '[name].[hash].css'
+            filename: '[name].[chunkhash].css'
+        }),
+        new PurgeCSSPlugin({
+            paths: purgeCSSPaths
         }),
     ]
 }
-  
