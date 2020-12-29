@@ -1,0 +1,13 @@
+{{ define "main" }}
+    <div class="columns is-multiline">
+        <div class="column has-text-centered">
+            <ul>
+                {{ with .Site.GetPage "/burger" }}
+                    {{ range .Pages.ByWeight }}
+                        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                    {{ end }}
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+{{ end }}
