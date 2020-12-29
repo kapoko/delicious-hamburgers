@@ -4,10 +4,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faDownload, faCode, faEllipsisH, faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { render } from 'github-buttons'
 
-import tippy, { animateFill } from 'tippy.js';
-import 'tippy.js/dist/tippy.css';
-import 'tippy.js/dist/backdrop.css';
-import 'tippy.js/animations/shift-away.css';
+import tippy from 'tippy.js';
 
 import '../sass/main.scss';
 
@@ -119,8 +116,5 @@ domReady(() => {
     })
 
     // Tooltips
-    tippy('[data-tippy-content]', {
-        animateFill: true,
-        plugins: [animateFill],
-    });
+    tippy('[data-tippy-content]', {});
 });
