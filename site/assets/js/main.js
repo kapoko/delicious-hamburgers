@@ -1,7 +1,7 @@
 import domReady from './helpers/domReady';
 import { library, dom } from "@fortawesome/fontawesome-svg-core";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faDownload, faCode, faEllipsisH, faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { faDownload, faCode, faEllipsisH, faAngleLeft, faAngleRight, faInfo, faCircle } from "@fortawesome/free-solid-svg-icons";
 import { render } from 'github-buttons'
 
 import tippy from 'tippy.js';
@@ -9,7 +9,7 @@ import tippy from 'tippy.js';
 import '../../node_modules/tippy.js/dist/tippy.css'
 import '../sass/main.scss';
 
-library.add(faDownload, faGithub, faCode, faEllipsisH, faAngleLeft, faAngleRight);
+library.add(faDownload, faGithub, faCode, faEllipsisH, faAngleLeft, faAngleRight, faInfo, faCircle);
 dom.watch();
 
 domReady(() => {

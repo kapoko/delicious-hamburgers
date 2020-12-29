@@ -25,6 +25,19 @@
                     {{ end }}
                 </nav>
             </div>
+            {{ if .Params.hover }}
+                <article class="message is-warning">
+                    <div class="message-header is-justify-content-left">
+                        <span class="fa-stack mr-sm" style="vertical-align: top;">
+                            <i class="fas fa-circle fa-stack-2x has-text-body"></i>
+                            <i class="fas fa-info fa-stack-1x has-text-warning"></i>
+                        </span> Uses :hover
+                    </div>
+                    <div class="message-body">
+                        This animation uses the <strong>:hover selector</strong>, so keep in mind it behaves slightly different on touch devices.
+                    </div>
+                </article>
+            {{ end }}
             <p><strong>1.</strong> Install with npm or Yarn</p>
             {{ highlight "npm install delicious-hamburgers --save" "bash" "" }}
             {{ highlight "yarn add delicious-hamburgers" "bash" ""}}
