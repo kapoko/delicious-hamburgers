@@ -1,7 +1,7 @@
 {{ define "additional-css" }}
     {{ $script := .Site.Data.manifest.test }}
     {{ with $script.css }}
-        <link type="text/css" href="{{ absURL . }}"> 
+        <link rel="stylesheet" type="text/css" href="{{ absURL . }}"> 
     {{ end }}
 {{ end }}
 
