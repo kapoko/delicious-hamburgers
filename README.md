@@ -116,7 +116,8 @@ $hamburger-color:               #fff;
 Here's a full list of the customizable options available with their default values:
 
 ```scss
-$hamburger-size:                            50px;
+$hamburger-size:                            50px; // Set both width and height
+$hamburger-width:                           $hamburger-size; // Width (overrides $size, for a non square button)
 $hamburger-thickness:                       2px; // Thickness of the bars
 $hamburger-color:                           #000;
 $hamburger-color-hover:                     $hamburger-color;

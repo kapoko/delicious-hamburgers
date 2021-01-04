@@ -12,12 +12,12 @@
 
 button.#{$hamburger-class-name} {
     height: $hamburger-size;
-    width: $hamburger-size;    
+    width: $hamburger-width;    
 }
 
 div.#{$hamburger-class-name} {
     height: $hamburger-size - ($hamburger-border-width * 2);
-    width: $hamburger-size - ($hamburger-border-width * 2);
+    width: $hamburger-width - ($hamburger-border-width * 2);
 
     > .inner {
         top: 50%;
