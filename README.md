@@ -146,9 +146,10 @@ $hamburger-bar-spacing:                     round($hamburger-size / 5); // How f
 $hamburger-animation-speed:                 1; // The timings of the animations are carefully chosen. But you 
                                             // can use this factor variable to slow down or speed up the animations. 
                                             // Use .5 for twice as slow, 2 for twice as fast etc.
-$hamburger-class-name:                      'hamburger' // The main class and prefixes of the animation classes 
+$hamburger-class-name:                      'hamburger'; // The main class and prefixes of the animation classes 
                                             // can be changed. This allows for different styled buttons on the 
                                             // same page.
+$hamburger-active-class-name:               'active'; // Change the classname that triggers the animation
 $hamburger-extra-transition-rules:          &; // = null. If you need extra transition rules on the base element
                                             // you can set this variable and it gets appended. This way you don't 
                                             // need to overwrite the plugin transition rules. Example:

@@ -25,7 +25,7 @@
             }
         }
 
-        &.active {
+        &.#{$hamburger-active-class-name} {
             > .inner {
                 transform: rotate(90deg) translate3d($hamburger-thickness / 2, -$hamburger-thickness / 2, 0);
                 transition: transform 0.35s / $hamburger-animation-speed $hamburger-easing;

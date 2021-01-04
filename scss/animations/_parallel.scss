@@ -34,7 +34,7 @@
             }
         }
 
-        &.active {
+        &.#{$hamburger-active-class-name} {
             span.bar {
                 top: 0;
                 transition:

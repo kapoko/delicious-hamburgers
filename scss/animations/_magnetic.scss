@@ -30,7 +30,7 @@
             }
         }
 
-        &.active {
+        &.#{$hamburger-active-class-name} {
             span.bar {
                 transition: transform 0.2s / $hamburger-animation-speed $hamburger-easing;
 

@@ -2,7 +2,7 @@
 
 @if index($hamburger-animations, default) {
     .#{$hamburger-class-name}--default {
-        &.active {
+        &.#{$hamburger-active-class-name} {
             span.bar {
                 top: 0;
 

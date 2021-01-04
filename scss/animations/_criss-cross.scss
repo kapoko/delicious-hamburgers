@@ -40,7 +40,7 @@
             }
         }
 
-        &.active {
+        &.#{$hamburger-active-class-name} {
             > .inner {
                 &::before,
                 &::after {

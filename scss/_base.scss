@@ -60,7 +60,7 @@ div.#{$hamburger-class-name} {
         }
     }
 
-    &.active {
+    &.#{$hamburger-active-class-name} {
         background-color: $hamburger-background-active;
 
         span.bar {

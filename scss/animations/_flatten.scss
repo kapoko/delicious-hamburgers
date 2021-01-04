@@ -6,7 +6,7 @@
             transition: transform 0.3s / $hamburger-animation-speed $hamburger-easing;
         }
 
-        &.active {
+        &.#{$hamburger-active-class-name} {
             span.bar {
                 &:nth-child(1) {
                     transform: translate3d(0, $hamburger-bar-spacing, 0);

@@ -22,7 +22,7 @@
             }
         }
 
-        &.active {
+        &.#{$hamburger-active-class-name} {
             span.bar {
                 &:nth-child(1) {
                     transform: rotate(-45deg) translate3d(0, 0, 0);

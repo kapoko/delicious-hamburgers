@@ -18,7 +18,7 @@
             }
         }
 
-        &.active {
+        &.#{$hamburger-active-class-name} {
             > .inner {
                 transform: rotate(-180deg) translate3d(0, -$hamburger-thickness, 0);
             }
