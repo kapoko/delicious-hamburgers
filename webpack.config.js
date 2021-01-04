@@ -1,7 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
 
-const TerserJSPlugin = require("terser-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
@@ -18,7 +17,6 @@ module.exports = [
         },
         optimization: {
             minimizer: [
-                new TerserJSPlugin({}),
                 new OptimizeCSSAssetsPlugin({})
             ]
         },
