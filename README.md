@@ -149,6 +149,10 @@ $hamburger-animation-speed:                 1; // The timings of the animations 
 $hamburger-class-name:                      'hamburger' // The main class and prefixes of the animation classes 
                                             // can be changed. This allows for different styled buttons on the 
                                             // same page.
+$hamburger-extra-transition-rules:          &; // = null. If you need extra transition rules on the base element
+                                            // you can set this variable and it gets appended. This way you don't 
+                                            // need to overwrite the plugin transition rules. Example:
+                                            // $hamburger-extra-transition-rules: box-shadow 0.15s ease-in-out;
 ```
 
 #### Select which animations to compile by variable

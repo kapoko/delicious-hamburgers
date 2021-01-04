@@ -21,6 +21,7 @@ $hamburger-border-radius: 0 !default;
 $hamburger-bar-border-radius: 0 !default;
 $hamburger-bar-spacing: round($hamburger-size / 5) !default;
 $hamburger-animation-speed: 1 !default;
+$hamburger-extra-transition-rules: & !default;
 
 // Animation types. Use this as a variable and remove the animations
 // you don't need so they won't get compiled in your css.

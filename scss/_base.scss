@@ -25,6 +25,7 @@ div.#{$hamburger-class-name} {
 }
 
 .#{$hamburger-class-name} {
+    $base-transitions: opacity $hamburger-opacity-transition-speed $hamburger-easing, background $hamburger-background-transition-speed $hamburger-easing;
     background-color: $hamburger-background;
     border: $hamburger-border-width $hamburger-border-color solid;
     border-radius: $hamburger-border-radius;
@@ -36,7 +37,7 @@ div.#{$hamburger-class-name} {
     overflow: visible;
     padding: $hamburger-padding;
     text-transform: none;
-    transition: opacity $hamburger-opacity-transition-speed $hamburger-easing, background $hamburger-background-transition-speed $hamburger-easing;
+    transition: append($base-transitions, $hamburger-extra-transition-rules);
 
     &:hover {
         background-color: $hamburger-background-hover;
