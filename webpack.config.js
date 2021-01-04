@@ -2,8 +2,8 @@ const path = require('path');
 const webpack = require('webpack');
 
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
-const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
 const StylelintPlugin = require('stylelint-webpack-plugin');
 
 const isDev = process.env.NODE_ENV === 'development'
@@ -16,9 +16,11 @@ module.exports = [
             path: path.resolve(process.cwd(), 'dist'),
         },
         optimization: {
+            minimize: true,
             minimizer: [
-                new OptimizeCSSAssetsPlugin({})
-            ]
+              `...`,
+              new CssMinimizerPlugin(),
+            ],
         },
         module: {
             rules: [{
@@ -47,7 +49,7 @@ module.exports = [
         },
         plugins: [
             new webpack.ProgressPlugin(),
-            new FixStyleOnlyEntriesPlugin(),
+            new RemoveEmptyScriptsPlugin(),
             new MiniCssExtractPlugin({
                 filename: "hamburgers.min.css",
             }),
@@ -91,7 +93,7 @@ module.exports = [
         },
         plugins: [
             new webpack.ProgressPlugin(),
-            new FixStyleOnlyEntriesPlugin(),
+            new RemoveEmptyScriptsPlugin(),
             new MiniCssExtractPlugin({
                 filename: "hamburgers.css",
             }),
