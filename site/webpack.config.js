@@ -5,7 +5,7 @@ const glob = require('glob-all');
 const AssetsPlugin = require("assets-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
+const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
 const PurgeCSSPlugin = require('purgecss-webpack-plugin')
 
 const purgeCSSPaths = glob.sync([
@@ -35,7 +35,8 @@ module.exports = {
                 test: /\.(sa|sc|c)ss$/,
                 exclude: /node_modules/,
                 use: [
-                    isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
+                    // isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
+                    MiniCssExtractPlugin.loader,
                     "css-loader", 
                     {
                         loader: 'postcss-loader',
@@ -75,7 +76,7 @@ module.exports = {
             prettyPrint: true,
             removeFullPathAutoPrefix: true
         }),
-        new FixStyleOnlyEntriesPlugin(),
+        new RemoveEmptyScriptsPlugin(),
         new MiniCssExtractPlugin({
             filename: '[name].[chunkhash].css'
         }),
