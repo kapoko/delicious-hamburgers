@@ -1,4 +1,4 @@
-@-webkit-keyframes spinAround{to{transform:rotate(359deg)}}@keyframes spinAround{from{transform:rotate(0deg)}to{transform:rotate(359deg)}}.test-default{/*!
+.test-default{/*!
  * delicious-hamburgers
  * @description Beautiful SASS powered hamburger menu toggle buttons
  * @author Kasper Koman
