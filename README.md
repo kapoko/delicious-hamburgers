@@ -202,4 +202,4 @@ Old (v0.x.x) | New (v1.x.x) | Comments
 
 ## Copyright and license
 
-Aw yiss, code released under [MIT License](https://github.com/kapoko/delicious-hamburgers/blob/master/LICENSE). Have at it 🤘.
+Aw yiss, code released under [MIT License](https://github.com/kapoko/delicious-hamburgers/blob/main/LICENSE). Have at it 🤘.
