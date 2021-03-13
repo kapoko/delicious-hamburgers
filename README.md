@@ -199,6 +199,9 @@ Old (v0.x.x) | New (v1.x.x) | Comments
 &#xfeff;| `$hamburger-background-hover` |
 &#xfeff;| `$hamburger-background-transition-speed` |
 &#xfeff;| `$hamburger-opacity-transition-speed` |
+&#xfeff;| `$hamburger-width` | <sup>Since 1.1.0</sup>
+&#xfeff;| `$hamburger-active-class-name` | <sup>Since 1.1.0</sup>
+&#xfeff;| `$hamburger-extra-transition-rules` | <sup>Since 1.1.0</sup>
 
 ## Copyright and license
 
