@@ -20,7 +20,7 @@ module.exports = {
         test: path.join(__dirname, "assets", "sass", "test.scss"),
     },
     output: {
-        filename: '[name].[chunkhash].js',
+        filename: '[name].[contenthash].js',
         path: path.join(__dirname, 'dist')
     },
     module: {
@@ -78,7 +78,7 @@ module.exports = {
         }),
         new RemoveEmptyScriptsPlugin(),
         new MiniCssExtractPlugin({
-            filename: '[name].[chunkhash].css'
+            filename: '[name].[contenthash].css'
         }),
         new PurgeCSSPlugin({
             paths: purgeCSSPaths
