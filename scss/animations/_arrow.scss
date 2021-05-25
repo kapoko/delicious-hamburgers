@@ -1,7 +1,8 @@
 @import '../variables';
 
 @if index($hamburger-animations, arrow) or index($hamburger-animations, arrow-r) {
-    .#{$hamburger-class-name}--arrow, .#{$hamburger-class-name}--arrow-right {
+    .#{$hamburger-class-name}--arrow,
+    .#{$hamburger-class-name}--arrow-right {
         > .inner {
             transition: transform 0.5s / $hamburger-animation-speed $hamburger-easing;
         }
