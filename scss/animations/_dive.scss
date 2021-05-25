@@ -4,7 +4,7 @@
 @if index($hamburger-animations, dive) {
     .#{$hamburger-class-name}--dive {
         span.bar {
-            transition: transform 0.4s / $hamburger-animation-speed $hamburger-easing;
+            transition: transform math.div(0.4s, $hamburger-animation-speed) $hamburger-easing;
 
             &:nth-child(1) {
                 top: 0;

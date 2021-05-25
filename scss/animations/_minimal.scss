@@ -5,8 +5,8 @@
     .#{$hamburger-class-name}--minimal {
         span.bar {
             transition:
-                transform 0.4s / $hamburger-animation-speed $hamburger-easing,
-                opacity 0.3s / $hamburger-animation-speed $hamburger-easing 0.1s / $hamburger-animation-speed;
+                transform math.div(0.4s, $hamburger-animation-speed) $hamburger-easing,
+                opacity math.div(0.3s, $hamburger-animation-speed) $hamburger-easing math.div(0.1s, $hamburger-animation-speed);
 
             &:nth-child(1) {
                 top: round(-$hamburger-bar-spacing * 0.8);
@@ -24,8 +24,8 @@
         &.#{$hamburger-active-class-name} {
             span.bar {
                 transition:
-                    transform 0.4s / $hamburger-animation-speed $hamburger-easing,
-                    opacity 0.3s / $hamburger-animation-speed $hamburger-easing;
+                    transform math.div(0.4s, $hamburger-animation-speed) $hamburger-easing,
+                    opacity math.div(0.3s, $hamburger-animation-speed) $hamburger-easing;
 
                 &:nth-child(1) {
                     transform: translate3d(0, round($hamburger-bar-spacing * 0.8), 0);

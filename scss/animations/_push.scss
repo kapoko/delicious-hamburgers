@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 @import '../variables';
 
 @if index($hamburger-animations, push) {
@@ -5,7 +7,7 @@
         overflow: hidden;
 
         > .inner {
-            transition: transform 0.4s / $hamburger-animation-speed $hamburger-easing;
+            transition: transform math.div(0.4s, $hamburger-animation-speed) $hamburger-easing;
 
             &::before,
             &::after {

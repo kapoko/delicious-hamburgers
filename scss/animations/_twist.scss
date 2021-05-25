@@ -1,14 +1,16 @@
+@use 'sass:math';
+
 @import '../variables';
 
 @if index($hamburger-animations, twist) {
     .#{$hamburger-class-name}--twist {
         $origin-offset: 0.4;
         $offset-factor: 1 - 2 * $origin-offset;
-        $offset-y: $hamburger-bar-size / 2 / $root-two * $offset-factor;
-        $offset-x: $hamburger-bar-size / 2 * $offset-factor + $offset-y;
+        $offset-y: math.div(math.div($hamburger-bar-size, 2), $root-two) * $offset-factor;
+        $offset-x: math.div($hamburger-bar-size, 2) * $offset-factor + $offset-y;
 
         span.bar {
-            transition: transform 0.6s / $hamburger-animation-speed $hamburger-easing;
+            transition: transform math.div(0.6s, $hamburger-animation-speed) $hamburger-easing;
 
             &:nth-child(1) {
                 top: 0;
@@ -17,7 +19,7 @@
 
             &:nth-child(2) {
                 opacity: 1;
-                transition: opacity 0.2s / $hamburger-animation-speed $hamburger-easing 0.4s / $hamburger-animation-speed;
+                transition: opacity math.div(0.2s, $hamburger-animation-speed) $hamburger-easing math.div(0.4s, $hamburger-animation-speed);
             }
 
             &:nth-child(3) {

@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @import 'variables';
 
 @import '../../node_modules/bulma/bulma';
@@ -24,10 +26,10 @@
     $hamburger-size: 240px;
     $hamburger-thickness: 6px;
     $hamburger-border-width: 6px;
-    $hamburger-padding: $hamburger-size / 8;
+    $hamburger-padding: math.div($hamburger-size, 8);
     $hamburger-border-color: #000;
-    $hamburger-padding: round($hamburger-size / 7);
-    $hamburger-bar-spacing: round($hamburger-size / 6);
+    $hamburger-padding: round(math.div($hamburger-size, 7));
+    $hamburger-bar-spacing: round(math.div($hamburger-size, 6));
     @import '../../../scss/hamburgers';
 }
 
@@ -37,8 +39,8 @@
     $hamburger-thickness: 3px;
     $hamburger-border-width: 3px;
     $hamburger-border-color: #000;
-    $hamburger-padding: round($hamburger-size / 7);
-    $hamburger-bar-spacing: round($hamburger-size / 6);
+    $hamburger-padding: round(math.div($hamburger-size, 7));
+    $hamburger-bar-spacing: round(math.div($hamburger-size, 6));
     @import '../../../scss/hamburgers';
 }
 
@@ -48,7 +50,7 @@
     $hamburger-thickness: 1px;
     $hamburger-border-width: 1px;
     $hamburger-border-color: #000;
-    $hamburger-padding: round($hamburger-size / 6);
-    $hamburger-bar-spacing: round($hamburger-size / 7);
+    $hamburger-padding: round(math.div($hamburger-size, 6));
+    $hamburger-bar-spacing: round(math.div($hamburger-size, 7));
     @import '../../../scss/hamburgers';
 }

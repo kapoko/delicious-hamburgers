@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 @import 'variables';
 
 @mixin hamburger-bar() {
@@ -82,7 +84,7 @@ div.#{$hamburger-class-name} {
     
     > .inner {
         margin: 0;
-        margin-top: -$hamburger-thickness / 2;
+        margin-top: math.div(-$hamburger-thickness, 2);
         position: relative;
         width: 100%;
     }

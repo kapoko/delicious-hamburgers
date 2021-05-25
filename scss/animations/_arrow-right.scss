@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 @import '../variables';
 @import 'arrow';
 
@@ -25,18 +27,18 @@
 
             span.bar {
                 $scale: 0.4;
-                $offset: $hamburger-bar-spacing / $root-two + $hamburger-thickness / 2 / $root-two;
+                $offset: math.div($hamburger-bar-spacing, $root-two) + math.div(math.div($hamburger-thickness, 2), $root-two);
 
                 &:nth-child(1) {
-                    transform: rotate(-45deg) scaleX($scale) translate3d(-$offset / $scale, $offset, 0);
+                    transform: rotate(-45deg) scaleX($scale) translate3d(math.div(-$offset, $scale), $offset, 0);
                 }
 
                 &:nth-child(2) {
-                    transform: scaleX(1 - $hamburger-thickness / $hamburger-bar-size);
+                    transform: scaleX(1 - math.div($hamburger-thickness, $hamburger-bar-size));
                 }
 
                 &:nth-child(3) {
-                    transform: rotate(45deg) scaleX($scale) translate3d(-$offset / $scale, -$offset, 0);
+                    transform: rotate(45deg) scaleX($scale) translate3d(math.div(-$offset, $scale), -$offset, 0);
                 }
             }
 

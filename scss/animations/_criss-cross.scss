@@ -1,9 +1,11 @@
+@use 'sass:math';
+
 @import '../variables';
 
 @if index($hamburger-animations, criss-cross) {
     .#{$hamburger-class-name}--criss-cross {
-        $offset-y: $hamburger-bar-size / 2 / $root-two;
-        $offset-x: $hamburger-bar-size / 2 - $offset-y;
+        $offset-y: math.div(math.div($hamburger-bar-size, 2), $root-two);
+        $offset-x: math.div($hamburger-bar-size, 2) - $offset-y;
         
         > .inner {
             &::before,
@@ -13,8 +15,8 @@
                 opacity: 0;
                 transform-origin: 0 50%;
                 transition:
-                    opacity 0.4s / $hamburger-animation-speed $hamburger-easing,
-                    transform 0.4s / $hamburger-animation-speed $hamburger-easing;
+                    opacity math.div(0.4s, $hamburger-animation-speed) $hamburger-easing,
+                    transform math.div(0.4s, $hamburger-animation-speed) $hamburger-easing;
             }
 
             &::before {
@@ -23,19 +25,19 @@
 
             &::after {
                 transform: rotate(-45deg) translate3d(-$offset-x, $offset-y, 0) scaleX(0);
-                transition-delay: 0.1s / $hamburger-animation-speed;
+                transition-delay: math.div(0.1s, $hamburger-animation-speed);
             }
         }
 
         span.bar {
             transition:
-                transform 0.4s / $hamburger-animation-speed $hamburger-easing,
-                opacity 0.4s / $hamburger-animation-speed $hamburger-easing,
-                width 0.4s / $hamburger-animation-speed $hamburger-easing;
+                transform math.div(0.4s, $hamburger-animation-speed) $hamburger-easing,
+                opacity math.div(0.4s, $hamburger-animation-speed) $hamburger-easing,
+                width math.div(0.4s, $hamburger-animation-speed) $hamburger-easing;
 
             @for $i from 1 through 3 {
                 &:nth-child(#{$i}) {
-                    transition-delay: (0.3 + ($i * 0.03s)) / $hamburger-animation-speed;
+                    transition-delay: math.div(0.3 + ($i * 0.03s), $hamburger-animation-speed);
                 }
             }
         }
@@ -49,12 +51,12 @@
 
                 &::before {
                     transform: rotate(45deg) translate3d(-$offset-x, -$offset-y, 0);
-                    transition-delay: 0.4s / $hamburger-animation-speed;
+                    transition-delay: math.div(0.4s, $hamburger-animation-speed);
                 }
 
                 &::after {
                     transform: rotate(-45deg) translate3d(-$offset-x, $offset-y, 0);
-                    transition-delay: 0.5s / $hamburger-animation-speed;
+                    transition-delay: math.div(0.5s, $hamburger-animation-speed);
                 }
             }
 
@@ -64,15 +66,15 @@
                 width: 50%;
 
                 &:nth-child(1) {
-                    transition-delay: 0s / $hamburger-animation-speed;
+                    transition-delay: math.div(0s, $hamburger-animation-speed);
                 }
 
                 &:nth-child(2) {
-                    transition-delay: 0.2s / $hamburger-animation-speed;
+                    transition-delay: math.div(0.2s, $hamburger-animation-speed);
                 }
 
                 &:nth-child(3) {
-                    transition-delay: 0.1s / $hamburger-animation-speed;
+                    transition-delay: math.div(0.1s, $hamburger-animation-speed);
                 }
             }
         }

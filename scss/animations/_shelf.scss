@@ -1,14 +1,16 @@
+@use 'sass:math';
+
 @import '../variables';
 
 @if index($hamburger-animations, shelf) {
     .#{$hamburger-class-name}--shelf {
-        $offset-y: $hamburger-bar-size / 2 / $root-two;
-        $offset-x: $hamburger-bar-size / 2 - $offset-y;
+        $offset-y: math.div(math.div($hamburger-bar-size, 2), $root-two);
+        $offset-x: math.div($hamburger-bar-size, 2) - $offset-y;
 
         span.bar {
             transition: 
-                transform 0.3s / $hamburger-animation-speed $hamburger-easing-out,
-                opacity 0.2s / $hamburger-animation-speed $hamburger-easing 0.1s / $hamburger-animation-speed;
+                transform math.div(0.3s, $hamburger-animation-speed) $hamburger-easing-out,
+                opacity math.div(0.2s, $hamburger-animation-speed) $hamburger-easing math.div(0.1s, $hamburger-animation-speed);
 
             &:nth-child(1) {
                 top: 0;
@@ -42,8 +44,8 @@
         &.#{$hamburger-active-class-name} {
             span.bar {
                 transition: 
-                    transform 0.3s / $hamburger-animation-speed $hamburger-easing,
-                    opacity 0.2s / $hamburger-animation-speed $hamburger-easing;
+                    transform math.div(0.3s, $hamburger-animation-speed) $hamburger-easing,
+                    opacity math.div(0.2s, $hamburger-animation-speed) $hamburger-easing;
 
                 &:nth-child(1) {
                     transform: rotate(45deg) translate3d(0, 0, 0);

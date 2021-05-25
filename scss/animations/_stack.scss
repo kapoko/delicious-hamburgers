@@ -4,8 +4,8 @@
 @if index($hamburger-animations, stack) {
     .#{$hamburger-class-name}--stack {
         span.bar {
-            transition: transform 0.3s / $hamburger-animation-speed $hamburger-easing 0.2s / $hamburger-animation-speed,
-                opacity 0.25s / $hamburger-animation-speed $hamburger-easing 0.25s / $hamburger-animation-speed,;
+            transition: transform math.div(0.3s, $hamburger-animation-speed) $hamburger-easing math.div(0.2s, $hamburger-animation-speed),
+                opacity math.div(0.25s, $hamburger-animation-speed) $hamburger-easing math.div(0.25s, $hamburger-animation-speed),;
 
             &:nth-child(1),
             &:nth-child(3) {
@@ -14,7 +14,7 @@
 
                 &::before {
                     @include hamburger-bar();
-                    transition: transform 0.35s / $hamburger-animation-speed $hamburger-easing;
+                    transition: transform math.div(0.35s, $hamburger-animation-speed) $hamburger-easing;
                 }
             }
 
@@ -29,15 +29,15 @@
 
         &.#{$hamburger-active-class-name} {
             span.bar {
-                transition: transform 0.25s / $hamburger-animation-speed $hamburger-easing, 
-                    opacity 0.25s / $hamburger-animation-speed $hamburger-easing;
+                transition: transform math.div(0.25s, $hamburger-animation-speed) $hamburger-easing, 
+                    opacity math.div(0.25s, $hamburger-animation-speed) $hamburger-easing;
 
                 &:nth-child(1),
                 &:nth-child(3) {
                     transform: translate3d(0, 0, 0);
 
                     &::before {
-                        transition: transform 0.35s / $hamburger-animation-speed $hamburger-easing 0.15s / $hamburger-animation-speed;
+                        transition: transform math.div(0.35s, $hamburger-animation-speed) $hamburger-easing math.div(0.15s, $hamburger-animation-speed);
                     }
                 }
 

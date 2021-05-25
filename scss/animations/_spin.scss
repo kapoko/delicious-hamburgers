@@ -1,21 +1,23 @@
+@use 'sass:math';
+
 @import '../variables';
 
 @if index($hamburger-animations, spin) {
     .#{$hamburger-class-name}--spin {
         $origin-offset: 0.4;
         $offset-factor: 1 - 2 * $origin-offset;
-        $offset-y: $hamburger-bar-size / 2 / $root-two * $offset-factor;
-        $offset-x-a: $hamburger-bar-size / 2 * $offset-factor + $offset-y;
-        $offset-x-b: $hamburger-bar-size / 2 * $offset-factor - $offset-y;
+        $offset-y: math.div(math.div($hamburger-bar-size, 2), $root-two) * $offset-factor;
+        $offset-x-a: math.div($hamburger-bar-size, 2) * $offset-factor + $offset-y;
+        $offset-x-b: math.div($hamburger-bar-size, 2) * $offset-factor - $offset-y;
 
         > .inner {
-            transition: transform 0.5s / $hamburger-animation-speed $hamburger-easing;
+            transition: transform math.div(0.5s, $hamburger-animation-speed) $hamburger-easing;
         }
 
         span.bar {
             transition:
-                transform 0.4s / $hamburger-animation-speed $hamburger-easing,
-                opacity 0.2s / $hamburger-animation-speed $hamburger-easing 0.2s /$hamburger-animation-speed;
+                transform math.div(0.4s, $hamburger-animation-speed) $hamburger-easing,
+                opacity math.div(0.2s, $hamburger-animation-speed) $hamburger-easing math.div(0.2s, $hamburger-animation-speed);
 
             &:nth-child(1) {
                 top: 0;
@@ -37,8 +39,8 @@
 
             span.bar {
                 transition:
-                    transform 0.3s / $hamburger-animation-speed $hamburger-easing 0.1s, 
-                    opacity 0.2s / $hamburger-animation-speed $hamburger-easing;
+                    transform math.div(0.3s, $hamburger-animation-speed) $hamburger-easing 0.1s, 
+                    opacity math.div(0.2s, $hamburger-animation-speed) $hamburger-easing;
 
                 &:nth-child(1) {
                     transform: rotate(135deg) translate3d(-$offset-x-a, -$offset-y, 0);

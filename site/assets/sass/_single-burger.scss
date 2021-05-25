@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .single {
     .preview {
         @include mobile() {
@@ -13,7 +15,7 @@
 
     .hamburger {
         vertical-align: bottom;
-        margin: $gap / 2;
+        margin: math.div($gap, 2);
 
         @include touch() {
             display: inline-block;

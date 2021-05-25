@@ -1,11 +1,13 @@
+@use 'sass:math';
+
 @import '../variables';
 
 @if index($hamburger-animations, converge) {
     .#{$hamburger-class-name}--converge {
         span.bar {
             transition:
-                transform 0.3s / $hamburger-animation-speed $hamburger-easing,
-                opacity 0.3s / $hamburger-animation-speed $hamburger-easing;
+                transform math.div(0.3s, $hamburger-animation-speed) $hamburger-easing,
+                opacity math.div(0.3s, $hamburger-animation-speed) $hamburger-easing;
 
             &:nth-child(1) {
                 top: 0;
