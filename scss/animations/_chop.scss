@@ -1,6 +1,5 @@
-@use 'sass:math';
-
-@import '../variables';
+@use "sass:math";
+@import "../variables";
 
 @if index($hamburger-animations, chop) {
     .#{$hamburger-class-name}--chop {
@@ -15,7 +14,7 @@
             }
 
             &:nth-child(2) {
-                opacity: 1;
+                opacity: 100%;
                 transform-origin: 15% 50%;
             }
 
@@ -34,7 +33,7 @@
                 }
 
                 &:nth-child(2) {
-                    opacity: 0;
+                    opacity: 0%;
                     transform: scale(0);
                 }
 

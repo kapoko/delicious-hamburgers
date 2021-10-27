@@ -1,6 +1,5 @@
-@use 'sass:math';
-
-@import '../variables';
+@use "sass:math";
+@import "../variables";
 
 @if index($hamburger-animations, twist) {
     .#{$hamburger-class-name}--twist {
@@ -18,8 +17,10 @@
             }
 
             &:nth-child(2) {
-                opacity: 1;
-                transition: opacity math.div(0.2s, $hamburger-animation-speed) $hamburger-easing math.div(0.4s, $hamburger-animation-speed);
+                opacity: 100%;
+                transition:
+                    opacity math.div(0.2s, $hamburger-animation-speed)
+                    $hamburger-easing math.div(0.4s, $hamburger-animation-speed);
             }
 
             &:nth-child(3) {
@@ -36,7 +37,7 @@
                 }
 
                 &:nth-child(2) {
-                    opacity: 0;
+                    opacity: 0%;
                     transition: opacity 0.3s $hamburger-easing;
                 }
 

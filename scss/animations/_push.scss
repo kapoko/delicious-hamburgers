@@ -1,6 +1,5 @@
-@use 'sass:math';
-
-@import '../variables';
+@use "sass:math";
+@import "../variables";
 
 @if index($hamburger-animations, push) {
     .#{$hamburger-class-name}--push {
@@ -11,7 +10,8 @@
 
             &::before,
             &::after {
-                @include hamburger-bar();
+                @include hamburger-bar;
+
                 top: -$hamburger-size * 1.1;
             }
 
@@ -23,7 +23,7 @@
                 transform: rotate(-45deg);
             }
         }
-        
+
         &.#{$hamburger-active-class-name} {
             > .inner {
                 transform: translate3d(0, $hamburger-size * 1.1, 0);

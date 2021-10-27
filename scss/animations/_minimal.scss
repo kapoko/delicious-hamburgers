@@ -1,19 +1,20 @@
-@use 'sass:math';
-@import '../variables';
+@use "sass:math";
+@import "../variables";
 
 @if index($hamburger-animations, minimal) {
     .#{$hamburger-class-name}--minimal {
         span.bar {
             transition:
                 transform math.div(0.4s, $hamburger-animation-speed) $hamburger-easing,
-                opacity math.div(0.3s, $hamburger-animation-speed) $hamburger-easing math.div(0.1s, $hamburger-animation-speed);
+                opacity math.div(0.3s, $hamburger-animation-speed)
+                $hamburger-easing math.div(0.1s, $hamburger-animation-speed);
 
             &:nth-child(1) {
-                top: round(-$hamburger-bar-spacing * 0.8);
+                top: math.round(-$hamburger-bar-spacing * 0.8);
             }
 
             &:nth-child(2) {
-                top: round($hamburger-bar-spacing * 0.8);
+                top: math.round($hamburger-bar-spacing * 0.8);
             }
 
             &:nth-child(3) {
@@ -28,12 +29,12 @@
                     opacity math.div(0.3s, $hamburger-animation-speed) $hamburger-easing;
 
                 &:nth-child(1) {
-                    transform: translate3d(0, round($hamburger-bar-spacing * 0.8), 0);
+                    transform: translate3d(0, math.round($hamburger-bar-spacing * 0.8), 0);
                 }
 
                 &:nth-child(2) {
-                    opacity: 0;
-                    transform: translate3d(0, round(-$hamburger-bar-spacing * 0.8), 0);
+                    opacity: 0%;
+                    transform: translate3d(0, math.round(-$hamburger-bar-spacing * 0.8), 0);
                 }
             }
         }

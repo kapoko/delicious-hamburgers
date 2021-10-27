@@ -1,6 +1,5 @@
-@use 'sass:math';
-
-@import '../variables';
+@use "sass:math";
+@import "../variables";
 
 @if index($hamburger-animations, arrow) or index($hamburger-animations, arrow-r) {
     .#{$hamburger-class-name}--arrow,
@@ -33,7 +32,10 @@
 
             span.bar {
                 $scale: 0.4;
-                $offset: math.div($hamburger-bar-spacing, $root-two) + math.div(math.div($hamburger-thickness, 2), $root-two);
+                $offset: math.div($hamburger-bar-spacing, $root-two) + math.div(
+                    math.div($hamburger-thickness, 2),
+                    $root-two
+                );
 
                 transition-delay: 0s;
 
@@ -49,7 +51,6 @@
                     transform: rotate(-45deg) scaleX($scale) translate3d(math.div($offset, $scale), -$offset, 0);
                 }
             }
-
         }
     }
 }

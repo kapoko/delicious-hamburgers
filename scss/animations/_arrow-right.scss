@@ -1,7 +1,6 @@
-@use 'sass:math';
-
-@import '../variables';
-@import 'arrow';
+@use "sass:math";
+@import "../variables";
+@import "arrow";
 
 @if index($hamburger-animations, arrow-right) {
     .#{$hamburger-class-name}--arrow-right {
@@ -27,7 +26,10 @@
 
             span.bar {
                 $scale: 0.4;
-                $offset: math.div($hamburger-bar-spacing, $root-two) + math.div(math.div($hamburger-thickness, 2), $root-two);
+                $offset: math.div($hamburger-bar-spacing, $root-two) + math.div(
+                    math.div($hamburger-thickness, 2),
+                    $root-two
+                );
 
                 &:nth-child(1) {
                     transform: rotate(-45deg) scaleX($scale) translate3d(math.div(-$offset, $scale), $offset, 0);
@@ -41,7 +43,6 @@
                     transform: rotate(45deg) scaleX($scale) translate3d(math.div(-$offset, $scale), -$offset, 0);
                 }
             }
-
         }
     }
 }

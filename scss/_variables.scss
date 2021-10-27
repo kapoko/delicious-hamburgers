@@ -1,8 +1,8 @@
-@use 'sass:math';
+@use "sass:math";
 
 // Variables
-$hamburger-class-name: 'hamburger' !default;
-$hamburger-active-class-name: 'active' !default;
+$hamburger-class-name: "hamburger" !default;
+$hamburger-active-class-name: "active" !default;
 $hamburger-size: 50px !default;
 $hamburger-width: $hamburger-size !default;
 $hamburger-thickness: 2px !default;
@@ -18,38 +18,37 @@ $hamburger-border-width: 0 !default;
 $hamburger-opacity: 1 !default;
 $hamburger-opacity-hover: 1 !default;
 $hamburger-opacity-transition-speed: 0.2s !default;
-$hamburger-padding: round(math.div($hamburger-size, 10)) !default;
+$hamburger-padding: math.round(math.div($hamburger-size, 10)) !default;
 $hamburger-border-radius: 0 !default;
 $hamburger-bar-border-radius: 0 !default;
-$hamburger-bar-spacing: round(math.div($hamburger-size, 5)) !default;
+$hamburger-bar-spacing: math.round(math.div($hamburger-size, 5)) !default;
 $hamburger-animation-speed: 1 !default;
 $hamburger-extra-transition-rules: & !default;
 
 // Animation types. Use this as a variable and remove the animations
 // you don't need so they won't get compiled in your css.
 $hamburger-animations: (
-    'apple',
-    'arrow',
-    'arrow-right',
-    'collapse',
-    'converge',
-    'criss-cross',
-    'default',
-    'dive',
-    'minimal',
-    'spin',
-    'stack',
-    'twist',
-    'magnetic',
-    'chop',
-    'parallel',
-    'vertical',
-    'push',
-    'flatten',
-    'simple',
-    'shelf'
+    "apple",
+    "arrow",
+    "arrow-right",
+    "collapse",
+    "converge",
+    "criss-cross",
+    "default",
+    "dive",
+    "minimal",
+    "spin",
+    "stack",
+    "twist",
+    "magnetic",
+    "chop",
+    "parallel",
+    "vertical",
+    "push",
+    "flatten",
+    "simple",
+    "shelf"
 ) !default;
-
 $hamburger-bar-size: $hamburger-size - ($hamburger-padding * 2) - ($hamburger-border-width * 2);
 $hamburger-easing: cubic-bezier(0.645, 0.045, 0.355, 1) !default;
 $hamburger-easing-in: cubic-bezier(0.55, 0.055, 0.675, 0.19) !default;

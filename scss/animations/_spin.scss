@@ -1,6 +1,5 @@
-@use 'sass:math';
-
-@import '../variables';
+@use "sass:math";
+@import "../variables";
 
 @if index($hamburger-animations, spin) {
     .#{$hamburger-class-name}--spin {
@@ -17,7 +16,8 @@
         span.bar {
             transition:
                 transform math.div(0.4s, $hamburger-animation-speed) $hamburger-easing,
-                opacity math.div(0.2s, $hamburger-animation-speed) $hamburger-easing math.div(0.2s, $hamburger-animation-speed);
+                opacity math.div(0.2s, $hamburger-animation-speed)
+                $hamburger-easing math.div(0.2s, $hamburger-animation-speed);
 
             &:nth-child(1) {
                 top: 0;
@@ -39,15 +39,15 @@
 
             span.bar {
                 transition:
-                    transform math.div(0.3s, $hamburger-animation-speed) $hamburger-easing 0.1s, 
+                    transform math.div(0.3s, $hamburger-animation-speed) $hamburger-easing 0.1s,
                     opacity math.div(0.2s, $hamburger-animation-speed) $hamburger-easing;
 
                 &:nth-child(1) {
                     transform: rotate(135deg) translate3d(-$offset-x-a, -$offset-y, 0);
-                } 
+                }
 
                 &:nth-child(2) {
-                    opacity: 0;
+                    opacity: 0%;
                     transform: rotate(45deg);
                 }
 

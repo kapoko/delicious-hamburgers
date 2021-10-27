@@ -1,10 +1,12 @@
-@use 'sass:math';
-@import '../variables';
+@use "sass:math";
+@import "../variables";
 
 @if index($hamburger-animations, magnetic) {
     .#{$hamburger-class-name}--magnetic {
         span.bar {
-            transition: transform math.div(0.2s, $hamburger-animation-speed) $hamburger-easing math.div(0.2s, $hamburger-animation-speed);
+            transition:
+                transform math.div(0.2s, $hamburger-animation-speed)
+                $hamburger-easing math.div(0.2s, $hamburger-animation-speed);
 
             &:nth-child(1),
             &:nth-child(2) {
@@ -12,17 +14,18 @@
                 top: 0;
 
                 &::before {
-                    @include hamburger-bar();
+                    @include hamburger-bar;
+
                     transition: transform math.div(0.4s, $hamburger-animation-speed) $hamburger-easing;
                 }
             }
 
             &:nth-child(1) {
-                transform: translate3d(0, round(-$hamburger-bar-spacing * 0.8), 0);
+                transform: translate3d(0, math.round(-$hamburger-bar-spacing * 0.8), 0);
             }
 
             &:nth-child(2) {
-                transform: translate3d(0, round($hamburger-bar-spacing * 0.8), 0);
+                transform: translate3d(0, math.round($hamburger-bar-spacing * 0.8), 0);
             }
 
             &:nth-child(3) {

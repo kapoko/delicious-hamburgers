@@ -1,11 +1,11 @@
-@use 'sass:math';
-
-@import 'variables';
+@use "sass:math";
+@use "sass:list";
+@import "variables";
 
 @mixin hamburger-bar() {
     background-color: $hamburger-color;
     border-radius: $hamburger-bar-border-radius;
-    content: '';
+    content: "";
     display: block;
     height: $hamburger-thickness;
     position: absolute;
@@ -14,7 +14,7 @@
 
 button.#{$hamburger-class-name} {
     height: $hamburger-size;
-    width: $hamburger-width;    
+    width: $hamburger-width;
 }
 
 div.#{$hamburger-class-name} {
@@ -23,11 +23,13 @@ div.#{$hamburger-class-name} {
 
     > .inner {
         top: 50%;
-    }   
+    }
 }
 
 .#{$hamburger-class-name} {
-    $base-transitions: opacity $hamburger-opacity-transition-speed $hamburger-easing, background $hamburger-background-transition-speed $hamburger-easing;
+    $base-transitions: opacity $hamburger-opacity-transition-speed $hamburger-easing,
+        background $hamburger-background-transition-speed $hamburger-easing;
+
     background-color: $hamburger-background;
     border: $hamburger-border-width $hamburger-border-color solid;
     border-radius: $hamburger-border-radius;
@@ -39,7 +41,7 @@ div.#{$hamburger-class-name} {
     overflow: visible;
     padding: $hamburger-padding;
     text-transform: none;
-    transition: append($base-transitions, $hamburger-extra-transition-rules);
+    transition: list.append($base-transitions, $hamburger-extra-transition-rules);
 
     &:hover {
         background-color: $hamburger-background-hover;
@@ -47,7 +49,7 @@ div.#{$hamburger-class-name} {
 
         span.bar {
             background-color: $hamburger-color-hover;
-        } 
+        }
 
         > .inner,
         span.bar {
@@ -57,7 +59,7 @@ div.#{$hamburger-class-name} {
                 &::before,
                 &::after {
                     background-color: $hamburger-color-hover;
-                }       
+                }
             }
         }
     }
@@ -77,11 +79,11 @@ div.#{$hamburger-class-name} {
                 &::before,
                 &::after {
                     background-color: $hamburger-color-active;
-                }       
+                }
             }
         }
     }
-    
+
     > .inner {
         margin: 0;
         margin-top: math.div(-$hamburger-thickness, 2);
@@ -90,7 +92,7 @@ div.#{$hamburger-class-name} {
     }
 
     span.bar {
-        @include hamburger-bar();
+        @include hamburger-bar;
 
         &:nth-child(1) {
             top: -$hamburger-bar-spacing;
@@ -100,7 +102,7 @@ div.#{$hamburger-class-name} {
             top: $hamburger-bar-spacing;
         }
     }
-    
+
     &:focus {
         outline: 0;
     }

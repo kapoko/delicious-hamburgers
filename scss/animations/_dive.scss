@@ -1,5 +1,5 @@
-@use 'sass:math';
-@import '../variables';
+@use "sass:math";
+@import "../variables";
 
 @if index($hamburger-animations, dive) {
     .#{$hamburger-class-name}--dive {
@@ -8,12 +8,12 @@
 
             &:nth-child(1) {
                 top: 0;
-                transform: translate3d(0, round(-$hamburger-bar-spacing * 0.8), 0);
+                transform: translate3d(0, math.round(-$hamburger-bar-spacing * 0.8), 0);
             }
 
             &:nth-child(2) {
                 top: 0;
-                transform: translate3d(0, round($hamburger-bar-spacing * 0.8), 0);
+                transform: translate3d(0, math.round($hamburger-bar-spacing * 0.8), 0);
             }
 
             &:nth-child(3) {

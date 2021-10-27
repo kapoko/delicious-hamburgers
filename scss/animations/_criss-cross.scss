@@ -1,18 +1,17 @@
-@use 'sass:math';
-
-@import '../variables';
+@use "sass:math";
+@import "../variables";
 
 @if index($hamburger-animations, criss-cross) {
     .#{$hamburger-class-name}--criss-cross {
         $offset-y: math.div(math.div($hamburger-bar-size, 2), $root-two);
         $offset-x: math.div($hamburger-bar-size, 2) - $offset-y;
-        
+
         > .inner {
             &::before,
             &::after {
-                @include hamburger-bar();
+                @include hamburger-bar;
 
-                opacity: 0;
+                opacity: 0%;
                 transform-origin: 0 50%;
                 transition:
                     opacity math.div(0.4s, $hamburger-animation-speed) $hamburger-easing,
@@ -46,8 +45,8 @@
             > .inner {
                 &::before,
                 &::after {
-                    opacity: 1;
-                }           
+                    opacity: 100%;
+                }
 
                 &::before {
                     transform: rotate(45deg) translate3d(-$offset-x, -$offset-y, 0);
@@ -61,7 +60,7 @@
             }
 
             span.bar {
-                opacity: 0;
+                opacity: 0%;
                 transform: translate3d(-10px, 0, 0);
                 width: 50%;
 

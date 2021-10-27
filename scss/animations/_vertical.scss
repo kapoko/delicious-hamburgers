@@ -1,5 +1,5 @@
-@use 'sass:math';
-@import '../variables';
+@use "sass:math";
+@import "../variables";
 
 @if index($hamburger-animations, vertical) {
     .#{$hamburger-class-name}--vertical {
@@ -13,17 +13,19 @@
         }
 
         span.bar {
-            transition: transform math.div(0.3s, $hamburger-animation-speed) $hamburger-easing math.div(0.15s, $hamburger-animation-speed);
+            transition:
+                transform math.div(0.3s, $hamburger-animation-speed)
+                $hamburger-easing math.div(0.15s, $hamburger-animation-speed);
 
             &:nth-child(1) {
                 top: 0;
-                transform: translate3d(0, round(-$hamburger-bar-spacing * 0.8), 0);
+                transform: translate3d(0, math.round(-$hamburger-bar-spacing * 0.8), 0);
                 transform-origin: (100% * $origin-offset) 50%;
             }
 
             &:nth-child(2) {
                 top: 0;
-                transform: translate3d(0, round($hamburger-bar-spacing * 0.8), 0);
+                transform: translate3d(0, math.round($hamburger-bar-spacing * 0.8), 0);
                 transform-origin: (100% * $origin-offset) 50%;
             }
 
@@ -34,15 +36,22 @@
 
         &.#{$hamburger-active-class-name} {
             > .inner {
-                transform: rotate(90deg) translate3d(math.div($hamburger-thickness, 2), math.div(-$hamburger-thickness, 2), 0);
+                transform:
+                    rotate(90deg) translate3d(
+                        math.div($hamburger-thickness, 2),
+                        math.div(-$hamburger-thickness, 2),
+                        0
+                    );
                 transition: transform math.div(0.4s, $hamburger-animation-speed) $hamburger-easing-out;
             }
 
             span.bar {
-                transition: transform math.div(0.3s, $hamburger-animation-speed) $hamburger-easing math.div(0.2s, $hamburger-animation-speed);
+                transition:
+                    transform math.div(0.3s, $hamburger-animation-speed)
+                    $hamburger-easing math.div(0.2s, $hamburger-animation-speed);
 
                 &:nth-child(1) {
-                    transform: rotate(-45deg) translate3d(-$offset-x, $offset-y, 0);;
+                    transform: rotate(-45deg) translate3d(-$offset-x, $offset-y, 0);
                 }
 
                 &:nth-child(2) {

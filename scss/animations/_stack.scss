@@ -1,11 +1,14 @@
-@use 'sass:math';
-@import '../variables';
+@use "sass:math";
+@import "../variables";
 
 @if index($hamburger-animations, stack) {
     .#{$hamburger-class-name}--stack {
         span.bar {
-            transition: transform math.div(0.3s, $hamburger-animation-speed) $hamburger-easing math.div(0.2s, $hamburger-animation-speed),
-                opacity math.div(0.25s, $hamburger-animation-speed) $hamburger-easing math.div(0.25s, $hamburger-animation-speed),;
+            transition:
+                transform math.div(0.3s, $hamburger-animation-speed)
+                $hamburger-easing math.div(0.2s, $hamburger-animation-speed),
+                opacity math.div(0.25s, $hamburger-animation-speed)
+                $hamburger-easing math.div(0.25s, $hamburger-animation-speed);
 
             &:nth-child(1),
             &:nth-child(3) {
@@ -13,7 +16,8 @@
                 top: 0;
 
                 &::before {
-                    @include hamburger-bar();
+                    @include hamburger-bar;
+
                     transition: transform math.div(0.35s, $hamburger-animation-speed) $hamburger-easing;
                 }
             }
@@ -21,7 +25,7 @@
             &:nth-child(1) {
                 transform: translate3d(0, -$hamburger-bar-spacing, 0);
             }
-            
+
             &:nth-child(3) {
                 transform: translate3d(0, $hamburger-bar-spacing, 0);
             }
@@ -29,7 +33,8 @@
 
         &.#{$hamburger-active-class-name} {
             span.bar {
-                transition: transform math.div(0.25s, $hamburger-animation-speed) $hamburger-easing, 
+                transition:
+                    transform math.div(0.25s, $hamburger-animation-speed) $hamburger-easing,
                     opacity math.div(0.25s, $hamburger-animation-speed) $hamburger-easing;
 
                 &:nth-child(1),
@@ -37,7 +42,9 @@
                     transform: translate3d(0, 0, 0);
 
                     &::before {
-                        transition: transform math.div(0.35s, $hamburger-animation-speed) $hamburger-easing math.div(0.15s, $hamburger-animation-speed);
+                        transition:
+                            transform math.div(0.35s, $hamburger-animation-speed)
+                            $hamburger-easing math.div(0.15s, $hamburger-animation-speed);
                     }
                 }
 
@@ -48,8 +55,8 @@
                 }
 
                 &:nth-child(2) {
-                    opacity: 0;
-                } 
+                    opacity: 0%;
+                }
 
                 &:nth-child(3) {
                     &::before {
