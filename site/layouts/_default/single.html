@@ -38,16 +38,16 @@
                     </div>
                 </article>
             {{ end }}
-            <p><strong>1.</strong> Install with npm or Yarn</p>
+            <p class="mt-md"><strong>1.</strong> Install with npm or Yarn</p>
             {{ highlight "npm install delicious-hamburgers --save" "bash" "" }}
             {{ highlight "yarn add delicious-hamburgers" "bash" ""}}
 
-            <p><strong>2.</strong> Import Sass</p>
+            <p class="mt-md"><strong>2.</strong> Import Sass</p>
             {{ $code := printf `@import "~delicious-hamburgers/scss/base";
 @import "~delicious-hamburgers/scss/animations/%s";` .Params.class }}
             {{ highlight $code "scss" "" }}
 
-            <p><strong>3.</strong> Add markup</p>
+            <p class="mt-md"><strong>3.</strong> Add markup</p>
             {{ $code := printf `<button class="hamburger hamburger--%s" type="button">
     <div class="inner">
         <span class="bar"></span>
@@ -57,7 +57,7 @@
 </button>` .Params.class }}
             {{ highlight $code "html" "" }}
 
-            <p><strong>4.</strong> Add class <code>.active</code> to activate the animation. For all customisation options and more info check out the <a href="https://github.com/kapoko/delicious-hamburgers/blob/main/README.md" target="_blank">README</a> file.</p>
+            <p class="mt-md"><strong>4.</strong> Add class <code>.active</code> to activate the animation. For all customisation options and more info check out the <a href="https://github.com/kapoko/delicious-hamburgers/blob/main/README.md" target="_blank">README</a> file.</p>
         </div>
     </div>
 {{ end }}
