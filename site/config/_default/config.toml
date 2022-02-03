@@ -1,4 +1,3 @@
-baseURL = "https://kapoko.github.io/delicious-hamburgers/"
 languageCode = "en-us"
 title = "Delicious Hamburgers 🍔"
 staticDir = ["static", "dist"]
