@@ -11,7 +11,7 @@
             &::after {
                 @include hamburger-bar;
 
-                opacity: 0%;
+                opacity: 0;
                 transform-origin: 0 50%;
                 transition:
                     opacity math.div(0.4s, $hamburger-animation-speed) $hamburger-easing,
@@ -45,7 +45,7 @@
             > .inner {
                 &::before,
                 &::after {
-                    opacity: 100%;
+                    opacity: 1;
                 }
 
                 &::before {
@@ -60,7 +60,7 @@
             }
 
             span.bar {
-                opacity: 0%;
+                opacity: 0;
                 transform: translate3d(-10px, 0, 0);
                 width: 50%;
 

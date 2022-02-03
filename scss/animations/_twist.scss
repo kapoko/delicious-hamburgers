@@ -17,7 +17,7 @@
             }
 
             &:nth-child(2) {
-                opacity: 100%;
+                opacity: 1;
                 transition:
                     opacity math.div(0.2s, $hamburger-animation-speed)
                     $hamburger-easing math.div(0.4s, $hamburger-animation-speed);
@@ -37,7 +37,7 @@
                 }
 
                 &:nth-child(2) {
-                    opacity: 0%;
+                    opacity: 0;
                     transition: opacity 0.3s $hamburger-easing;
                 }
 

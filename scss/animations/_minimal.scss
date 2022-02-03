@@ -33,7 +33,7 @@
                 }
 
                 &:nth-child(2) {
-                    opacity: 0%;
+                    opacity: 0;
                     transform: translate3d(0, math.round(-$hamburger-bar-spacing * 0.8), 0);
                 }
             }
