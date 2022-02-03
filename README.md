@@ -20,6 +20,7 @@ This was inspired by [Jonsuh](https://github.com/jonsuh)'s great [hamburgers](ht
 - Lightweight: Less than `~1kb` minified and gzipped if you import one animation.
 - No Javascript and no CSS `@keyframes` which can sometimes block animations in weird ways. Bash away!
 - Customisable: loads of variables available for customisation which work for all animations.
+- No dependencies: no worries about dependencies getting out of date, there are none.
 
 ## Usage
 
