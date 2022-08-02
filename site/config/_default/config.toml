@@ -3,7 +3,7 @@ title = "Delicious Hamburgers 🍔"
 staticDir = ["static", "dist"]
 disableKinds = ["taxonomy", "taxonomyTerm"]
 [params]
-    author = "Kasper Koman"
+    author = "kapoko"
     description = "Beautifully animated Sass-powered hamburger menu buttons"
 
 [markup]
