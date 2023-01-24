@@ -6,7 +6,7 @@ const AssetsPlugin = require("assets-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
-const PurgeCSSPlugin = require('purgecss-webpack-plugin')
+const { PurgeCSSPlugin } = require('purgecss-webpack-plugin');
 
 const purgeCSSPaths = glob.sync([
     `${path.join(__dirname, 'layouts')}/**/*`,
