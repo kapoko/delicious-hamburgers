@@ -1,6 +1,6 @@
 {
   "name": "delicious-hamburgers",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Beautiful SASS powered hamburger menu toggle buttons",
   "main": "scss/hamburgers.scss",
   "repository": {
