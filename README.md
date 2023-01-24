@@ -17,7 +17,7 @@ This was inspired by [Jonsuh](https://github.com/jonsuh)'s great [hamburgers](ht
 
 - Performant: doesn't use position attributes like `top` to animate, but only CSS transforms which are often hardware accelerated, for the most buttery animations possible.
 - Simple: same markup for all animations, same implementation (just add class `active` to the element).
-- Lightweight: Less than `~1kb` minified and gzipped if you import one animation.
+- Lightweight: Seperate imports per animation, include only what you need.
 - No Javascript and no CSS `@keyframes` which can sometimes block animations in weird ways. Bash away!
 - Customisable: loads of variables available for customisation which work for all animations.
 - No dependencies: no worries about dependencies getting out of date, there are none.
