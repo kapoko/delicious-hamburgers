@@ -11,14 +11,18 @@
         {{ partial "head/favicons.html" . }}
         {{ partial "head/metadata.html" . }}
         {{ partial "head/og.html" . }}
+        
+        {{ $sass := resources.Get "sass/main.scss" }}
+        {{ $options := dict "transpiler" "dartsass" "includePaths" (slice "node_modules") }}
+        {{ $style := $sass | resources.ToCSS $options | resources.Fingerprint }}
+        <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
 
-        {{ $script := .Site.Data.manifest.main }}
-        {{ with $script.css }}
-            <link rel="stylesheet" type="text/css" href="{{ absURL . }}"> 
-        {{ end }}
-        {{ block "additional-css" . }}{{ end }}
+        {{ $defines := dict "process.env.NODE_ENV" `"development"` }}
+        {{ $js := resources.Get "js/main.js" | js.Build | resources.Fingerprint }}
+        <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
     </head>
     <body>
+        {{ $local := resources.Get "sass/main.scss" }}
         <section class="section">
             <header class="container"> 
                 {{ partial "header.html" . }}
@@ -29,10 +33,5 @@
             </main>
         </section>
         {{ partial "footer.html" . }}
-
-        <!-- {{ $script := .Site.Data.manifest.main }} -->
-        {{ with $script.js }}
-            <script type="text/javascript" src="{{ absURL . }}"></script>
-        {{ end }}
     </body>
 </html>

@@ -16,3 +16,6 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
     noClasses = true
     style = "monokailight"
     tabWidth = 4
+
+[build]
+  noJSConfigInAssets = true

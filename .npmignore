@@ -1,4 +1,4 @@
-node_modules
-site
-.github
+node_modules/
+site/
+.github/
 webpack.config.js
