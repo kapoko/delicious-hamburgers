@@ -12,8 +12,19 @@ jobs:
     steps: 
     - uses: actions/checkout@v3
 
+    - name: Setup dart-sass-embedded
+      run: |
+        curl -s https://api.github.com/repos/sass/dart-sass-embedded/releases/latest \
+        | grep "browser_download_url.*linux-x64" \
+        | cut -d : -f 2,3 \
+        | tr -d \" \
+        | xargs wget -qO- \
+        | tar xvz -C /tmp
+        chmod 755 /tmp/sass_embedded/dart-sass-embedded
+        ln -s /tmp/sass_embedded/dart-sass-embedded /usr/local/bin
+
     - name: Setup Node
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v3
       with:
         node-version: '16.x'
 
@@ -23,13 +34,11 @@ jobs:
         hugo-version: 'latest'
         extended: true
 
-    - name: npm install
-      run: |
-        npm install
+    - name: Install dependencies
+      run: npm ci
 
-    - name: Build
-      run: |
-        npm run build:site
+    - name: Build site
+      run: npm run build:site
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
