@@ -16,10 +16,10 @@
     "build:site": "npm run -w site build:production",
     "start": "run-p start:*",
     "start:hamburgers": "NODE_ENV=development webpack --watch",
-    "start:site": "npm run  -w site start",
+    "start:site": "npm run -w site start",
     "stylelint": "stylelint 'scss/**/*.scss'",
     "stylelint:fix": "stylelint 'scss/**/*.scss' --fix",
-    "prepare": "npm-run-all test build"
+    "prepare": "run-s test build"
   },
   "keywords": [
     "sass",
@@ -53,20 +53,20 @@
   },
   "devDependencies": {
     "css-loader": "^6.7.3",
-    "css-minimizer-webpack-plugin": "^4.2.2",
-    "mini-css-extract-plugin": "^2.7.2",
+    "css-minimizer-webpack-plugin": "^5.0.0",
+    "mini-css-extract-plugin": "^2.7.5",
     "npm-run-all": "^4.1.5",
-    "postcss-loader": "^7.0.2",
-    "postcss-preset-env": "^8.0.1",
-    "sass": "^1.58.0",
-    "sass-loader": "^13.2.0",
-    "style-loader": "^3.3.1",
-    "stylelint": "^14.16.1",
-    "stylelint-config-sass-guidelines": "^9.0.1",
-    "stylelint-config-standard-scss": "^6.1.0",
-    "stylelint-webpack-plugin": "^3.3.0",
-    "webpack": "^5.75.0",
+    "postcss-loader": "^7.2.4",
+    "postcss-preset-env": "^8.3.2",
+    "sass": "^1.62.0",
+    "sass-loader": "^13.2.2",
+    "style-loader": "^3.3.2",
+    "stylelint": "^15.5.0",
+    "stylelint-config-sass-guidelines": "^10.0.0",
+    "stylelint-config-standard-scss": "^8.0.0",
+    "stylelint-webpack-plugin": "^4.1.1",
+    "webpack": "^5.79.0",
     "webpack-cli": "^5.0.1",
-    "webpack-remove-empty-scripts": "^1.0.1"
+    "webpack-remove-empty-scripts": "^1.0.3"
   }
 }
