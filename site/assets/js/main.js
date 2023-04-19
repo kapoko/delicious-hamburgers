@@ -111,7 +111,7 @@ domReady(() => {
     });
 
     // Github badge
-    let anchor = document.getElementById('github-button')
+    let anchor = document.querySelector('a.github-button')
     render(anchor, function (el) {
         anchor.parentNode.replaceChild(el, anchor)
     })

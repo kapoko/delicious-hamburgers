@@ -1,9 +1,14 @@
 .copyright {
+    vertical-align: top;
     a.npm {
         border-bottom: 0;
+    }
+}
 
-        > img {
-            vertical-align: middle;
-        }
+.github-button-wrap {
+    display: flex;
+    
+    > span {
+        display: inherit;
     }
 }
