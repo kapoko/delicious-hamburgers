@@ -47,7 +47,6 @@
   "stylelint": {
     "extends": "stylelint-config-standard-scss",
     "rules": {
-      "indentation": 4,
       "max-nesting-depth": 4
     }
   },
