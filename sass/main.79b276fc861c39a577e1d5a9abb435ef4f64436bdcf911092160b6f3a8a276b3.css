@@ -10604,11 +10604,18 @@ header > a h2 {
   }
 }
 
+.copyright {
+  vertical-align: top;
+}
 .copyright a.npm {
   border-bottom: 0;
 }
-.copyright a.npm > img {
-  vertical-align: middle;
+
+.github-button-wrap {
+  display: flex;
+}
+.github-button-wrap > span {
+  display: inherit;
 }
 
 .links .item {

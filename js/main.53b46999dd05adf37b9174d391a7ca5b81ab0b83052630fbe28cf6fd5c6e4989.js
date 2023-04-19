@@ -5972,7 +5972,7 @@
         window.location = href;
       }
     });
-    let anchor = document.getElementById("github-button");
+    let anchor = document.querySelector("a.github-button");
     render3(anchor, function(el) {
       anchor.parentNode.replaceChild(el, anchor);
     });
